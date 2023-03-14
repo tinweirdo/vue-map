@@ -1,5 +1,6 @@
 <script setup>
 import Map from './components/Map.vue'
+import Locate from './map/Locate.vue';
 import PipeLineGroup from './components/PipeLineGroup.vue';
 import { freeBus } from './geojson';
 const pipelines = [
@@ -14,6 +15,7 @@ const pipelines = [
   </leftPane>
   <Map>
     <PipeLineGroup :pipelines="pipelines" />
+    <Locate/>
   </Map>
 
 </template>
