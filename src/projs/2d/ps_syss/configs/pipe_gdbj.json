@@ -1,0 +1,83 @@
+{
+  "geometryEdit": false,
+  "layers": [
+    {
+      "layer": {
+        "name": "管点",
+        "aliasname": "管点",
+        "geometryType": "point",
+        "url": "http://39.105.96.43:9572/kcgis/services/network/FeatureServer/pointLayer",
+        "editfields": [
+          {
+            "name": "qsdw",
+            "alias": "权属单位",
+            "value": "qsdw",
+            "type": "kccombox",
+            "valid": "NotNull"
+          },
+          {
+            "name": "msld",
+            "alias": "埋设年代",
+            "value": "",
+            "type": "date",
+            "valid": "Date"
+          },
+          {
+            "name": "dmgc",
+            "alias": "地面高程",
+            "value": "",
+            "type": "textinput",
+            "valid": "DoubleOrNull"
+          },
+          {
+            "name": "tz",
+            "alias": "特征",
+            "value": "",
+            "type": "textinput"
+          },
+          {
+            "name": "fsw",
+            "alias": "附属物",
+            "value": "",
+            "type": "textinput"
+          },
+          {
+            "name": "jdgc",
+            "alias": "井底高程",
+            "value": "",
+            "type": "textinput",
+            "valid": "DoubleOrNull"
+          },
+          {
+            "name": "jdms",
+            "alias": "井底埋深",
+            "value": "",
+            "type": "textinput",
+            "valid": "DoubleOrNull"
+          },
+          {
+            "name": "tfh",
+            "alias": "图幅号",
+            "value": "",
+            "type": "textinput"
+          },
+          {
+            "name": "bsm",
+            "alias": "标识码",
+            "value": "",
+            "type": "textinput",
+            "valid": "NotNull"
+          },
+          {
+            "name": "created_user",
+            "alias": "创建人",
+            "value": "",
+            "type": "textinput",
+            "valid": "NotNull"
+          }
+        ]
+
+      }
+    }
+  ]
+}

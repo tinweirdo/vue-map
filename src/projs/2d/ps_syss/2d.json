@@ -1,0 +1,3189 @@
+{
+    "title": "中科圣禹智慧排水监测控制一体化平台",
+    "serviceUrl": "//webapi.kcgis.cn/",
+    "serviceUrl2": "//yun.kcgis.cn/webapi_dev/",
+    "serviceUrl3": "http://localhost:58626/",
+    "baseMapUrl": "https://kc3.kcgis.cn:30130/kcgis/services/",
+    "baseStreamUrl": "https://kc3.kcgis.cn:30170/kcgis/services/",
+    "baseMapUrlEx": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsMap/",
+    "resBase": "//admin.kcgis.cn/res/",
+    "client": "2d",
+    "projid": "ps_syss",
+    "hefengAPIKey": "7669eb4a4933482b947246a9ca3f395b",
+    "pipe_len": {
+        "DX": 0,
+        "DL": 0,
+        "RL": 0,
+        "BM": 0,
+        "PS": 0,
+        "JS": 0,
+        "CT": 0,
+        "XH": 0,
+        "GD": 0,
+        "YD": 0,
+        "DT": 0,
+        "TR": 0,
+        "HS": 0,
+        "TX": 0,
+        "SS": 0,
+        "JK": 0,
+        "LT": 0,
+        "JY": 0,
+        "LD": 0,
+        "YS": 0,
+        "WS": 0,
+        "RQ": 0,
+        "DS": 0,
+        "len": 0
+    },
+    "base": {
+        "cad": {
+            "serviceUrl": "https://kc3.kcgis.cn:25440/",
+            "serviceUrl2": "http://localhost:58626/",
+            "res": "https://kc3.kcgis.cn:25437/cadfile/"
+        }
+    },
+    "map": {
+        "center": {
+            "x": 117.154984,
+            "y": 31.862688
+        },
+        "zoom": 15,
+        "position": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+        },
+        "minZoom": 0,
+        "maxZoom": 22,
+        "centerAutoLevel": 18,
+        "controls": [
+            {
+                "type": "scale"
+            },
+            {
+                "type": "location",
+                "showlevel": false
+            },
+            {
+                "type": "tool",
+                "item": [
+                    "location",
+                    "fullscreen"
+                ],
+                "position": "bottomright",
+                "visible": false
+            },
+            {
+                "type": "zoom",
+                "position": "bottomright",
+                "visible": false
+            },
+            {
+                "type": "layers",
+                "position": "bottomleft",
+                "visible": false
+            }
+        ],
+        "basemaps": [
+            {
+                "name": "地图底图",
+                "id": 1,
+                "order": 1,
+                "open": "false",
+                "type": "group"
+            },
+            {
+                "name": "矢量图",
+                "type": "arcgis_tile",
+                "pid": 1,
+                "id": 13,
+                "order": 1,
+                "minZoom": 0,
+                "maxZoom": 21,
+                "url": "https://kc3.kcgis.cn:31005/kcgis/services/syssvec/MapServer",
+                "visible": true
+            },
+            {
+                "name": "影像图",
+                "pid": 1,
+                "id": 12,
+                "order": 2,
+                "open": "false",
+                "type": "group"
+            },
+            {
+                "pid": 12,
+                "name": "离线卫星影像图",
+                "type": "arcgis_tile",
+                "url": "https://kc3.kcgis.cn:31005/kcgis/services/syssimg/MapServer",
+                "minZoom": 0,
+                "maxZoom": 21,
+                "maxNativeZoom": 20,
+                "visible": false
+            },
+            {
+                "pid": 12,
+                "name": "天地图标注",
+                "icon": "tiandituimage.png",
+                "type": "www_tdt",
+                "layer": "img_z",
+                "visible": false,
+                "key": [
+                    "1fc272471d37137f5618f7752a4ec1b1",
+                    "a4fe2b7da8001e4e72d2cdede741002b",
+                    "eedfe8f60fd33e03c1cfcf5c02b11bc9",
+                    "1bcee50876badf926d670a4536f5d6aa"
+                ],
+                "crs": ""
+            },
+            {
+                "name": "正射投影",
+                "pid": 12,
+                "type": "arcgis_tile",
+                "url": "https://kc3.kcgis.cn:31005/kcgis/services/hfzsimg/MapServer",
+                "minZoom": 0,
+                "maxZoom": 22,
+                "maxNativeZoom": 20,
+                "visible": false
+            },
+            {
+                "name": "CAD底图",
+                "pid": 1,
+                "type": "arcgis_tile",
+                "url": "https://kc3.kcgis.cn:31005/kcgis/services/sysscad/MapServer",
+                "minZoom": 0,
+                "maxZoom": 22,
+                "maxNativeZoom": 20,
+                "visible": false
+            }
+        ],
+        "operationallayers": [
+            {
+                "name": "综合管网",
+                "id": 2,
+                "order": 1,
+                "type": "group"
+            },
+            {
+                "id": 101,
+                "name": "管线图层",
+                "label": "排水管线",
+                "pid": 2,
+                "order": 7,
+                "visible": true,
+                "fields": [],
+                "pixi": {
+                    "fields": [
+                        "objectId",
+                        "type",
+                        "subtype"
+                    ]
+                },
+                "type": "kcgis_featurelayer_pixi",
+                "styleName": "StreamLayer",
+                "drawTrack": 10,
+                "cellSize": 512,
+                "group": "",
+                "where": "'defaultversion'='1' and version='20221206113645'",
+                "mode": {
+                    "type": "ondemand",
+                    "where": " shape !='' and 1=1"
+                },
+                "sync": true,
+                "intervalQuery": 10000,
+                "url": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsMap/FeatureServer/syhfssLineLayer",
+                "featureUrl": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsMap/FeatureServer/syhfssLineLayer",
+                "iconWidth": 36,
+                "iconHeight": 88,
+                "open": "true",
+                "queryType": "subscribe",
+                "isInitLoad": false,
+                "geometrytype": "polyline",
+                "tooltip": "{objectId}",
+                "symbol": {
+                    "styleField": "subtype",
+                    "styleOptions": {
+                        "default": {
+                            "name": "默认",
+                            "type": "SLS",
+                            "style": "SLSSolid",
+                            "color": "0x000000",
+                            "opacity": 1,
+                            "width": 3
+                        },
+                        "YS": {
+                            "name": "雨水",
+                            "type": "SLS",
+                            "style": "SLSSolid",
+                            "color": "0x0000ff",
+                            "opacity": 1,
+                            "width": 3
+                        },
+                        "WS": {
+                            "name": "污水",
+                            "type": "SLS",
+                            "style": "SLSSolid",
+                            "color": "0xFB1200",
+                            "opacity": 1,
+                            "width": 3
+                        },
+                        "HS": {
+                            "name": "合水",
+                            "type": "SLS",
+                            "style": "SLSSolid",
+                            "color": "0xcd853f",
+                            "opacity": 1,
+                            "width": 3
+                        }
+                    }
+                },
+                "minZoom": 0,
+                "maxZoom": 21,
+                "popup": {
+                    "url": "cdkc_pipe/2d/ps_syss/popup/lineLayer/popup.html",
+                    "mousePostion": true,
+                    "width": 730,
+                    "height": 360
+                }
+            },
+            {
+                "id": 102,
+                "name": "管点图层",
+                "label": "排水管点",
+                "pid": 2,
+                "order": 8,
+                "cellSize": 512,
+                "drawTrack": 10,
+                "url": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsMap/FeatureServer/syhfssPointLayer",
+                "featureUrl": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsMap/FeatureServer/syhfssPointLayer",
+                "fields": [
+                    "objectId",
+                    "type",
+                    "subtype",
+                    "feature"
+                ],
+                "visible": true,
+                "geometrytype": "point",
+                "group": "",
+                "iconHeight": 88,
+                "iconWidth": 36,
+                "intervalQuery": 10000,
+                "isInitLoad": false,
+                "minZoom": 0,
+                "maxZoom": 21,
+                "mode": {
+                    "type": "ondemand",
+                    "where": " shape !='' and 1=1"
+                },
+                "open": "true",
+                "pixi": {
+                    "fields": [
+                        "objectId",
+                        "type",
+                        "subtype",
+                        "feature"
+                    ]
+                },
+                "popup": {
+                    "mousePostion": false,
+                    "url": "cdkc_pipe/2d/ps_syss/popup/pointLayer/popup.html",
+                    "width": 728,
+                    "height": 360
+                },
+                "queryType": "subscribe",
+                "styleName": "StreamLayer",
+                "symbol": {
+                    "styleField": "subtype",
+                    "styleField2": "feature",
+                    "styleOptions": {
+                        "default": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/1x/PS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,户出": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,非普点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/FP.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,非普查": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/FP.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,污水篦": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/WB.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,污水井": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/WJ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,变材": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/BC.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,变材点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/BC.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,六通": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,立管": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,多通": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/DT.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,多通点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/DT.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,弯头": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/WT.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,直线点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,进水口": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/JSK.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,雨水篦": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/YB.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,暗井": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,探测点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,变径": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/BJ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,变径点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/BJ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,偏心点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,五通": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,出水口": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/CSK.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,预留口": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/YLK.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,ZZ": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/ZZ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,转折": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/ZZ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,转折点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/ZZ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,拐点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/GD.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,入户": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/RH.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,四通": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/4T.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,三通": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/3T.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "YS,雨水井": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/YS/YJ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,户出": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,非普点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/FP.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,非普查": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/FP.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,污水篦": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/WB.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,污水井": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/WJ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,变材": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/BC.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,变材点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/BC.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,六通": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,立管": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,多通": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/DT.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,多通点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/DT.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,弯头": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/WT.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,直线点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,进水口": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/JSK.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,雨水篦": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/YB.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,暗井": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,探测点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,变径": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/BJ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,变径点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/BJ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,偏心点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,五通": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/ZX.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,出水口": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/CSK.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,预留口": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/YLK.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,ZZ": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/ZZ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,转折": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/ZZ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,转折点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/ZZ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,拐点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/GD.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,入户": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/RH.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,四通": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/4T.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,三通": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/3T.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "WS,雨水井": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/WS/YJ.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        }
+                    }
+                },
+                "sync": true,
+                "type": "kcgis_featurelayer_pixi",
+                "where": "'defaultversion'='1' and version='20221206113645'"
+            },
+            {
+                "id": 103,
+                "name": "附属设施",
+                "label": "附属设施",
+                "pid": 2,
+                "order": 8,
+                "cellSize": 512,
+                "drawTrack": 10,
+                "url": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsMap/FeatureServer/syhfssPointLayer",
+                "featureUrl": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsMap/FeatureServer/syhfssPointLayer",
+                "fields": [
+                    "objectId",
+                    "type",
+                    "subtype",
+                    "feature",
+                    "subside"
+                ],
+                "visible": true,
+                "geometrytype": "point",
+                "group": "",
+                "iconHeight": 88,
+                "iconWidth": 36,
+                "intervalQuery": 10000,
+                "isInitLoad": false,
+                "minZoom": 0,
+                "maxZoom": 21,
+                "mode": {
+                    "type": "ondemand",
+                    "where": " shape !='' and 1=1"
+                },
+                "open": "false",
+                "pixi": {
+                    "fields": [
+                        "objectId",
+                        "type",
+                        "subtype",
+                        "feature",
+                        "subside"
+                    ]
+                },
+                "popup": {
+                    "mousePostion": false,
+                    "url": "cdkc_pipe/2d/ps_syss/popup/pointLayer/popup.html",
+                    "width": 728,
+                    "height": 360
+                },
+                "queryType": "subscribe",
+                "styleName": "StreamLayer",
+                "symbol": {
+                    "styleField": "subside",
+                    "styleOptions": {
+                        "default": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/js/1x/qt.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "污水井": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/js/1x/wsj.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "污水篦": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/js/1x/wsb.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "雨水井": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/js/1x/ysj.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "雨水篦": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/js/1x/ysb.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "暗井": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/js/1x/aj.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "立管": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/js/1x/lg.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "非普查": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/js/1x/fpc.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "非普点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/js/1x/fpc.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        }
+                    }
+                },
+                "sync": true,
+                "type": "kcgis_featurelayer_pixi",
+                "where": " defaultversion='1' and 1=0 "
+            },
+            {
+                "name": "传感器",
+                "id": 3,
+                "order": 1,
+                "type": "group"
+            },
+            {
+                "id": 31,
+                "pid": 3,
+                "name": "监测设备",
+                "label": "监测设备",
+                "visible": true,
+                "fields": [
+                    "objectId",
+                    "globalId",
+                    "pipe_type",
+                    "online_state",
+                    "warning_state",
+                    "enable_warning",
+                    "alarm_process_state"
+                ],
+                "type": "kcgis_stream_pixi",
+                "styleName": "StreamLayer",
+                "drawTrack": 10,
+                "cellSize": 512,
+                "pixi": {
+                    "fields": [
+                        "objectId",
+                        "globalId",
+                        "pipe_type",
+                        "online_state",
+                        "warning_state",
+                        "enable_warning",
+                        "alarm_process_state"
+                    ]
+                },
+                "group": "",
+                "where": "1=0 ",
+                "mode": {
+                    "type": "queryall",
+                    "where": " shape !=''"
+                },
+                "sync": true,
+                "intervalQuery": 300,
+                "url": "https://kc3.kcgis.cn:30170/kcgis/services/syzhpsStream/StreamServer/syssDevicePointLayer",
+                "featureUrl": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsStream/FeatureServer/syssDevicePointLayer",
+                "iconWidth": 36,
+                "iconHeight": 88,
+                "open": "false",
+                "order": "6",
+                "queryType": "subscribe",
+                "isInitLoad": false,
+                "geometrytype": "point",
+                "field": "collection",
+                "symbol": {
+                    "styleField": "pipe_type",
+                    "styleField2": "warning_state",
+                    "styleOptions": {
+                        "default": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps/1x/ysb.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "雨水": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/sb_ys.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "污水": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/sb_ws.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "雨水,异常": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/sb_dtb.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "污水,异常": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/sb_dtb.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "雨水,正常": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/sb_ys.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "污水,正常": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/sb_ws.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                0.5
+                            ]
+                        }
+                    }
+                },
+                "minZoom": 0,
+                "maxZoom": 24,
+                "popup": {
+                    "url": "cdkc_pipe/2d/ps_syss/popup/deviceLayer/popup.html",
+                    "width": 700,
+                    "height": 400
+                }
+            },
+            {
+                "id": 32,
+                "pid": 3,
+                "name": "控制设备",
+                "label": "控制设备",
+                "visible": true,
+                "fields": [
+                    "objectId",
+                    "globalId",
+                    "pipe_type",
+                    "online_state",
+                    "warning_state",
+                    "enable_warning"
+                ],
+                "type": "kcgis_stream_pixi",
+                "styleName": "StreamLayer",
+                "drawTrack": 10,
+                "cellSize": 512,
+                "pixi": {
+                    "fields": [
+                        "objectId",
+                        "globalId",
+                        "pipe_type",
+                        "online_state",
+                        "warning_state",
+                        "enable_warning"
+                    ]
+                },
+                "group": "",
+                "where": "1=0 ",
+                "mode": {
+                    "type": "queryall",
+                    "where": " shape !=''"
+                },
+                "sync": true,
+                "intervalQuery": 300,
+                "url": "https://kc3.kcgis.cn:30170/kcgis/services/syzhpsStream/StreamServer/syssControlDevicePointLayer",
+                "featureUrl": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsStream/FeatureServer/syssControlDevicePointLayer",
+                "iconWidth": 36,
+                "iconHeight": 88,
+                "ctrl_model": [
+                    {
+                        "下开堰I型": "http://58.49.128.78:801/runview.aspx?filename=sddyZ3"
+                    },
+                    {
+                        "下开堰II型": "http://58.49.128.78:801/runview.aspx?filename=t5"
+                    },
+                    {
+                        "柔性分流装置I型": "http://modb.shengyupaishui.com:801/runview.aspx?filename=qa3new"
+                    },
+                    {
+                        "柔性分流装置II型": "http://58.49.128.78:801/runview.aspx?filename=thrxj"
+                    }
+                ],
+                "open": "false",
+                "order": "6",
+                "queryType": "subscribe",
+                "isInitLoad": false,
+                "geometrytype": "point",
+                "field": "collection",
+                "symbol": {
+                    "styleField": "order_type",
+                    "styleOptions": {
+                        "default": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/dflj.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                1
+                            ]
+                        },
+                        "下开式堰门": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/dflj.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                1
+                            ]
+                        },
+                        "分流井": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/dflj.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                1
+                            ]
+                        }
+                    }
+                },
+                "minZoom": 0,
+                "maxZoom": 24,
+                "popup": {
+                    "url": "cdkc_pipe/2d/ps_syss/popup/controlLayer/popup.html",
+                    "width": 700,
+                    "height": 450
+                }
+            },
+            {
+                "id": 33,
+                "pid": 3,
+                "name": "核心设施",
+                "label": "核心设施",
+                "visible": true,
+                "fields": [
+                    "objectId",
+                    "globalId",
+                    "type"
+                ],
+                "type": "kcgis_stream_pixi",
+                "styleName": "StreamLayer",
+                "drawTrack": 10,
+                "cellSize": 512,
+                "pixi": {
+                    "fields": [
+                        "objectId",
+                        "globalId",
+                        "type"
+                    ]
+                },
+                "group": "",
+                "where": "1=0 ",
+                "mode": {
+                    "type": "queryall",
+                    "where": " shape !=''"
+                },
+                "sync": true,
+                "url": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsMap/FeatureServer/syssAssetsLayer",
+                "featureUrl": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsMap/FeatureServer/syssAssetsLayer",
+                "iconWidth": 36,
+                "iconHeight": 88,
+                "open": "false",
+                "order": "6",
+                "queryType": "subscribe",
+                "isInitLoad": false,
+                "geometrytype": "point",
+                "symbol": {
+                    "styleField": "type",
+                    "styleOptions": {
+                        "default": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps/1x/bz.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                1
+                            ]
+                        },
+                        "调蓄池": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/dtxc.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                1
+                            ]
+                        },
+                        "泵站": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/dbz.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                1
+                            ]
+                        },
+                        "排口": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/dpk.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                1
+                            ]
+                        },
+                        "易涝点": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/dyld.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                1
+                            ]
+                        },
+                        "污水处理厂": {
+                            "iconUrl": "cdkc_pipe/res/mapicon/ps_syss/dwsc.png",
+                            "popupAnchor": [
+                                10,
+                                -17
+                            ],
+                            "iconAnchor": [
+                                0.5,
+                                1
+                            ]
+                        }
+                    }
+                },
+                "minZoom": 0,
+                "maxZoom": 24,
+                "popup": {
+                    "url": "cdkc_pipe/2d/ps_syss/popup/assetsLayer/popup.html",
+                    "width": 600,
+                    "height": 280
+                }
+            },
+            {
+                "name": "面图层",
+                "label": "面图层",
+                "visible": true,
+                "fields": [
+                    "objectId",
+                    "parent_name"
+                ],
+                "type": "kcgis_featurelayer_pixi",
+                "styleName": "StreamLayer",
+                "drawTrack": 10,
+                "cellSize": 512,
+                "pixi": {
+                    "fields": [
+                        "objectId",
+                        "parent_name"
+                    ]
+                },
+                "group": "",
+                "where": "1=0",
+                "mode": {
+                    "type": "queryall",
+                    "where": " shape !=''"
+                },
+                "sync": true,
+                "intervalQuery": 10000,
+                "url": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsMap/FeatureServer/syssAreaLayer",
+                "featureUrl": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsMap/FeatureServer/syssAreaLayer",
+                "iconWidth": 36,
+                "iconHeight": 88,
+                "open": "false",
+                "order": "6",
+                "queryType": "subscribe",
+                "isInitLoad": false,
+                "geometrytype": "polygon",
+                "symbol": {
+                    "styleField": "parent_name",
+                    "styleOptions": {
+                        "default": {
+                            "style": "Solid",
+                            "color": "0xebe967",
+                            "width": 5,
+                            "opacity": 0.5,
+                            "outline": {
+                                "color": "0xF9D605",
+                                "opacity": 0.5,
+                                "width": 5
+                            }
+                        },
+                        "0": {
+                            "style": "Solid",
+                            "color": "0xebe967",
+                            "width": 5,
+                            "opacity": 0.5,
+                            "outline": {
+                                "color": "0xF9D605",
+                                "opacity": 0.5,
+                                "width": 5
+                            }
+                        },
+                        "A区": {
+                            "style": "Solid",
+                            "color": "0x008000",
+                            "width": 5,
+                            "opacity": 0.5,
+                            "outline": {
+                                "color": "0xF9D605",
+                                "opacity": 0.5,
+                                "width": 5
+                            }
+                        },
+                        "B区": {
+                            "style": "Solid",
+                            "color": "0x006CA9",
+                            "width": 5,
+                            "opacity": 0.5,
+                            "outline": {
+                                "color": "0xF9D605",
+                                "opacity": 0.5,
+                                "width": 5
+                            }
+                        }
+                    }
+                },
+                "field": "parent_name",
+                "minZoom": 0,
+                "maxZoom": 24,
+                "tooltip": "{parent_name}"
+            }
+        ]
+    },
+    "widget": {
+        "debugger": false,
+        "version": "202212071710",
+        "defaultOptions": {
+            "windowOptions": {
+                "position": "",
+                "maxmin": true,
+                "resize": true,
+                "closeBtn": true
+            },
+            "autoDisable": true,
+            "disableOhter": true
+        },
+        "widgetsAtStart": [
+            {
+                "name": "系统初始化",
+                "uri": "widgets_pipe/2d_init/widget.js"
+            },
+            {
+                "name": "顶部",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_top/widget.js",
+                "deviceLayer": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsStream/FeatureServer/syssDevicePointLayer",
+                "type": "2d",
+                "css": {
+                    "top": "10px",
+                    "left": "10px",
+                    "right": 0
+                }
+            },
+            {
+                "name": "图例",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_tlzs/widget.js",
+                "lineLayerUrl": "https://kc3.kcgis.cn:30130/kcgis/services/syzhpsMap/FeatureServer/syhfssLineLayer",
+                "subtype": true,
+                "css": {
+                    "bottom": "20px",
+                    "right": "350px"
+                }
+            },
+            {
+                "name": "搜索",
+                "uri": "cdkc_pipe_widgets/pipe_find2/widget.js",
+                "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_find.json",
+                "css": {
+                    "width": "350px",
+                    "left": "340px",
+                    "top": "75px"
+                }
+            }
+        ],
+        "widgets": [
+            {
+                "id": "map_manage",
+                "name": "地图管理",
+                "type": "group",
+                "icon": "iconjsy_menu",
+                "menu": true,
+                "children": [
+                    {
+                        "id": "2d_manageLayers",
+                        "name": "图层管理",
+                        "uri": "widgets_pipe/2d_manageLayers/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/2d_manageLayers.json",
+                        "autoDisable": false,
+                        "disableOhter": false,
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "noTitle": false,
+                            "width": 300,
+                            "position": {
+                                "top": 75,
+                                "bottom": 30,
+                                "left": 10
+                            },
+                            "maxmin": false,
+                            "closeBtn": true,
+                            "resize": true
+                        },
+                        "openAtStart": true
+                    },
+                    {
+                        "id": "pipe_2d3d_zbdw",
+                        "name": "坐标定位",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_zbdw/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "height": 150,
+                            "position": {
+                                "bottom": 30,
+                                "left": 320
+                            },
+                            "maxmin": false,
+                            "resize": false,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_multi_locate",
+                        "name": "坐标定位Plus",
+                        "uri": "cdkc_pipe_widgets/pipe_multi_locate/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "height": 300,
+                            "position": {
+                                "bottom": 30,
+                                "left": 320
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d_measure",
+                        "name": "测量",
+                        "uri": "cdkc_pipe_widgets/pipe_2d_measure/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 405,
+                            "height": 95,
+                            "autoDisable": false,
+                            "disableOhter": false,
+                            "position": {
+                                "bottom": 30,
+                                "left": 320
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "disableOhter": false
+                    }
+                ]
+            },
+            {
+                "id": "pipe_query",
+                "name": "管网查询",
+                "type": "group",
+                "icon": "cdkc_xunjian",
+                "menu": true,
+                "children": [
+                    {
+                        "id": "pipe_2d3d_quicksearch",
+                        "name": "快速查询",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_quicksearch/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_2d3d_quicksearch.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 650,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_kjcx",
+                        "name": "空间查询",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_kjcx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_2d3d_kjcx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "height": 700,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_zbcx",
+                        "name": "周边查询",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_zbcx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_2d3d_zbcx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_gjcx",
+                        "name": "高级查询",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_gjcx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_2d3d_gjcx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 650,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    }
+                ]
+            },
+            {
+                "id": "pipe_analyse",
+                "name": "管网分析",
+                "type": "group",
+                "icon": "cdkc_tongji",
+                "menu": true,
+                "children": [
+                    {
+                        "id": "pipe_2d3d_lxfx",
+                        "name": "流向分析",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_lxfx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_lxfx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "height": 300,
+                            "position": {
+                                "left": 10,
+                                "top": 75
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_hlfx",
+                        "name": "汇流分析",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_hlfx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_lxfx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "height": 300,
+                            "position": {
+                                "left": 10,
+                                "top": 75
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_gdlhfx",
+                        "name": "管点老化分析",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_gdlhfx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_gdlhfx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 590,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_gxlhfx",
+                        "name": "管线老化分析",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_gxlhfx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_gxlhfx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 590,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_spjjfx",
+                        "name": "水平净距分析",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_spjjfx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_spjjfx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_czjjfx",
+                        "name": "垂直净距分析",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_czjjfx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_czjjfx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_bgfx",
+                        "name": "爆管分析",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_bgfx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_bgfx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_hpmfx",
+                        "name": "横剖面分析",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_hpmfx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_hpmfx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 740,
+                            "height": 700,
+                            "position": {
+                                "top": 60,
+                                "right": 0
+                            },
+                            "maxmin": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_zpmfx",
+                        "name": "纵剖面分析",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_zpmfx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_zpmfx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 740,
+                            "height": 700,
+                            "position": {
+                                "top": 60,
+                                "right": 0
+                            },
+                            "maxmin": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_ltxfx",
+                        "name": "连通性分析",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_ltxfx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_ltxfx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 740,
+                            "height": 635,
+                            "position": {
+                                "top": 60,
+                                "right": 0
+                            },
+                            "maxmin": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    }
+                ]
+            },
+            {
+                "id": "pipe_edit",
+                "name": "管网编辑",
+                "type": "group",
+                "menu": true,
+                "icon": "cdkc_bianji",
+                "children": [
+                    {
+                        "id": "pipe_2d3d_sxbj_gd",
+                        "name": "管点属性编辑",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_sxbj_gd/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_sxbj_gd.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 450,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_sxbj_gx",
+                        "name": "管线属性编辑",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_sxbj_gx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_sxbj_gx.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 450,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_sxbj_gxlj",
+                        "name": "管线连接编辑",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_sxbj_gxlj/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_sxbj_gxlj.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 360,
+                            "height": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "collection_gwbj",
+                        "name": "管网编辑",
+                        "uri": "cdkc_pipe_widgets/collection_gwbj/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/collection_gwbj.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "height": 350,
+                            "position": {
+                                "left": 10,
+                                "top": 10
+                            },
+                            "disableOhter": true,
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "autoDisable": false,
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_editFeature",
+                        "name": "管网编辑",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_editFeature/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/edit_network.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "col-pipe-pointAdd",
+                        "name": "新增管点",
+                        "uri": "cdkc_pipe_widgets/collection_add_gd/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/collection_sxbj_gd.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "col-pipe-lineAdd",
+                        "name": "新增管线",
+                        "uri": "cdkc_pipe_widgets/collection_add_gx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/collection_sxbj_gx.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "col-pipe-propertyEdit",
+                        "name": "管点属性编辑",
+                        "uri": "cdkc_pipe_widgets/collection_sxbj_gd/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/collection_sxbj_gd.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "col-pipeProperty-LineEdit",
+                        "name": "管线属性编辑",
+                        "uri": "cdkc_pipe_widgets/collection_sxbj_gx/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/collection_sxbj_gx.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "gatherPoints",
+                        "name": "开始收点",
+                        "uri": "cdkc_pipe_widgets/collection_add_sur_num/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/collection_startMeasure_many.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "PointsNotMeasure",
+                        "name": "未测量点",
+                        "uri": "cdkc_pipe_widgets/collection_unmeasured/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/collection_startMeasure_many.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "col-importData",
+                        "name": "导入数据",
+                        "uri": "cdkc_pipe_widgets/collection_importCsv/widget.js",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "gatherPointsinOrder",
+                        "name": "逐条收点",
+                        "uri": "cdkc_pipe_widgets/collection_startMeasure_one/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/collection_startMeasure_many.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "gatherPointsAlot",
+                        "name": "批量收点",
+                        "uri": "cdkc_pipe_widgets/collection_startMeasure_many/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/collection_startMeasure_many.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "col-pipe_check",
+                        "name": "管网检查",
+                        "uri": "cdkc_pipe_widgets/collection_pipe_check/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/collection_startMeasure_many.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_inputnetwork2",
+                        "name": "数据导入",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_inputnetwork/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_2d3d_inputnetwork.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 780,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    }
+                ]
+            },
+            {
+                "id": "pipe_statistics",
+                "name": "管网统计",
+                "type": "group",
+                "menu": true,
+                "icon": "cdkc_tongji1",
+                "children": [
+                    {
+                        "id": "pipe_2d3d_gwtj",
+                        "name": "管网统计",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_gwtj/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_2d3d_gwtj.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "disableOhter": true,
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_gwlhtj",
+                        "name": "管网老化统计",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_gwlhtj/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_2d3d_gwlhtj.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "disableOhter": true,
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_gdtj",
+                        "name": "管点统计",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_gdtj/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_gdtj.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "disableOhter": true,
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_gdlhtj",
+                        "name": "管点老化统计",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_gdlhtj/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_gdlhtj.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_gxtj",
+                        "name": "管线统计",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_gxtj/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_gxtj.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_gxlhtj",
+                        "name": "管线老化统计",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_gxlhtj/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_gxlhtj.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "pipe_2d3d_statistics",
+                        "name": "综合统计",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_statistics/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_gwtj.json",
+                        "lineLayerUrl": "syzhpsMap/FeatureServer/syhfssLineLayer",
+                        "pointLayerUrl": "syzhpsMap/FeatureServer/syhfssPointLayer",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "css": {
+                            "right": 10,
+                            "top": 75,
+                            "bottom": 20
+                        },
+                        "openAtStart": true
+                    }
+                ]
+            },
+            {
+                "id": "export_print",
+                "name": "输出打印",
+                "type": "group",
+                "menu": true,
+                "icon": "cdkc_dayin",
+                "children": [
+                    {
+                        "id": "2d_print",
+                        "name": "打印",
+                        "uri": "cdkc_pipe_widgets/2d_print_f/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "autoDisable": false,
+                        "disableOhter": false,
+                        "windowOptions": {
+                            "width": 574,
+                            "position": {
+                                "top": 300,
+                                "bottom": 300,
+                                "right": 500
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        }
+                    },
+                    {
+                        "id": "DaochuExcel",
+                        "name": "导出EXCEL",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_export_excel/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_2d3d_export_excel.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 490,
+                            "height": 700,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "DaochuCad",
+                        "name": "导出CAD",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_export_cad/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_2d3d_export_cad.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 480,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "DaochuCad_Plus",
+                        "name": "高级导出CAD",
+                        "uri": "cdkc_pipe_widgets/pipe_2d3d_export_cad_version/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_2d3d_export_cad.json",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 480,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    }
+                ]
+            },
+            {
+                "id": "cdkc_ywfx",
+                "name": "业务分析",
+                "type": "group",
+                "menu": true,
+                "icon": "cdkc_dayin",
+                "children": [
+                    {
+                        "id": "history_data",
+                        "name": "数据统计",
+                        "uri": "widgets_ps/syss_data_statics/widget.js",
+                        "icon": "cdkc_caidan",
+                        "menu": true,
+                        "windowOptions": {
+                            "position": {
+                                "left": 330,
+                                "top": 75,
+                                "right": 10,
+                                "bottom": 30
+                            },
+                            "disableOhter": true,
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "multi_devices_analyse",
+                        "name": "实时比对",
+                        "uri": "cdkc_pipe_widgets/monitors_contrast/widget.js",
+                        "configfile": "cdkc_pipe/2d/ps_syss/configs/pipe_2d3d_kjcx.json",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 600,
+                            "height": 700,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "maxmin": false,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "yshjfx",
+                        "name": "雨水混错接",
+                        "uri": "widgets_ps/syss_ys_analyse/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "position": {
+                                "left": 330,
+                                "top": 75,
+                                "right": 10,
+                                "bottom": 30
+                            },
+                            "disableOhter": true,
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "wsqtwsfx",
+                        "name": " 污水（雨天）外水接入",
+                        "uri": "widgets_ps/syss_wsyt_analyse/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "position": {
+                                "left": 330,
+                                "top": 75,
+                                "right": 10,
+                                "bottom": 30
+                            },
+                            "disableOhter": true,
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "wsytwsfx",
+                        "name": "污水（晴天）外水接入",
+                        "uri": "widgets_ps/syss_wsqt_analyse/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "position": {
+                                "left": 330,
+                                "top": 75,
+                                "right": 10,
+                                "bottom": 30
+                            },
+                            "disableOhter": true,
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "name": "业务分析列表",
+                        "uri": "widgets_ps/syss_alarm_module/widget.js",
+                        "alarmLayer": "https://kc3.kcgis.cn:30170/kcgis/services/syzhpsStream/StreamServer/syssAlarmLayer",
+                        "menu": false,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "width": 320,
+                            "position": {
+                                "right": 10,
+                                "top": 75,
+                                "bottom": 20
+                            },
+                            "disableOhter": true,
+                            "maxmin": true,
+                            "resize": true,
+                            "closeBtn": true
+                        },
+                        "openAtStart": false
+                    }
+                ]
+            },
+            {
+                "id": "sys_manage",
+                "name": "系统管理",
+                "type": "group",
+                "menu": true,
+                "icon": "iconjsy_menu",
+                "children": [
+                    {
+                        "id": "base_deploy",
+                        "name": "基础配置",
+                        "uri": "cdkc_pipe_widgets/cdkc_base_config/widget.js",
+                        "resources": "xj_jczygl",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "position": {
+                                "top": 68,
+                                "left": 10,
+                                "right": 20,
+                                "bottom": 15
+                            },
+                            "maxmin": false,
+                            "closeBtn": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "id": "company_manage",
+                        "name": "公司管理",
+                        "uri": "widgets_sys/dwzz_company/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "position": {
+                                "top": 68,
+                                "left": 10,
+                                "right": 20,
+                                "bottom": 15
+                            },
+                            "maxmin": false,
+                            "closeBtn": true,
+                            "resize": true
+                        },
+                        "autoDisable": false,
+                        "disableOhter": false
+                    },
+                    {
+                        "id": "dwzz_department",
+                        "name": "部门管理",
+                        "uri": "widgets_sys/dwzz_department/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "position": {
+                                "top": 68,
+                                "left": 10,
+                                "right": 20,
+                                "bottom": 15
+                            },
+                            "maxmin": false,
+                            "closeBtn": true,
+                            "resize": true
+                        },
+                        "autoDisable": false,
+                        "disableOhter": false
+                    },
+                    {
+                        "id": "role_manage",
+                        "name": "角色管理",
+                        "uri": "widgets_sys/dwzz_role/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "position": {
+                                "top": 68,
+                                "left": 10,
+                                "right": 20,
+                                "bottom": 15
+                            },
+                            "maxmin": false,
+                            "closeBtn": true,
+                            "resize": true
+                        },
+                        "autoDisable": false,
+                        "disableOhter": false
+                    },
+                    {
+                        "id": "UserManage",
+                        "name": "用户管理",
+                        "uri": "widgets_sys/dwzz_user/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "position": {
+                                "top": 68,
+                                "left": 10,
+                                "right": 20,
+                                "bottom": 15
+                            },
+                            "maxmin": false,
+                            "closeBtn": true,
+                            "resize": true
+                        },
+                        "autoDisable": false,
+                        "disableOhter": false
+                    },
+                    {
+                        "id": "DataItemManageJSy",
+                        "name": "字典配置",
+                        "uri": "widgets_sys/system_dataItem/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "position": {
+                                "top": 68,
+                                "left": 10,
+                                "right": 20,
+                                "bottom": 15
+                            },
+                            "maxmin": false,
+                            "closeBtn": true,
+                            "resize": true
+                        },
+                        "autoDisable": false,
+                        "disableOhter": false
+                    },
+                    {
+                        "id": "system_docItem",
+                        "name": "文档管理",
+                        "uri": "widgets_sys/system_docItem/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "position": {
+                                "top": 68,
+                                "left": 10,
+                                "right": 20,
+                                "bottom": 15
+                            },
+                            "maxmin": false,
+                            "closeBtn": true,
+                            "resize": true
+                        },
+                        "autoDisable": false,
+                        "disableOhter": false
+                    },
+                    {
+                        "id": "SystemLogJsy",
+                        "name": "系统日志",
+                        "uri": "widgets_sys/system_log/widget.js",
+                        "menu": true,
+                        "icon": "cdkc_caidan",
+                        "windowOptions": {
+                            "position": {
+                                "top": 68,
+                                "left": 10,
+                                "right": 20,
+                                "bottom": 15
+                            },
+                            "maxmin": false,
+                            "closeBtn": true,
+                            "resize": true
+                        },
+                        "autoDisable": false,
+                        "disableOhter": false
+                    }
+                ]
+            }
+        ]
+    },
+    "defaultWindowConfig": {
+        "size": [
+            "300px",
+            "300px"
+        ],
+        "opts": {
+            "shadeClose": false,
+            "shade": 0,
+            "maxmin": false
+        }
+    },
+    "mapToolsLayer": [
+        {
+            "style": {
+                "left": "20px",
+                "bottom": "40px",
+                "border": "2px solid rgba(0,0,0,0.2)",
+                "border-radius": "3px"
+            },
+            "group": [
+                {
+                    "label": "+",
+                    "title": "放大",
+                    "event": {
+                        "click": "map.zoomIn()"
+                    },
+                    "style": {
+                        "width": "35px",
+                        "height": "35px",
+                        "background": "white",
+                        "color": "black"
+                    },
+                    "hoverStyle": {
+                        "width": "35px",
+                        "height": "35px",
+                        "background": "#f4f4f4",
+                        "color": "black"
+                    }
+                },
+                {
+                    "label": "-",
+                    "title": "缩小",
+                    "event": {
+                        "click": "map.zoomOut()"
+                    },
+                    "style": {
+                        "width": "35px",
+                        "height": "35px",
+                        "background": "white",
+                        "color": "black",
+                        "font-size": "35px"
+                    },
+                    "hoverStyle": {
+                        "width": "35px",
+                        "height": "35px",
+                        "background": "#f4f4f4",
+                        "color": "black",
+                        "font-size": "35px"
+                    }
+                },
+                {
+                    "icon": "res/images/icon/map/home.png",
+                    "title": "默认区域",
+                    "event": {
+                        "click": "goHomeExtent()"
+                    },
+                    "style": {
+                        "width": "35px",
+                        "height": "35px",
+                        "background": "white",
+                        "color": "black",
+                        "font-size": "35px"
+                    },
+                    "hoverStyle": {
+                        "width": "35px",
+                        "height": "35px",
+                        "background": "#f4f4f4",
+                        "color": "black",
+                        "font-size": "35px"
+                    }
+                },
+                {
+                    "icon": "res/images/icon/map/fullscreen.png",
+                    "title": "全屏/还原",
+                    "event": {
+                        "click": "map.toggleFullscreen();"
+                    },
+                    "style": {
+                        "width": "35px",
+                        "height": "35px",
+                        "background": "white",
+                        "color": "black",
+                        "font-size": "35px"
+                    },
+                    "hoverStyle": {
+                        "width": "35px",
+                        "height": "35px",
+                        "background": "#f4f4f4",
+                        "color": "black",
+                        "font-size": "35px"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "sys_manage",
+            "name": "系统管理",
+            "type": "group",
+            "menu": true,
+            "icon": "iconjsy_menu",
+            "children": [
+                {
+                    "id": "base_deploy",
+                    "name": "基础配置",
+                    "uri": "cdkc_pipe_widgets/cdkc_base_config/widget.js",
+                    "resources": "xj_jczygl",
+                    "menu": true,
+                    "icon": "cdkc_caidan",
+                    "windowOptions": {
+                        "position": {
+                            "top": 68,
+                            "left": 10,
+                            "right": 20,
+                            "bottom": 15
+                        },
+                        "maxmin": false,
+                        "closeBtn": true,
+                        "resize": true
+                    },
+                    "openAtStart": false
+                },
+                {
+                    "id": "company_manage",
+                    "name": "公司管理",
+                    "uri": "widgets_sys/dwzz_company/widget.js",
+                    "menu": true,
+                    "icon": "cdkc_caidan",
+                    "windowOptions": {
+                        "position": {
+                            "top": 68,
+                            "left": 10,
+                            "right": 20,
+                            "bottom": 15
+                        },
+                        "maxmin": false,
+                        "closeBtn": true,
+                        "resize": true
+                    },
+                    "autoDisable": false,
+                    "disableOhter": false
+                },
+                {
+                    "id": "dwzz_department",
+                    "name": "部门管理",
+                    "uri": "widgets_sys/dwzz_department/widget.js",
+                    "menu": true,
+                    "icon": "cdkc_caidan",
+                    "windowOptions": {
+                        "position": {
+                            "top": 68,
+                            "left": 10,
+                            "right": 20,
+                            "bottom": 15
+                        },
+                        "maxmin": false,
+                        "closeBtn": true,
+                        "resize": true
+                    },
+                    "autoDisable": false,
+                    "disableOhter": false
+                },
+                {
+                    "id": "role_manage",
+                    "name": "角色管理",
+                    "uri": "widgets_sys/dwzz_role/widget.js",
+                    "menu": true,
+                    "icon": "cdkc_caidan",
+                    "windowOptions": {
+                        "position": {
+                            "top": 68,
+                            "left": 10,
+                            "right": 20,
+                            "bottom": 15
+                        },
+                        "maxmin": false,
+                        "closeBtn": true,
+                        "resize": true
+                    },
+                    "autoDisable": false,
+                    "disableOhter": false
+                },
+                {
+                    "id": "UserManage",
+                    "name": "用户管理",
+                    "uri": "widgets_sys/dwzz_user/widget.js",
+                    "menu": true,
+                    "icon": "cdkc_caidan",
+                    "windowOptions": {
+                        "position": {
+                            "top": 68,
+                            "left": 10,
+                            "right": 20,
+                            "bottom": 15
+                        },
+                        "maxmin": false,
+                        "closeBtn": true,
+                        "resize": true
+                    },
+                    "autoDisable": false,
+                    "disableOhter": false
+                },
+                {
+                    "id": "DataItemManageJSy",
+                    "name": "字典配置",
+                    "uri": "widgets_sys/system_dataItem/widget.js",
+                    "menu": true,
+                    "icon": "cdkc_caidan",
+                    "windowOptions": {
+                        "position": {
+                            "top": 68,
+                            "left": 10,
+                            "right": 20,
+                            "bottom": 15
+                        },
+                        "maxmin": false,
+                        "closeBtn": true,
+                        "resize": true
+                    },
+                    "autoDisable": false,
+                    "disableOhter": false
+                },
+                {
+                    "id": "system_docItem",
+                    "name": "文档管理",
+                    "uri": "widgets_sys/system_docItem/widget.js",
+                    "menu": true,
+                    "icon": "cdkc_caidan",
+                    "windowOptions": {
+                        "position": {
+                            "top": 68,
+                            "left": 10,
+                            "right": 20,
+                            "bottom": 15
+                        },
+                        "maxmin": false,
+                        "closeBtn": true,
+                        "resize": true
+                    },
+                    "autoDisable": false,
+                    "disableOhter": false
+                },
+                {
+                    "id": "SystemLogJsy",
+                    "name": "系统日志",
+                    "uri": "widgets_sys/system_log/widget.js",
+                    "menu": true,
+                    "icon": "cdkc_caidan",
+                    "windowOptions": {
+                        "position": {
+                            "top": 68,
+                            "left": 10,
+                            "right": 20,
+                            "bottom": 15
+                        },
+                        "maxmin": false,
+                        "closeBtn": true,
+                        "resize": true
+                    },
+                    "autoDisable": false,
+                    "disableOhter": false
+                }
+            ]
+        }
+    ]
+}

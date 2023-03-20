@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="../../../../lib/include-lib.js" libpath="../../../../lib/" include="jquery,cdkc,jquery.mCustomScrollbar"></script>
+    <link href="../popup.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="title">
+        <span id="popTitle"></span>
+    </div>
+    <div id="context" class='context'>
+
+
+    </div>
+</body>
+<script>
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
+    (function() {
+        /// <summary>
+        /// 引号转义符号
+        /// </summary>
+        String.EscapeChar = '\'';
+
+        /// <summary>
+        /// 替换所有字符串
+        /// </summary>
+        /// <param name="searchValue">检索值</param>
+        /// <param name="replaceValue">替换值</param>
+        String.prototype.replaceAll = function(searchValue, replaceValue) {
+            var regExp = new RegExp(searchValue, "g");
+            return this.replace(regExp, replaceValue);
+        }
+
+        /// <summary>
+        /// 格式化字符串
+        /// </summary>
+        String.prototype.format = function() {
+            var regexp = /\{(\d+)\}/g;
+            var args = arguments;
+            var result = this.replace(regexp, function(m, i, o, n) {
+                return args[i];
+            });
+            return result.replaceAll('%', String.EscapeChar);
+        }
+    })();
+
+    //获取巡检点id
+    var id = getQueryString("id");
+    var xjdid = getQueryString("xjdid");
+    //获取设备id
+    var sbid = getQueryString("sbid");
+    //获取线路id
+    var xlid = getQueryString("xlid");
+    //获取区域id
+    var qyid = getQueryString("qyid");
+    var urlInit = getQueryString("url");
+
+    var name = null;
+    var mainDiv = document.getElementById("context");
+    var html = "<table width='100%' height='100%'   >";
+   
+
+    //巡检点数据获取 
+    if (xjdid) XJDPopup(xjdid)
+    //设备数据获取
+    if (sbid) SBPopup(sbid)
+    async function SETURL(path,globalId){
+        let url= new URL(path,urlInit)
+        url.searchParams.set('returnGeometry', true); 
+        url.searchParams.set('where', `"globalId"='${globalId}'`); 
+        url.searchParams.set('outSr', 4326); 
+        url.searchParams.set('outFields', '*'); 
+        url.searchParams.set('whereEncryption', true); 
+        url.searchParams.set('f', 'json'); 
+        return url
+    }
+    async function XJDPopup(xjdid){
+        let url=await SETURL('inspectionPointLayer/query',xjdid)
+        let response = await fetch(url)
+        results=await response.json();
+        data=results.features;
+        document.getElementById("popTitle").innerHTML="巡检点"
+        html += "<tr><td  width='90px'>巡检点名称" + ":</td><td>" + data[0].attributes.name + "</td></tr>";
+        html += "<tr><td  width='90px'>巡检点编号" + ":</td><td>" + data[0].attributes.objectId + "</td></tr>";
+        html += "<tr><td  width='90px'>最近更新时间" + ":</td><td>" + data[0].attributes.last_edited_date + "</td></tr>";
+        html += "<tr><td  width='90px'>最近更新人员" + ":</td><td>" + data[0].attributes.last_edited_user + "</td></tr>";
+        html += "</table>";
+        mainDiv.innerHTML = html;
+    }
+    async function SBPopup(sbid){
+        let url=await SETURL('deviceLayer/query',sbid)
+        let response = await fetch(url)
+        results=await response.json();
+        data=results.features;
+        document.getElementById("popTitle").innerHTML="巡检设备"
+        html += "<tr><td  width='90px'>设备名称" + ":</td><td>" + data[0].attributes.name + "</td></tr>";
+        html += "<tr><td  width='90px'>设备类型" + ":</td><td>" + data[0].attributes.type + "</td></tr>";
+        html += "<tr><td  width='90px'>设备编码" + ":</td><td>" + data[0].attributes.code + "</td></tr>";
+        html += "<tr><td  width='90px'>备注" + ":</td><td>" + data[0].attributes.projid + "</td></tr>";
+        html += "</table>";
+        mainDiv.innerHTML = html;
+    }
+
+    //线路数据获取
+    if (xlid) {
+        xlid = `'${xlid}'`
+        new Promise((resolve, reject) => {
+            var url = window.top.kckj.config.serviceUrl + 'cdkc_xj/cdkc_xj_xlgl/GetList';
+            var param = {
+                "id": xlid
+            }
+            top.cdkc.httpAsync("post", url, param, function(data) {
+                resolve(data)
+            })
+        }).then(data => {
+            console.log(data);
+            html += "<tr><td  width='90px'>线路名称" + ":</td><td>" + data[0].f_name + "</td></tr>";
+            html += "<tr><td  width='90px'>线路状态" + ":</td><td>" + data[0].f_status + "</td></tr>";
+            html += "<tr><td  width='90px'>巡检点个数" + ":</td><td>" + data[0].f_xjdnum + "</td></tr>";
+            html += "<tr><td  width='90px'>备注" + ":</td><td>" + data[0].f_description + "</td></tr>";
+            html += "<tr><td  width='90px'>巡检点名称" + ":</td><td>" + data[0].f_xjdmc + "</td></tr>";
+            html += "</table>";
+            mainDiv.innerHTML = html;
+        })
+    }
+    //区域数据获取
+    if (qyid) {
+        new Promise((resolve, reject) => {
+            var url = window.top.kckj.config.serviceUrl + 'cdkc_xj/cdkc_xj_qygl/GetList';
+            var param = {
+                "id": qyid
+            }
+            top.cdkc.httpAsync("get", url, param, function(data) {
+                resolve(data)
+            })
+        }).then(data => {
+            console.log(data);
+            html += "<tr><td  width='90px'>区域名称" + ":</td><td>" + data[0].f_name + "</td></tr>";
+            html += "<tr><td  width='90px'>区域状态" + ":</td><td>" + data[0].f_status + "</td></tr>";
+            html += "<tr><td  width='90px'>备注" + ":</td><td>" + data[0].f_description + "</td></tr>";
+            html += "</table>";
+            mainDiv.innerHTML = html;
+        })
+    }
+    // console.log(id);
+
+
+    //parent.kcgis3d.L.esri.query({
+    //    url: url
+    //}).where('"objectId"=' + id).run(function (error, results) {
+    //    if (results == null) return;
+    //    var feaSet = results.features;
+    //    var mainDiv = document.getElementById("context");
+    //    var html = "<table width='100%' height='100%'   >";
+    //    if (feaSet.length > 0) {
+    //        getpopupHtml(feaSet[0], mainDiv);
+    //    }
+
+    //});
+
+
+    //function getpopupHtml(feature, mainDiv) {
+    //    $.getJSON("../popup_gd.json", "", function (jsondata) {
+    //        var html = "<table width='100%' height='100%'   >";
+    //        for (var i = 0; i < jsondata.fields.length; i++) {
+    //            var name = jsondata.fields[i].field.name;
+    //            var alias = jsondata.fields[i].field.alias;
+    //            var translateType = jsondata.fields[i].field.translateType;
+    //            var unit = jsondata.fields[i].field.unit
+    //            var preName = feature.properties[name];
+    //            if (translateType) {
+    //                var translate = getAlais(translateType, feature.properties[name]);
+    //                if (translate == undefined || translate == "undefined") {
+    //                    html += "<tr><td  width='90px'>" + alias + ":</td><td>" + preName + "</td></tr>";
+
+    //                } else {
+    //                    html += "<tr><td  width='90px'>" + alias + ":</td><td>" + translate + "</td></tr>";
+
+    //                }
+    //            }
+    //            else {
+    //                if (unit != null && unit != undefined && unit != '')
+    //                    html += "<tr><td  width='90px'>" + alias + ":</td><td>" + feature.properties[name] + " " + unit + "</td></tr>";
+    //                else
+    //                    html += "<tr><td  width='90px'>" + alias + ":</td><td>" + feature.properties[name] + "</td></tr>";
+    //            }
+    //        }
+    //        html += "</table>";
+    //        mainDiv.innerHTML = html;
+    //        document.getElementById("popTitle").innerHTML = feature.properties[jsondata.title];
+    //        $("#context").mCustomScrollbar({
+    //            axis: "yx",
+    //            theme: "minimal"
+    //        });
+    //    });
+    //}
+
+    function getAlais(translateType, value) {
+
+        for (var i = 0; i < translateType.length; i++) {
+            if (translateType[i].name == value) {
+                return translateType[i].alias;
+            }
+        }
+    }
+    // if (xjdid) {
+    //     // XJDPopup(xjdid)
+    //     // xjdid = `'${xjdid}'`
+    //     new Promise((resolve, reject) => {
+    //         // var url = window.top.kckj.config.serviceUrl + 'cdkc_xj/cdkc_xj_xjdgl/GetList';
+    //         // var param = {
+    //         //     "id": xjdid
+    //         // }
+    //         // console.log(url)
+    //         // console.log(param)
+    //         // top.cdkc.httpAsync("post", url, param, function(data) {
+    //         //     resolve(data)
+    //         // })
+    //         this.parent.L.esri.query({
+    //             url: urlInit
+    //         }).where('"globalId"=\'' + xjdid + "'").run(function (error, results) {
+    //             if (results == null) return;
+    //             var feaSet = results.features;
+    //             resolve(feaSet)
+
+    //         });
+            
+    //     }).then(data => {
+    //         document.getElementById("popTitle").innerHTML="巡检点"
+    //         console.log(data);
+    //         html += "<tr><td  width='90px'>巡检点名称" + ":</td><td>" + data[0].properties.name + "</td></tr>";
+    //         html += "<tr><td  width='90px'>巡检点编号" + ":</td><td>" + data[0].properties.objectId + "</td></tr>";
+    //         html += "<tr><td  width='90px'>最近更新时间" + ":</td><td>" + data[0].properties.last_edited_date + "</td></tr>";
+    //         html += "<tr><td  width='90px'>最近更新人员" + ":</td><td>" + data[0].properties.last_edited_user + "</td></tr>";
+    //         html += "</table>";
+    //         mainDiv.innerHTML = html;
+    //     })
+    // }
+    // if (sbid)
+    // {
+    //     //sbid = `'${sbid}'`
+    //     new Promise((resolve, reject) => {
+    //         var name = null;
+    //         this.parent.L.esri.query({
+    //             url: url
+    //         }).where('"globalId"=\'' + sbid + "'").run(function (error, results) {
+    //             if (results == null) return;
+    //             var feaSet = results.features;
+    //             resolve(feaSet)
+
+    //         });
+
+
+    //     }).then(data => {
+    //         document.getElementById("popTitle").innerHTML="巡检设备"
+    //         console.log(data);
+    //         if(data){
+    //             html += "<tr><td  width='90px'>设备名称" + ":</td><td>" + data[0].properties.name + "</td></tr>";
+    //             html += "<tr><td  width='90px'>设备类型" + ":</td><td>" + data[0].properties.type + "</td></tr>";
+    //             html += "<tr><td  width='90px'>设备编码" + ":</td><td>" + data[0].properties.code + "</td></tr>";
+    //             // html += "<tr><td  width='90px'>生产厂家" + ":</td><td>" + data[0].properties.f_sbcj + "</td></tr>";
+    //             html += "<tr><td  width='90px'>备注" + ":</td><td>" + data[0].properties.projid + "</td></tr>";
+    //             html += "</table>";
+    //         }
+    //         mainDiv.innerHTML = html;
+    //     })
+    // }
+</script>
+
+</html>

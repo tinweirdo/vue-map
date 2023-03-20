@@ -1,0 +1,1280 @@
+{
+  "layer": {
+    "name": "管线图层",
+    "aliasname": "管线图层",
+    "layerInfo": "popup_gx.json",
+    "url": "syzhpsMap/FeatureServer/syhfssLineLayer",
+    "pointUrl": "syzhpsMap/FeatureServer/syhfssPointLayer",
+    "lineUrl": "syzhpsMap/FeatureServer/syhfssLineLayer",
+    "titlefield": "bh",
+    "wherefields": [
+      {
+        "wherefield": {
+          "name": "map_num_s",
+          "alias": "起点号"
+        }
+      }
+    ],
+    "outfields": [
+      {
+        "outfield": {
+          "name": "objectId",
+          "alias": "唯一编号",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "map_num_s",
+          "alias": "起点号",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "map_num_e",
+          "alias": "终点号",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "type",
+          "alias": "管线类型",
+          "translateType": "pipe_line_type",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "subtype",
+          "alias": "管线子类型",
+          "translateType": "pipe_line_subtype",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "grade",
+          "alias": "管线分级",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "symbol",
+          "alias": "代码",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "material",
+          "alias": "管线材料",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "top_h_sn",
+          "alias": "起点管顶高程(米)",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "top_h_en",
+          "alias": "终点管顶高程(米)",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "bot_h_sn",
+          "alias": "起点管底高程(米)",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "bot_h_en",
+          "alias": "终点管底高程(米)",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "cen_deep_sn",
+          "alias": "起点埋深(米)",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "cen_deep_en",
+          "alias": "终点埋深(米)",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "certainty",
+          "alias": "确定性",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "d_s",
+          "alias": "管径/断面尺寸(毫米)",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "cab_num",
+          "alias": "缆线根数",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "remark",
+          "alias": "备注",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "state",
+          "alias": "状态",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "proj_num",
+          "alias": "工程号",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "rec_num",
+          "alias": "建设许可证",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "chk_num",
+          "alias": "验收合格证号",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "belong",
+          "alias": "权属单位",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "build_date",
+          "alias": "建设时间",
+          "width": "100",
+          "isshow": true
+        }
+      }
+    ]
+  },
+  "subtype":{
+    "JS": {
+      "line": {
+        "style": {
+          "color": "#00FFFF",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "SS": {
+      "line": {
+        "style": {
+          "color": "#00FFFF",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "ZS": {
+      "line": {
+        "style": {
+          "color": "#00FFFF",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "XF": {
+      "line": {
+        "style": {
+          "color": "#00FFFF",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "LH": {
+      "line": {
+        "style": {
+          "color": "#00FFFF",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "RL": {
+      "line": {
+        "style": {
+          "color": "#ff8000",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "RS": {
+      "line": {
+        "style": {
+          "color": "#ff8000",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "RSEIW": {
+      "line": {
+        "style": {
+          "color": "#ff8000",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "RSYIW": {
+      "line": {
+        "style": {
+          "color": "#ff8000",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "ZQ": {
+      "line": {
+        "style": {
+          "color": "#ff8000",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "WQ": {
+      "line": {
+        "style": {
+          "color": "#ff8000",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "LQ": {
+      "line": {
+        "style": {
+          "color": "#ff8000",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "TR": {
+      "line": {
+        "style": {
+          "color": "#FF00FF",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "YH": {
+      "line": {
+        "style": {
+          "color": "#FF00FF",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "MQ": {
+      "line": {
+        "style": {
+          "color": "#FF00FF",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "WS": {
+      "line": {
+        "style": {
+          "color": "#4c3926",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "HS": {
+      "line": {
+        "style": {
+          "color": "#4c3926",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "YS": {
+      "line": {
+        "style": {
+          "color": "#4c3926",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    },
+    "default": {
+      "line": {
+        "style": {
+          "color": "#4c3926",
+          "dashArray2": "1, 5",
+          "weight": 6
+        }
+      }
+    }
+  },
+  "markerLabel": {
+    "isShow": true,
+    "style": {
+      "permanent": true,
+      "offset": [10, -15],
+      "direction": "right",
+      "sticky": true,
+      "className": "custom-tooltip"
+    }
+  },
+  "iconStyle": {
+    "BM": {
+      "default": "img/legend/MR.png",
+      "三通": "img/legend/BM3T.png",
+      "不明井": "img/legend/BMBMJ.png",
+      "四通": "img/legend/BM4T.png",
+      "直线": "img/legend/BMZX.png",
+      "转折": "img/legend/BMZZ.png",
+      "检修井": "img/legend/BMBMJ.png"
+    },
+    "DL": {
+      "default": "img/legend/DLMR.png",
+      "A杆": "img/legend/DLAG.png",
+      "GG": "img/legend/DLGG.png",
+      "MG": "img/legend/DLMG.png",
+      "三杆": "img/legend/DLSG.png",
+      "上杆": "img/legend/DLSG2.png",
+      "不明井": "img/legend/DLBMJ.png",
+      "井边": "img/legend/DLJB.png",
+      "人井": "img/legend/DLRJ.png",
+      "人孔": "img/legend/DLRK.png",
+      "人孔井边点": "img/legend/DLRKJBD.png",
+      "信号灯": "img/legend/DLXHD.png",
+      "偏心": "img/legend/DLPX.png",
+      "分支": "img/legend/DLFZ.png",
+      "分线": "img/legend/DLFX.png",
+      "分线箱": "img/legend/DLFXX.png",
+      "变压器": "img/legend/DLBYQ.png",
+      "变材": "img/legend/DLBC.png",
+      "变电站": "img/legend/DLBDZ.png",
+      "广告牌": "img/legend/DLGGP.png",
+      "手井": "img/legend/DLSJ.png",
+      "手孔": "img/legend/DLSK.png",
+      "手孔井边点": "img/legend/DLSKJBD.png",
+      "控制柜": "img/legend/DLKZG.png",
+      "沟边": "img/legend/DLGB.png",
+      "照射灯": "img/legend/DLZSD.png",
+      "环网柜": "img/legend/DLHWG.png",
+      "电井": "img/legend/DLDJ.png",
+      "电人孔": "img/legend/DLDRK.png",
+      "电手孔": "img/legend/DLDSK.png",
+      "电杆": "img/legend/DLDG.png",
+      "电灯": "img/legend/DLDD.png",
+      "电缆余线": "img/legend/DLDLYX.png",
+      "直线": "img/legend/DLZX.png",
+      "箱变": "img/legend/DLXB.png",
+      "路灯": "img/legend/DLLD.png",
+      "转折": "img/legend/DLZZ.png",
+      "配电室": "img/legend/DLPDS.png",
+      "铁塔": "img/legend/DLTT.png",
+      "铁杆": "img/legend/DLTG.png",
+      "非普": "img/legend/DLFP.png",
+      "预留口": "img/legend/DLYLK.png"
+    },
+    "GD": {
+      "default": "img/legend/DLMR.png",
+      "A杆": "img/legend/DLAG.png",
+      "GG": "img/legend/DLGG.png",
+      "MG": "img/legend/DLMG.png",
+      "三杆": "img/legend/DLSG.png",
+      "上杆": "img/legend/DLSG2.png",
+      "不明井": "img/legend/DLBMJ.png",
+      "井边": "img/legend/DLJB.png",
+      "人井": "img/legend/DLRJ.png",
+      "人孔": "img/legend/DLRK.png",
+      "人孔井边点": "img/legend/DLRKJBD.png",
+      "信号灯": "img/legend/DLXHD.png",
+      "偏心": "img/legend/DLPX.png",
+      "分支": "img/legend/DLFZ.png",
+      "分线": "img/legend/DLFX.png",
+      "分线箱": "img/legend/DLFXX.png",
+      "变压器": "img/legend/DLBYQ.png",
+      "变材": "img/legend/DLBC.png",
+      "变电站": "img/legend/DLBDZ.png",
+      "广告牌": "img/legend/DLGGP.png",
+      "手井": "img/legend/DLSJ.png",
+      "手孔": "img/legend/DLSK.png",
+      "手孔井边点": "img/legend/DLSKJBD.png",
+      "控制柜": "img/legend/DLKZG.png",
+      "沟边": "img/legend/DLGB.png",
+      "照射灯": "img/legend/DLZSD.png",
+      "环网柜": "img/legend/DLHWG.png",
+      "电井": "img/legend/DLDJ.png",
+      "电人孔": "img/legend/DLDRK.png",
+      "电手孔": "img/legend/DLDSK.png",
+      "电杆": "img/legend/DLDG.png",
+      "电灯": "img/legend/DLDD.png",
+      "电缆余线": "img/legend/DLDLYX.png",
+      "直线": "img/legend/DLZX.png",
+      "箱变": "img/legend/DLXB.png",
+      "路灯": "img/legend/DLLD.png",
+      "转折": "img/legend/DLZZ.png",
+      "配电室": "img/legend/DLPDS.png",
+      "铁塔": "img/legend/DLTT.png",
+      "铁杆": "img/legend/DLTG.png",
+      "非普": "img/legend/DLFP.png",
+      "预留口": "img/legend/DLYLK.png"
+    },
+    "LD": {
+      "default": "img/legend/DLMR.png",
+      "A杆": "img/legend/DLAG.png",
+      "GG": "img/legend/DLGG.png",
+      "MG": "img/legend/DLMG.png",
+      "三杆": "img/legend/DLSG.png",
+      "上杆": "img/legend/DLSG2.png",
+      "不明井": "img/legend/DLBMJ.png",
+      "井边": "img/legend/DLJB.png",
+      "人井": "img/legend/DLRJ.png",
+      "人孔": "img/legend/DLRK.png",
+      "人孔井边点": "img/legend/DLRKJBD.png",
+      "信号灯": "img/legend/DLXHD.png",
+      "偏心": "img/legend/DLPX.png",
+      "分支": "img/legend/DLFZ.png",
+      "分线": "img/legend/DLFX.png",
+      "分线箱": "img/legend/DLFXX.png",
+      "变压器": "img/legend/DLBYQ.png",
+      "变材": "img/legend/DLBC.png",
+      "变电站": "img/legend/DLBDZ.png",
+      "广告牌": "img/legend/DLGGP.png",
+      "手井": "img/legend/DLSJ.png",
+      "手孔": "img/legend/DLSK.png",
+      "手孔井边点": "img/legend/DLSKJBD.png",
+      "控制柜": "img/legend/DLKZG.png",
+      "沟边": "img/legend/DLGB.png",
+      "照射灯": "img/legend/DLZSD.png",
+      "环网柜": "img/legend/DLHWG.png",
+      "电井": "img/legend/DLDJ.png",
+      "电人孔": "img/legend/DLDRK.png",
+      "电手孔": "img/legend/DLDSK.png",
+      "电杆": "img/legend/DLDG.png",
+      "电灯": "img/legend/DLDD.png",
+      "电缆余线": "img/legend/DLDLYX.png",
+      "直线": "img/legend/DLZX.png",
+      "箱变": "img/legend/DLXB.png",
+      "路灯": "img/legend/DLLD.png",
+      "转折": "img/legend/DLZZ.png",
+      "配电室": "img/legend/DLPDS.png",
+      "铁塔": "img/legend/DLTT.png",
+      "铁杆": "img/legend/DLTG.png",
+      "非普": "img/legend/DLFP.png",
+      "预留口": "img/legend/DLYLK.png"
+    },
+    "DX": {
+      "default": "img/legend/DXMR.png",
+      "上杆": "img/legend/DXSG2.png",
+      "上架": "img/legend/DXSJ.png",
+      "井边点": "img/legend/DXJBD.png",
+      "人井": "img/legend/DXRJ.png",
+      "人孔": "img/legend/DXRK.png",
+      "偏心": "img/legend/DXPX.png",
+      "分支": "img/legend/DXFZ.png",
+      "发射塔": "img/legend/DXFST.png",
+      "变材": "img/legend/DXBC.png",
+      "手孔": "img/legend/DXSK.png",
+      "接线箱": "img/legend/DXJXX.png",
+      "沟边": "img/legend/DXGB.png",
+      "电话亭": "img/legend/DXDHT.png",
+      "监视器": "img/legend/DXJSQ.png",
+      "监控器": "img/legend/DXJKQ.png",
+      "直线": "img/legend/DXZX.png",
+      "转折": "img/legend/DXZZ.png",
+      "通讯机房": "img/legend/DXTXJF.png",
+      "非普": "img/legend/DXFP.png",
+      "预留口": "img/legend/DXYLK.png"
+    },
+    "JK": {
+      "default": "img/legend/DXMR.png",
+      "上杆": "img/legend/DXSG2.png",
+      "上架": "img/legend/DXSJ.png",
+      "井边点": "img/legend/DXJBD.png",
+      "人井": "img/legend/DXRJ.png",
+      "人孔": "img/legend/DXRK.png",
+      "偏心": "img/legend/DXPX.png",
+      "分支": "img/legend/DXFZ.png",
+      "发射塔": "img/legend/DXFST.png",
+      "变材": "img/legend/DXBC.png",
+      "手孔": "img/legend/DXSK.png",
+      "接线箱": "img/legend/DXJXX.png",
+      "沟边": "img/legend/DXGB.png",
+      "电话亭": "img/legend/DXDHT.png",
+      "监视器": "img/legend/DXJSQ.png",
+      "监控器": "img/legend/DXJKQ.png",
+      "直线": "img/legend/DXZX.png",
+      "转折": "img/legend/DXZZ.png",
+      "通讯机房": "img/legend/DXTXJF.png",
+      "非普": "img/legend/DXFP.png",
+      "预留口": "img/legend/DXYLK.png"
+    },
+    "JY": {
+      "default": "img/legend/DXMR.png",
+      "上杆": "img/legend/DXSG2.png",
+      "上架": "img/legend/DXSJ.png",
+      "井边点": "img/legend/DXJBD.png",
+      "人井": "img/legend/DXRJ.png",
+      "人孔": "img/legend/DXRK.png",
+      "偏心": "img/legend/DXPX.png",
+      "分支": "img/legend/DXFZ.png",
+      "发射塔": "img/legend/DXFST.png",
+      "变材": "img/legend/DXBC.png",
+      "手孔": "img/legend/DXSK.png",
+      "接线箱": "img/legend/DXJXX.png",
+      "沟边": "img/legend/DXGB.png",
+      "电话亭": "img/legend/DXDHT.png",
+      "监视器": "img/legend/DXJSQ.png",
+      "监控器": "img/legend/DXJKQ.png",
+      "直线": "img/legend/DXZX.png",
+      "转折": "img/legend/DXZZ.png",
+      "通讯机房": "img/legend/DXTXJF.png",
+      "非普": "img/legend/DXFP.png",
+      "预留口": "img/legend/DXYLK.png"
+    },
+    "LT": {
+      "default": "img/legend/DXMR.png",
+      "上杆": "img/legend/DXSG2.png",
+      "上架": "img/legend/DXSJ.png",
+      "井边点": "img/legend/DXJBD.png",
+      "人井": "img/legend/DXRJ.png",
+      "人孔": "img/legend/DXRK.png",
+      "偏心": "img/legend/DXPX.png",
+      "分支": "img/legend/DXFZ.png",
+      "发射塔": "img/legend/DXFST.png",
+      "变材": "img/legend/DXBC.png",
+      "手孔": "img/legend/DXSK.png",
+      "接线箱": "img/legend/DXJXX.png",
+      "沟边": "img/legend/DXGB.png",
+      "电话亭": "img/legend/DXDHT.png",
+      "监视器": "img/legend/DXJSQ.png",
+      "监控器": "img/legend/DXJKQ.png",
+      "直线": "img/legend/DXZX.png",
+      "转折": "img/legend/DXZZ.png",
+      "通讯机房": "img/legend/DXTXJF.png",
+      "非普": "img/legend/DXFP.png",
+      "预留口": "img/legend/DXYLK.png"
+    },
+    "TV": {
+      "default": "img/legend/DXMR.png",
+      "上杆": "img/legend/DXSG2.png",
+      "上架": "img/legend/DXSJ.png",
+      "井边点": "img/legend/DXJBD.png",
+      "人井": "img/legend/DXRJ.png",
+      "人孔": "img/legend/DXRK.png",
+      "偏心": "img/legend/DXPX.png",
+      "分支": "img/legend/DXFZ.png",
+      "发射塔": "img/legend/DXFST.png",
+      "变材": "img/legend/DXBC.png",
+      "手孔": "img/legend/DXSK.png",
+      "接线箱": "img/legend/DXJXX.png",
+      "沟边": "img/legend/DXGB.png",
+      "电话亭": "img/legend/DXDHT.png",
+      "监视器": "img/legend/DXJSQ.png",
+      "监控器": "img/legend/DXJKQ.png",
+      "直线": "img/legend/DXZX.png",
+      "转折": "img/legend/DXZZ.png",
+      "通讯机房": "img/legend/DXTXJF.png",
+      "非普": "img/legend/DXFP.png",
+      "预留口": "img/legend/DXYLK.png"
+    },
+    "XH": {
+      "default": "img/legend/DXMR.png",
+      "上杆": "img/legend/DXSG2.png",
+      "上架": "img/legend/DXSJ.png",
+      "井边点": "img/legend/DXJBD.png",
+      "人井": "img/legend/DXRJ.png",
+      "人孔": "img/legend/DXRK.png",
+      "偏心": "img/legend/DXPX.png",
+      "分支": "img/legend/DXFZ.png",
+      "发射塔": "img/legend/DXFST.png",
+      "变材": "img/legend/DXBC.png",
+      "手孔": "img/legend/DXSK.png",
+      "接线箱": "img/legend/DXJXX.png",
+      "沟边": "img/legend/DXGB.png",
+      "电话亭": "img/legend/DXDHT.png",
+      "监视器": "img/legend/DXJSQ.png",
+      "监控器": "img/legend/DXJKQ.png",
+      "直线": "img/legend/DXZX.png",
+      "转折": "img/legend/DXZZ.png",
+      "通讯机房": "img/legend/DXTXJF.png",
+      "非普": "img/legend/DXFP.png",
+      "预留口": "img/legend/DXYLK.png"
+    },
+    "YD": {
+      "default": "img/legend/DXMR.png",
+      "上杆": "img/legend/DXSG2.png",
+      "上架": "img/legend/DXSJ.png",
+      "井边点": "img/legend/DXJBD.png",
+      "人井": "img/legend/DXRJ.png",
+      "人孔": "img/legend/DXRK.png",
+      "偏心": "img/legend/DXPX.png",
+      "分支": "img/legend/DXFZ.png",
+      "发射塔": "img/legend/DXFST.png",
+      "变材": "img/legend/DXBC.png",
+      "手孔": "img/legend/DXSK.png",
+      "接线箱": "img/legend/DXJXX.png",
+      "沟边": "img/legend/DXGB.png",
+      "电话亭": "img/legend/DXDHT.png",
+      "监视器": "img/legend/DXJSQ.png",
+      "监控器": "img/legend/DXJKQ.png",
+      "直线": "img/legend/DXZX.png",
+      "转折": "img/legend/DXZZ.png",
+      "通讯机房": "img/legend/DXTXJF.png",
+      "非普": "img/legend/DXFP.png",
+      "预留口": "img/legend/DXYLK.png"
+    },
+    "GY": {
+      "default": "img/legend/GYMR.png",
+      "三通": "img/legend/GY3T.png",
+      "不明井": "img/legend/GYBMJ.png",
+      "井边": "img/legend/GYJB.png",
+      "偏心": "img/legend/GYPX.png",
+      "出地": "img/legend/GYCD.png",
+      "出气缸": "img/legend/GYCQG.png",
+      "出水口": "img/legend/GYCSK.png",
+      "变径": "img/legend/GYBJ.png",
+      "变材": "img/legend/GYBC.png",
+      "四通": "img/legend/GY4T.png",
+      "多通": "img/legend/GYDT.png",
+      "检查井": "img/legend/GYJCJ.png",
+      "直线": "img/legend/GYZX.png",
+      "管堵": "img/legend/GYGD.png",
+      "管帽": "img/legend/GYGM.png",
+      "转折": "img/legend/GYZZ.png",
+      "进水口": "img/legend/GYJSK.png",
+      "阀门": "img/legend/GYFM.png",
+      "阀门井": "img/legend/GYFMJ.png",
+      "非普": "img/legend/GYFP.png",
+      "预留口": "img/legend/GYYLK.png"
+    },
+    "JS": {
+      "default": "img/legend/JSMR.png",
+      "三通": "img/legend/JS3T.png",
+      "不明井": "img/legend/JSBMJ.png",
+      "井边": "img/legend/JSJB.png",
+      "偏心": "img/legend/JSPX.png",
+      "冲洗井": "img/legend/JSCXJ.png",
+      "出地": "img/legend/JSCD.png",
+      "出水口": "img/legend/JSCSK.png",
+      "变径": "img/legend/JSBJ.png",
+      "变材": "img/legend/JSBC.png",
+      "四通": "img/legend/JS4T.png",
+      "多通": "img/legend/JSDT.png",
+      "排气阀": "img/legend/JSPQF.png",
+      "排污井": "img/legend/JSPWJ.png",
+      "检查井": "img/legend/JSJCJ.png",
+      "水厂": "img/legend/JSSC.png",
+      "水塔": "img/legend/JSST.png",
+      "水源井": "img/legend/JSSYJ.png",
+      "水表": "img/legend/JSSB.png",
+      "水表井": "img/legend/JSSBJ.png",
+      "水表箱": "img/legend/JSSBX.png",
+      "水表组": "img/legend/JSSBZ.png",
+      "泵站": "img/legend/JSBZ.png",
+      "流量表": "img/legend/JSLLB.png",
+      "消防栓": "img/legend/JSXFS.png",
+      "球阀": "img/legend/JSQF.png",
+      "直线": "img/legend/JSZX.png",
+      "管堵": "img/legend/JSGD.png",
+      "管帽": "img/legend/JSGM.png",
+      "蝶阀": "img/legend/JSDF.png",
+      "转折": "img/legend/JSZZ.png",
+      "进水口": "img/legend/JSJSK.png",
+      "通风井": "img/legend/JSTFJ.png",
+      "闸阀": "img/legend/JSZF.png",
+      "阀门": "img/legend/JSFM.png",
+      "阀门井": "img/legend/JSFMJ.png",
+      "阀门孔": "img/legend/JSFMK.png",
+      "非普": "img/legend/JSFP.png",
+      "预留口": "img/legend/JSYLK.png"
+    },
+    "PS": {
+      "default": "img/legend/PSMR.png",
+      "DHJ": "img/legend/PSDHJ.png",
+      "GM": "img/legend/PSGM.png",
+      "PLZ": "img/legend/PSPLZ.png",
+      "PM": "img/legend/PSPM.png",
+      "PMJ": "img/legend/PSPMJ.png",
+      "SFJ": "img/legend/PSSFJ.png",
+      "WSCLC": "img/legend/PSWSCLC.png",
+      "ZM": "img/legend/PSZM.png",
+      "3T": "img/legend/PS3T.png",
+      "BMJ": "img/legend/PSBMJ.png",
+      "JB": "img/legend/PSJB.png",
+      "PX": "img/legend/PSPX.png",
+      "PXJ": "img/legend/PSPXJ.png",
+      "CD": "img/legend/PSCD.png",
+      "CSK": "img/legend/PSCSK.png",
+      "HFC": "img/legend/PSHFC.png",
+      "BJ": "img/legend/PSBJ.png",
+      "BC": "img/legend/PSBC.png",
+      "4T": "img/legend/PS4T.png",
+      "DT": "img/legend/PSDT.png",
+      "JLJ": "img/legend/PSJLJ.png",
+      "PJ": "img/legend/PSPJ.png",
+      "PSQQD": "img/legend/PSPSQQD.png",
+      "JHJ": "img/legend/PSJHJ.png",
+      "WSJ": "img/legend/PSWSJ.png",
+      "WSQSJ": "img/legend/PSWSQSJ.png",
+      "WL": "img/legend/PSWL.png",
+      "CDC": "img/legend/PSCDC.png",
+      "BZ": "img/legend/PSBZ.png",
+      "SSJ": "img/legend/PSSSJ.png",
+      "YLJ": "img/legend/PSYLJ.png",
+      "ZX": "img/legend/PSZX.png",
+      "GD": "img/legend/PSGD.png",
+      "QSJ": "img/legend/PSQSJ.png",
+      "SQD": "img/legend/PSQSD.png",
+      "DSJ": "img/legend/PSDSJ.png",
+      "ZZ": "img/legend/PSZZ.png",
+      "JSK": "img/legend/PSJSK.png",
+      "TFJ": "img/legend/PSTFJ.png",
+      "ZF": "img/legend/PSZF.png",
+      "ZFJ": "img/legend/PSZFJ.png",
+      "YSJ": "img/legend/PSYSJ.png",
+      "TSQSJ": "img/legend/PSYSQSJ.png",
+      "YL": "img/legend/PSYL.png",
+      "FP": "img/legend/PSFP.png",
+      "YLK": "img/legend/PSYLK.png",
+      "三通": "img/legend/PS3T.png",
+      "不明井": "img/legend/PSBMJ.png",
+      "井边": "img/legend/PSJB.png",
+      "偏心": "img/legend/PSPX.png",
+      "偏心井": "img/legend/PSPXJ.png",
+      "出地": "img/legend/PSCD.png",
+      "出水口": "img/legend/PSCSK.png",
+      "化粪池": "img/legend/PSHFC.png",
+      "变径": "img/legend/PSBJ.png",
+      "变材": "img/legend/PSBC.png",
+      "四通": "img/legend/PS4T.png",
+      "多通": "img/legend/PSDT.png",
+      "截流井": "img/legend/PSJLJ.png",
+      "排井": "img/legend/PSPJ.png",
+      "排水渠起点": "img/legend/PSPSQQD.png",
+      "接户井": "img/legend/PSJHJ.png",
+      "污水井": "img/legend/PSWSJ.png",
+      "污水处理厂": "img/legend/PSWSCLC.png",
+      "污水起始井": "img/legend/PSWSQSJ.png",
+      "污篦": "img/legend/PSWL.png",
+      "沉淀池": "img/legend/PSCDC.png",
+      "泵站": "img/legend/PSBZ.png",
+      "渗水井": "img/legend/PSSSJ.png",
+      "溢流井": "img/legend/PSYLJ.png",
+      "直线": "img/legend/PSZX.png",
+      "管堵": "img/legend/PSGD.png",
+      "起始井": "img/legend/PSQSJ.png",
+      "起始点": "img/legend/PSQSD.png",
+      "跌水井": "img/legend/PSDSJ.png",
+      "转折": "img/legend/PSZZ.png",
+      "进水口": "img/legend/PSJSK.png",
+      "通风井": "img/legend/PSTFJ.png",
+      "闸阀": "img/legend/PSZF.png",
+      "闸阀井": "img/legend/PSZFJ.png",
+      "雨水井": "img/legend/PSYSJ.png",
+      "雨水起始井": "img/legend/PSYSQSJ.png",
+      "雨篦": "img/legend/PSYL.png",
+      "非普": "img/legend/PSFP.png",
+      "预留口": "img/legend/PSYLK.png"
+    },
+    "HS": {
+      "default": "img/legend/PSMR.png",
+      "DHJ": "img/legend/PSDHJ.png",
+      "GM": "img/legend/PSGM.png",
+      "PLZ": "img/legend/PSPLZ.png",
+      "PM": "img/legend/PSPM.png",
+      "PMJ": "img/legend/PSPMJ.png",
+      "SFJ": "img/legend/PSSFJ.png",
+      "WSCLC": "img/legend/PSWSCLC.png",
+      "ZM": "img/legend/PSZM.png",
+      "3T": "img/legend/PS3T.png",
+      "BMJ": "img/legend/PSBMJ.png",
+      "JB": "img/legend/PSJB.png",
+      "PX": "img/legend/PSPX.png",
+      "PXJ": "img/legend/PSPXJ.png",
+      "CD": "img/legend/PSCD.png",
+      "CSK": "img/legend/PSCSK.png",
+      "HFC": "img/legend/PSHFC.png",
+      "BJ": "img/legend/PSBJ.png",
+      "BC": "img/legend/PSBC.png",
+      "4T": "img/legend/PS4T.png",
+      "DT": "img/legend/PSDT.png",
+      "JLJ": "img/legend/PSJLJ.png",
+      "PJ": "img/legend/PSPJ.png",
+      "PSQQD": "img/legend/PSPSQQD.png",
+      "JHJ": "img/legend/PSJHJ.png",
+      "WSJ": "img/legend/PSWSJ.png",
+      "WSQSJ": "img/legend/PSWSQSJ.png",
+      "WL": "img/legend/PSWL.png",
+      "CDC": "img/legend/PSCDC.png",
+      "BZ": "img/legend/PSBZ.png",
+      "SSJ": "img/legend/PSSSJ.png",
+      "YLJ": "img/legend/PSYLJ.png",
+      "ZX": "img/legend/PSZX.png",
+      "GD": "img/legend/PSGD.png",
+      "QSJ": "img/legend/PSQSJ.png",
+      "SQD": "img/legend/PSQSD.png",
+      "DSJ": "img/legend/PSDSJ.png",
+      "ZZ": "img/legend/PSZZ.png",
+      "JSK": "img/legend/PSJSK.png",
+      "TFJ": "img/legend/PSTFJ.png",
+      "ZF": "img/legend/PSZF.png",
+      "ZFJ": "img/legend/PSZFJ.png",
+      "YSJ": "img/legend/PSYSJ.png",
+      "TSQSJ": "img/legend/PSYSQSJ.png",
+      "YL": "img/legend/PSYL.png",
+      "FP": "img/legend/PSFP.png",
+      "YLK": "img/legend/PSYLK.png",
+      "三通": "img/legend/PS3T.png",
+      "不明井": "img/legend/PSBMJ.png",
+      "井边": "img/legend/PSJB.png",
+      "偏心": "img/legend/PSPX.png",
+      "偏心井": "img/legend/PSPXJ.png",
+      "出地": "img/legend/PSCD.png",
+      "出水口": "img/legend/PSCSK.png",
+      "化粪池": "img/legend/PSHFC.png",
+      "变径": "img/legend/PSBJ.png",
+      "变材": "img/legend/PSBC.png",
+      "四通": "img/legend/PS4T.png",
+      "多通": "img/legend/PSDT.png",
+      "截流井": "img/legend/PSJLJ.png",
+      "排井": "img/legend/PSPJ.png",
+      "排水渠起点": "img/legend/PSPSQQD.png",
+      "接户井": "img/legend/PSJHJ.png",
+      "污水井": "img/legend/PSWSJ.png",
+      "污水处理厂": "img/legend/PSWSCLC.png",
+      "污水起始井": "img/legend/PSWSQSJ.png",
+      "污篦": "img/legend/PSWL.png",
+      "沉淀池": "img/legend/PSCDC.png",
+      "泵站": "img/legend/PSBZ.png",
+      "渗水井": "img/legend/PSSSJ.png",
+      "溢流井": "img/legend/PSYLJ.png",
+      "直线": "img/legend/PSZX.png",
+      "管堵": "img/legend/PSGD.png",
+      "起始井": "img/legend/PSQSJ.png",
+      "起始点": "img/legend/PSQSD.png",
+      "跌水井": "img/legend/PSDSJ.png",
+      "转折": "img/legend/PSZZ.png",
+      "进水口": "img/legend/PSJSK.png",
+      "通风井": "img/legend/PSTFJ.png",
+      "闸阀": "img/legend/PSZF.png",
+      "闸阀井": "img/legend/PSZFJ.png",
+      "雨水井": "img/legend/PSYSJ.png",
+      "雨水起始井": "img/legend/PSYSQSJ.png",
+      "雨篦": "img/legend/PSYL.png",
+      "非普": "img/legend/PSFP.png",
+      "预留口": "img/legend/PSYLK.png"
+    },
+    "WS": {
+      "default": "img/legend/PSMR.png",
+      "DHJ": "img/legend/PSDHJ.png",
+      "GM": "img/legend/PSGM.png",
+      "PLZ": "img/legend/PSPLZ.png",
+      "PM": "img/legend/PSPM.png",
+      "PMJ": "img/legend/PSPMJ.png",
+      "SFJ": "img/legend/PSSFJ.png",
+      "WSCLC": "img/legend/PSWSCLC.png",
+      "ZM": "img/legend/PSZM.png",
+      "3T": "img/legend/PS3T.png",
+      "BMJ": "img/legend/PSBMJ.png",
+      "JB": "img/legend/PSJB.png",
+      "PX": "img/legend/PSPX.png",
+      "PXJ": "img/legend/PSPXJ.png",
+      "CD": "img/legend/PSCD.png",
+      "CSK": "img/legend/PSCSK.png",
+      "HFC": "img/legend/PSHFC.png",
+      "BJ": "img/legend/PSBJ.png",
+      "BC": "img/legend/PSBC.png",
+      "4T": "img/legend/PS4T.png",
+      "DT": "img/legend/PSDT.png",
+      "JLJ": "img/legend/PSJLJ.png",
+      "PJ": "img/legend/PSPJ.png",
+      "PSQQD": "img/legend/PSPSQQD.png",
+      "JHJ": "img/legend/PSJHJ.png",
+      "WSJ": "img/legend/PSWSJ.png",
+      "WSQSJ": "img/legend/PSWSQSJ.png",
+      "WL": "img/legend/PSWL.png",
+      "CDC": "img/legend/PSCDC.png",
+      "BZ": "img/legend/PSBZ.png",
+      "SSJ": "img/legend/PSSSJ.png",
+      "YLJ": "img/legend/PSYLJ.png",
+      "ZX": "img/legend/PSZX.png",
+      "GD": "img/legend/PSGD.png",
+      "QSJ": "img/legend/PSQSJ.png",
+      "SQD": "img/legend/PSQSD.png",
+      "DSJ": "img/legend/PSDSJ.png",
+      "ZZ": "img/legend/PSZZ.png",
+      "JSK": "img/legend/PSJSK.png",
+      "TFJ": "img/legend/PSTFJ.png",
+      "ZF": "img/legend/PSZF.png",
+      "ZFJ": "img/legend/PSZFJ.png",
+      "YSJ": "img/legend/PSYSJ.png",
+      "TSQSJ": "img/legend/PSYSQSJ.png",
+      "YL": "img/legend/PSYL.png",
+      "FP": "img/legend/PSFP.png",
+      "YLK": "img/legend/PSYLK.png",
+      "三通": "img/legend/PS3T.png",
+      "不明井": "img/legend/PSBMJ.png",
+      "井边": "img/legend/PSJB.png",
+      "偏心": "img/legend/PSPX.png",
+      "偏心井": "img/legend/PSPXJ.png",
+      "出地": "img/legend/PSCD.png",
+      "出水口": "img/legend/PSCSK.png",
+      "化粪池": "img/legend/PSHFC.png",
+      "变径": "img/legend/PSBJ.png",
+      "变材": "img/legend/PSBC.png",
+      "四通": "img/legend/PS4T.png",
+      "多通": "img/legend/PSDT.png",
+      "截流井": "img/legend/PSJLJ.png",
+      "排井": "img/legend/PSPJ.png",
+      "排水渠起点": "img/legend/PSPSQQD.png",
+      "接户井": "img/legend/PSJHJ.png",
+      "污水井": "img/legend/PSWSJ.png",
+      "污水处理厂": "img/legend/PSWSCLC.png",
+      "污水起始井": "img/legend/PSWSQSJ.png",
+      "污篦": "img/legend/PSWL.png",
+      "沉淀池": "img/legend/PSCDC.png",
+      "泵站": "img/legend/PSBZ.png",
+      "渗水井": "img/legend/PSSSJ.png",
+      "溢流井": "img/legend/PSYLJ.png",
+      "直线": "img/legend/PSZX.png",
+      "管堵": "img/legend/PSGD.png",
+      "起始井": "img/legend/PSQSJ.png",
+      "起始点": "img/legend/PSQSD.png",
+      "跌水井": "img/legend/PSDSJ.png",
+      "转折": "img/legend/PSZZ.png",
+      "进水口": "img/legend/PSJSK.png",
+      "通风井": "img/legend/PSTFJ.png",
+      "闸阀": "img/legend/PSZF.png",
+      "闸阀井": "img/legend/PSZFJ.png",
+      "雨水井": "img/legend/PSYSJ.png",
+      "雨水起始井": "img/legend/PSYSQSJ.png",
+      "雨篦": "img/legend/PSYL.png",
+      "非普": "img/legend/PSFP.png",
+      "预留口": "img/legend/PSYLK.png"
+    },
+    "YS": {
+      "default": "img/legend/PSMR.png",
+      "DHJ": "img/legend/PSDHJ.png",
+      "GM": "img/legend/PSGM.png",
+      "PLZ": "img/legend/PSPLZ.png",
+      "PM": "img/legend/PSPM.png",
+      "PMJ": "img/legend/PSPMJ.png",
+      "SFJ": "img/legend/PSSFJ.png",
+      "WSCLC": "img/legend/PSWSCLC.png",
+      "ZM": "img/legend/PSZM.png",
+      "3T": "img/legend/PS3T.png",
+      "BMJ": "img/legend/PSBMJ.png",
+      "JB": "img/legend/PSJB.png",
+      "PX": "img/legend/PSPX.png",
+      "PXJ": "img/legend/PSPXJ.png",
+      "CD": "img/legend/PSCD.png",
+      "CSK": "img/legend/PSCSK.png",
+      "HFC": "img/legend/PSHFC.png",
+      "BJ": "img/legend/PSBJ.png",
+      "BC": "img/legend/PSBC.png",
+      "4T": "img/legend/PS4T.png",
+      "DT": "img/legend/PSDT.png",
+      "JLJ": "img/legend/PSJLJ.png",
+      "PJ": "img/legend/PSPJ.png",
+      "PSQQD": "img/legend/PSPSQQD.png",
+      "JHJ": "img/legend/PSJHJ.png",
+      "WSJ": "img/legend/PSWSJ.png",
+      "WSQSJ": "img/legend/PSWSQSJ.png",
+      "WL": "img/legend/PSWL.png",
+      "CDC": "img/legend/PSCDC.png",
+      "BZ": "img/legend/PSBZ.png",
+      "SSJ": "img/legend/PSSSJ.png",
+      "YLJ": "img/legend/PSYLJ.png",
+      "ZX": "img/legend/PSZX.png",
+      "GD": "img/legend/PSGD.png",
+      "QSJ": "img/legend/PSQSJ.png",
+      "SQD": "img/legend/PSQSD.png",
+      "DSJ": "img/legend/PSDSJ.png",
+      "ZZ": "img/legend/PSZZ.png",
+      "JSK": "img/legend/PSJSK.png",
+      "TFJ": "img/legend/PSTFJ.png",
+      "ZF": "img/legend/PSZF.png",
+      "ZFJ": "img/legend/PSZFJ.png",
+      "YSJ": "img/legend/PSYSJ.png",
+      "TSQSJ": "img/legend/PSYSQSJ.png",
+      "YL": "img/legend/PSYL.png",
+      "FP": "img/legend/PSFP.png",
+      "YLK": "img/legend/PSYLK.png",
+      "三通": "img/legend/PS3T.png",
+      "不明井": "img/legend/PSBMJ.png",
+      "井边": "img/legend/PSJB.png",
+      "偏心": "img/legend/PSPX.png",
+      "偏心井": "img/legend/PSPXJ.png",
+      "出地": "img/legend/PSCD.png",
+      "出水口": "img/legend/PSCSK.png",
+      "化粪池": "img/legend/PSHFC.png",
+      "变径": "img/legend/PSBJ.png",
+      "变材": "img/legend/PSBC.png",
+      "四通": "img/legend/PS4T.png",
+      "多通": "img/legend/PSDT.png",
+      "截流井": "img/legend/PSJLJ.png",
+      "排井": "img/legend/PSPJ.png",
+      "排水渠起点": "img/legend/PSPSQQD.png",
+      "接户井": "img/legend/PSJHJ.png",
+      "污水井": "img/legend/PSWSJ.png",
+      "污水处理厂": "img/legend/PSWSCLC.png",
+      "污水起始井": "img/legend/PSWSQSJ.png",
+      "污篦": "img/legend/PSWL.png",
+      "沉淀池": "img/legend/PSCDC.png",
+      "泵站": "img/legend/PSBZ.png",
+      "渗水井": "img/legend/PSSSJ.png",
+      "溢流井": "img/legend/PSYLJ.png",
+      "直线": "img/legend/PSZX.png",
+      "管堵": "img/legend/PSGD.png",
+      "起始井": "img/legend/PSQSJ.png",
+      "起始点": "img/legend/PSQSD.png",
+      "跌水井": "img/legend/PSDSJ.png",
+      "转折": "img/legend/PSZZ.png",
+      "进水口": "img/legend/PSJSK.png",
+      "通风井": "img/legend/PSTFJ.png",
+      "闸阀": "img/legend/PSZF.png",
+      "闸阀井": "img/legend/PSZFJ.png",
+      "雨水井": "img/legend/PSYSJ.png",
+      "雨水起始井": "img/legend/PSYSQSJ.png",
+      "雨篦": "img/legend/PSYL.png",
+      "非普": "img/legend/PSFP.png",
+      "预留口": "img/legend/PSYLK.png"
+    },
+    "RL": {
+      "default": "img/legend/MR.png",
+      "变径": "img/legend/RLBJ.png",
+      "变材": "img/legend/RLBC.png",
+      "不明井": "img/legend/RLBMJ.png",
+      "出地": "img/legend/RLCD.png",
+      "出水口": "img/legend/RLCSK.png",
+      "多通": "img/legend/RLDT.png",
+      "非普": "img/legend/RLFP.png",
+      "盖堵": "img/legend/RLGD.png",
+      "进水口": "img/legend/RLJSK.png",
+      "井边": "img/legend/RLJB.png",
+      "偏心": "img/legend/RLPX.png",
+      "三通": "img/legend/RL3T.png",
+      "四通": "img/legend/RL4T.png",
+      "预留口": "img/legend/RLYLK.png",
+      "直线": "img/legend/RLZX.png",
+      "转折": "img/legend/RLZZ.png"
+    },
+    "RSEIW": {
+      "default": "img/legend/MR.png",
+      "变径": "img/legend/RLBJ.png",
+      "变材": "img/legend/RLBC.png",
+      "不明井": "img/legend/RLBMJ.png",
+      "出地": "img/legend/RLCD.png",
+      "出水口": "img/legend/RLCSK.png",
+      "多通": "img/legend/RLDT.png",
+      "非普": "img/legend/RLFP.png",
+      "盖堵": "img/legend/RLGD.png",
+      "进水口": "img/legend/RLJSK.png",
+      "井边": "img/legend/RLJB.png",
+      "偏心": "img/legend/RLPX.png",
+      "三通": "img/legend/RL3T.png",
+      "四通": "img/legend/RL4T.png",
+      "预留口": "img/legend/RLYLK.png",
+      "直线": "img/legend/RLZX.png",
+      "转折": "img/legend/RLZZ.png"
+    },
+    "RSYIW": {
+      "default": "img/legend/MR.png",
+      "变径": "img/legend/RLBJ.png",
+      "变材": "img/legend/RLBC.png",
+      "不明井": "img/legend/RLBMJ.png",
+      "出地": "img/legend/RLCD.png",
+      "出水口": "img/legend/RLCSK.png",
+      "多通": "img/legend/RLDT.png",
+      "非普": "img/legend/RLFP.png",
+      "盖堵": "img/legend/RLGD.png",
+      "进水口": "img/legend/RLJSK.png",
+      "井边": "img/legend/RLJB.png",
+      "偏心": "img/legend/RLPX.png",
+      "三通": "img/legend/RL3T.png",
+      "四通": "img/legend/RL4T.png",
+      "预留口": "img/legend/RLYLK.png",
+      "直线": "img/legend/RLZX.png",
+      "转折": "img/legend/RLZZ.png"
+    },
+    "RQ": {
+      "default": "img/legend/RQMR.png",
+      "变材": "img/legend/RQBC.png",
+      "变径": "img/legend/RQBJ.png",
+      "补偿器": "img/legend/RQBCQ.png",
+      "不明点": "img/legend/RQBMD.png",
+      "出地": "img/legend/RQCD.png",
+      "出水口": "img/legend/RQCSK.png",
+      "调压缸": "img/legend/RQTYG.png",
+      "调压箱": "img/legend/RQTYX.png",
+      "调压站": "img/legend/RQTYZ.png",
+      "多通": "img/legend/RQDT.png",
+      "阀门": "img/legend/RQFM.png",
+      "阀门井": "img/legend/RQFMJ.png",
+      "阀门孔": "img/legend/RQFMK.png",
+      "非普": "img/legend/RQFP.png",
+      "管堵": "img/legend/RQGD.png",
+      "管帽": "img/legend/RQGM.png",
+      "加气站": "img/legend/RQJQZ.png",
+      "进水口": "img/legend/RQJSK.png",
+      "井边": "img/legend/RQJB.png",
+      "门闸": "img/legend/RQMZ.png",
+      "凝水缸": "img/legend/RQNSG.png",
+      "偏心": "img/legend/RQPX.png",
+      "三通": "img/legend/RQ3T.png",
+      "四通": "img/legend/RQ4T.png",
+      "预留口": "img/legend/RQYLK.png",
+      "直线": "img/legend/RQZX.png",
+      "转折": "img/legend/RQZZ.png"
+    },
+    "SY": {
+      "default": "img/legend/RQMR.png",
+      "变材": "img/legend/RQBC.png",
+      "变径": "img/legend/RQBJ.png",
+      "补偿器": "img/legend/RQBCQ.png",
+      "不明点": "img/legend/RQBMD.png",
+      "出地": "img/legend/RQCD.png",
+      "出水口": "img/legend/RQCSK.png",
+      "调压缸": "img/legend/RQTYG.png",
+      "调压箱": "img/legend/RQTYX.png",
+      "调压站": "img/legend/RQTYZ.png",
+      "多通": "img/legend/RQDT.png",
+      "阀门": "img/legend/RQFM.png",
+      "阀门井": "img/legend/RQFMJ.png",
+      "阀门孔": "img/legend/RQFMK.png",
+      "非普": "img/legend/RQFP.png",
+      "管堵": "img/legend/RQGD.png",
+      "管帽": "img/legend/RQGM.png",
+      "加气站": "img/legend/RQJQZ.png",
+      "进水口": "img/legend/RQJSK.png",
+      "井边": "img/legend/RQJB.png",
+      "门闸": "img/legend/RQMZ.png",
+      "凝水缸": "img/legend/RQNSG.png",
+      "偏心": "img/legend/RQPX.png",
+      "三通": "img/legend/RQ3T.png",
+      "四通": "img/legend/RQ4T.png",
+      "预留口": "img/legend/RQYLK.png",
+      "直线": "img/legend/RQZX.png",
+      "转折": "img/legend/RQZZ.png"
+    },
+    "TR": {
+      "default": "img/legend/RQMR.png",
+      "变材": "img/legend/RQBC.png",
+      "变径": "img/legend/RQBJ.png",
+      "补偿器": "img/legend/RQBCQ.png",
+      "不明点": "img/legend/RQBMD.png",
+      "出地": "img/legend/RQCD.png",
+      "出水口": "img/legend/RQCSK.png",
+      "调压缸": "img/legend/RQTYG.png",
+      "调压箱": "img/legend/RQTYX.png",
+      "调压站": "img/legend/RQTYZ.png",
+      "多通": "img/legend/RQDT.png",
+      "阀门": "img/legend/RQFM.png",
+      "阀门井": "img/legend/RQFMJ.png",
+      "阀门孔": "img/legend/RQFMK.png",
+      "非普": "img/legend/RQFP.png",
+      "管堵": "img/legend/RQGD.png",
+      "管帽": "img/legend/RQGM.png",
+      "加气站": "img/legend/RQJQZ.png",
+      "进水口": "img/legend/RQJSK.png",
+      "井边": "img/legend/RQJB.png",
+      "门闸": "img/legend/RQMZ.png",
+      "凝水缸": "img/legend/RQNSG.png",
+      "偏心": "img/legend/RQPX.png",
+      "三通": "img/legend/RQ3T.png",
+      "四通": "img/legend/RQ4T.png",
+      "预留口": "img/legend/RQYLK.png",
+      "直线": "img/legend/RQZX.png",
+      "转折": "img/legend/RQZZ.png"
+    },
+    "TX": {
+      "default": "img/legend/MR.png",
+      "不明井": "img/legend/TXBMJ.png",
+      "人孔井边点": "img/legend/TXRKJBD.png",
+      "手孔井边点": "img/legend/TXSKJBD.png"
+    },
+    "ZH": {
+      "default": "img/legend/MR.png",
+      "三通": "img/legend/ZH3T.png",
+      "综合井": "img/legend/ZHJ.png",
+      "四通": "img/legend/ZH4T.png",
+      "直线": "img/legend/ZHZX.png",
+      "转折": "img/legend/ZHZZ.png"
+    }
+  }
+}

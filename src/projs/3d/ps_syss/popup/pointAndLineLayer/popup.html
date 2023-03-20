@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="../../../../../lib/include-lib.js" libpath="../../../../lib/"
+        include="jquery,jquery.mCustomScrollbar"></script>
+    <link href="popup.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="title">
+        <span id="popTitle"></span>
+    </div>
+    <div class='context' style="display: flex;justify-content: space-between;">
+        <div id="context" class=''>
+        </div>
+        <div id="context2" class='context2'>
+            <div class="pipe_line_title">
+                <span>管道类别：</span>
+                <span style="color: #ccc;" id="gd_type"></span>
+                <br>
+                <span>管线材质：</span>
+                <span style="color: #ccc;" id="gd_material"></span>
+                <br>
+                <span>流向：</span>
+                <span style="color: #ccc;" id="gd_flow"></span>
+                <br>
+                <span>埋设方式：</span>
+                <span style="color: #ccc;" id="gd_burytype"></span>
+            </div>
+            <div class="pipe_line_box">
+                <div class="show-line-box">
+                    <div class="show-line" id="showLine">
+                        <div class="right-bot" id="rightBot"></div>
+                        <div class="left-bot" id="leftBot"></div>
+                        <div class="listRowToleft"></div>
+                    </div>
+
+                </div>
+
+                <div class="gdcd">
+                    <p>管道长度</p>
+                    <p class="gdcd_num" id="gdcd_num"></p>
+                </div>
+                <span class="gdcd_line1"> </span>
+                <span class="gdcd_line2"> </span>
+                <span class="gdcd_line3"> </span>
+                <span class="gdcd_line4"> </span>
+                <div class="gdzj">
+                    <p>管道直径</p>
+                    <p id="gdzj_num"></p>
+                </div>
+                <div class="l_gdbg">
+                    <p>埋深</p>
+                    <p id="l_gdbg_num"></p>
+                </div>
+                <div class="r_gdbg">
+                    <p>埋深</p>
+                    <p id="r_gdbg_num"></p>
+                </div>
+
+                <div class="left_dh">
+                    <span id="left_dh_title">点号</span>
+                    <span id="left_dh_num"></span>
+                </div>
+                <div class="right_dh">
+                    <span id="right_dh_title">点号</span>
+                    <span id="right_dh_num"></span>
+                </div>
+            </div>
+        </div>
+        <div id="context3" style="display: none;" class='context3'>
+            <div class="gaocheng">
+                地面高程
+            </div>
+            <div class="right-line" id="rightLine">
+                <div class="right-shen">埋深</div>
+            </div>
+            <div class="left-line">
+                <div class="left-shen">埋深</div>
+            </div>
+            <div class="right-cir">
+                <div class="right-bottom"></div>
+                <div class="left-caliber">管径</div>
+                <div class="right-m">
+                    <p id="e_mapnum"></p>
+                    <p id="e_material"></p>
+                </div>
+            </div>
+            <div class="mid-cir">
+                <div class="mid-bottom"></div>
+                <div class="mid-line">
+                    <div class="mid-shen">井深</div>
+                </div>
+            </div>
+            <div class="left-cir">
+                <div class="left-bottom"></div>
+                <div class="left-caliber">管径</div>
+                <div class="left-m">
+                    <p id="s_mapnum"></p>
+                    <p id="s_material"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+    </script>
+    <script src="popup.js"></script>
+</body>
+
+</html>

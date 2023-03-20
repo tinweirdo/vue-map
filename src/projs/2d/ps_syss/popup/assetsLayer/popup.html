@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="../../../../../lib/include-lib.js" libpath="../../../../../"
+        include="jquery,bootstrap"></script>
+    <script type="text/javascript" src="../../../../../lib/cdkc/_index.js" libpath="../../../../../"
+        include="content"></script>
+    <link href="popup.css" rel="stylesheet" />
+
+    <script src="popup.js"></script>
+</head>
+
+<body>
+    <div class="title">
+        <span id="popTitle"></span>
+    </div>
+
+    <div class="scada-menu" style="display: none;">
+        <div class='nav-line'></div>
+        <ul id='xxjc-tabs' class="nav nav-tabs scada-navs" role="tablist">
+            <li role="presentation" class="active"><a href="#scada-baseInfo" role="tab" data-toggle="tab"
+                    aria-controls="scada-baseInfo" link="baseInfo.html">基本信息</a></li>
+        </ul>
+        <div class='nav-line'></div>
+    </div>
+    <div class="tab-content scada-tabs">
+        <div role="tabpanel" class="tab-pane active" id="scada-baseInfo">
+            <iframe src="baseInfo.html"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

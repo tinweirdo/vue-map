@@ -1,0 +1,457 @@
+{
+  "title": "objectId",
+  "fields": [
+    {
+      "field": {
+        "name": "type",
+        "alias": "管线大类",
+        "visible": "true",
+        "translateType": [
+          {
+            "name": "TX",
+            "alias": "通讯"
+          },
+          {
+            "name": "RQ",
+            "alias": "燃气"
+          },
+          {
+            "name": "JS",
+            "alias": "给水"
+          },
+          {
+            "name": "PS",
+            "alias": "排水"
+          },
+          {
+            "name": "DL",
+            "alias": "电力"
+          },
+          {
+            "name": "GY",
+            "alias": "工业"
+          },
+          {
+            "name": "RL",
+            "alias": "热力"
+          },
+          {
+            "name": "ZH",
+            "alias": "综合管廊（沟）"
+          },
+          {
+            "name": "BM",
+            "alias": "不明"
+          },
+          {
+            "name": "TV",
+            "alias": "广播电视"
+          },
+          {
+            "name": "GB",
+            "alias": "广播电视"
+          },
+          {
+            "name": "JK",
+            "alias": "监控"
+          }
+        ]
+      }
+    },
+    {
+      "field": {
+        "name": "subtype",
+        "alias": "管线子类",
+        "visible": "true",
+        "translateType": [
+          {
+            "name": "TX",
+            "alias": "通讯"
+          },
+          {
+            "name": "RQ",
+            "alias": "燃气"
+          },
+          {
+            "name": "JS",
+            "alias": "给水"
+          },
+          {
+            "name": "PS",
+            "alias": "排水"
+          },
+          {
+            "name": "DL",
+            "alias": "电力"
+          },
+          {
+            "name": "GY",
+            "alias": "工业"
+          },
+          {
+            "name": "RL",
+            "alias": "热力"
+          },
+          {
+            "name": "ZH",
+            "alias": "综合管廊（沟）"
+          },
+          {
+            "name": "GD",
+            "alias": "供电"
+          },
+          {
+            "name": "ZM",
+            "alias": "照明"
+          },
+          {
+            "name": "DC",
+            "alias": "电车"
+          },
+          {
+            "name": "XH",
+            "alias": "信号"
+          },
+          {
+            "name": "GGD",
+            "alias": "广告"
+          },
+          {
+            "name": "ZL",
+            "alias": "直流专用"
+          },
+          {
+            "name": "SH",
+            "alias": "市话"
+          },
+          {
+            "name": "CT",
+            "alias": "长途"
+          },
+          {
+            "name": "GB",
+            "alias": "广播"
+          },
+          {
+            "name": "TV",
+            "alias": "有线电视"
+          },
+          {
+            "name": "ZY",
+            "alias": "专用"
+          },
+          {
+            "name": "XXWL",
+            "alias": "信息网络"
+          },
+          {
+            "name": "JK",
+            "alias": "监控"
+          },
+          {
+            "name": "LD",
+            "alias": "路灯"
+          },
+          {
+            "name": "GS",
+            "alias": "供水"
+          },
+          {
+            "name": "ZYS",
+            "alias": "直饮水"
+          },
+          {
+            "name": "XHS",
+            "alias": "循环水"
+          },
+          {
+            "name": "XFS",
+            "alias": "消防水"
+          },
+          {
+            "name": "LHS",
+            "alias": "绿化水"
+          },
+          {
+            "name": "ZS",
+            "alias": "中水"
+          },
+          {
+            "name": "YUANSHUI",
+            "alias": "原水"
+          },
+          {
+            "name": "SS",
+            "alias": "上水"
+          },
+          {
+            "name": "SHUSHUI",
+            "alias": "输水"
+          },
+          {
+            "name": "PS",
+            "alias": "配水"
+          },
+          {
+            "name": "YS",
+            "alias": "雨水"
+          },
+          {
+            "name": "WS",
+            "alias": "污水"
+          },
+          {
+            "name": "HS",
+            "alias": "合流"
+          },
+          {
+            "name": "MQ",
+            "alias": "煤气"
+          },
+          {
+            "name": "TR",
+            "alias": "天然气"
+          },
+          {
+            "name": "YH",
+            "alias": "液化气"
+          },
+          {
+            "name": "RS",
+            "alias": "热水"
+          },
+          {
+            "name": "ZQ",
+            "alias": "蒸汽"
+          },
+          {
+            "name": "WQ",
+            "alias": "温泉"
+          },
+          {
+            "name": "H2",
+            "alias": "氢气"
+          },
+          {
+            "name": "O2",
+            "alias": "氧气"
+          },
+          {
+            "name": "YQ",
+            "alias": "乙炔"
+          },
+          {
+            "name": "YY",
+            "alias": "原油"
+          },
+          {
+            "name": "CPY",
+            "alias": "成品油"
+          },
+          {
+            "name": "HY",
+            "alias": "航油"
+          },
+          {
+            "name": "CY",
+            "alias": "柴油"
+          },
+          {
+            "name": "YX",
+            "alias": "乙烯"
+          },
+          {
+            "name": "PY",
+            "alias": "排液"
+          },
+          {
+            "name": "BEN",
+            "alias": "苯"
+          },
+          {
+            "name": "LQ",
+            "alias": "氯气"
+          },
+          {
+            "name": "DQ",
+            "alias": "氮气"
+          },
+          {
+            "name": "CO2",
+            "alias": "二氧化碳"
+          },
+          {
+            "name": "NH3",
+            "alias": "氨气"
+          },
+          {
+            "name": "C7H8",
+            "alias": "甲苯"
+          },
+          {
+            "name": "GG",
+            "alias": "管沟"
+          },
+          {
+            "name": "GL",
+            "alias": "管廊"
+          },
+          {
+            "name": "BM",
+            "alias": "不明"
+          }
+        ]
+      }
+    },
+    {
+      "field": {
+        "name": "map_num_s",
+        "alias": "起点号",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "map_num_e",
+        "alias": "终点号",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "cen_deep_sn",
+        "alias": "起点埋深",
+        "visible": "true",
+        "unit": "m",
+        "fixed": 2
+      }
+    },
+    {
+      "field": {
+        "name": "cen_deep_en",
+        "alias": "终点埋深",
+        "visible": "true",
+        "unit": "m",
+        "fixed": 2
+      }
+    },
+    {
+      "field": {
+        "name": "start_ele",
+        "alias": "起点高程",
+        "visible": "true",
+        "unit": "m",
+        "fixed": 3
+      }
+    },
+    {
+      "field": {
+        "name": "end_ele",
+        "alias": "终点高程",
+        "visible": "true",
+        "unit": "m",
+        "fixed": 3
+      }
+    },
+    {
+      "field": {
+        "name": "d_s",
+        "alias": "管道直径",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "p_value",
+        "alias": "压力值",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "material",
+        "alias": "管线材质",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "pe_type",
+        "alias": "PE型号",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "sdr",
+        "alias": "SDR",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "wall_thick",
+        "alias": "壁厚",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "inside_diameter",
+        "alias": "内径",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "pressure",
+        "alias": "管线压力",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "bury_type",
+        "alias": "埋设方式",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "len",
+        "alias": "长度",
+        "visible": "true",
+        "unit": "m",
+        "fixed": 2
+      }
+    },
+    {
+      "field": {
+        "name": "road_name",
+        "alias": "道路名称",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "belong",
+        "alias": "权属单位",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "created_date",
+        "alias": "创建时间",
+        "visible": "true"
+      }
+    },
+    {
+      "field": {
+        "name": "cab_num",
+        "alias": "电缆根数",
+        "visible": "true"
+      }
+    }
+  ]
+}

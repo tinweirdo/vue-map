@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="../../../../../lib/include-lib.js" libpath="../../../../../lib/"
+        include="jquery,jquery.mCustomScrollbar,kckjutil"></script>
+    <link href="../popup.css" rel="stylesheet" />
+    <script>
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+
+        (function () {
+            /// <summary>
+            /// 引号转义符号
+            /// </summary>
+            String.EscapeChar = '\'';
+            /// <summary>
+            /// 替换所有字符串
+            /// </summary>
+            /// <param name="searchValue">检索值</param>
+            /// <param name="replaceValue">替换值</param>
+            String.prototype.replaceAll = function (searchValue, replaceValue) {
+                var regExp = new RegExp(searchValue, "g");
+                return this.replace(regExp, replaceValue);
+            }
+            /// <summary>
+            /// 格式化字符串
+            /// </summary>
+            String.prototype.format = function () {
+                var regexp = /\{(\d+)\}/g;
+                var args = arguments;
+                var result = this.replace(regexp, function (m, i, o, n) {
+                    return args[i];
+                });
+                return result.replaceAll('%', String.EscapeChar);
+            }
+        })();
+        var id = getQueryString("id");
+        var pointurl = getQueryString("url");
+        var name = null;
+        let query = this.parent.L.esri.query;
+        // let where = '"objectId"=' + id;
+        new Promise((resolve, reject) => {
+            query({
+                url: pointurl
+            }).where('"objectId"=' + id).run(function (error, results) {
+                if (results == null) reject(new Error("no feature."));
+                var feaSet = results.features;
+                var mainDiv = document.getElementById("context");
+                var html = "<table width='100%' height='100%'   >";
+                if (feaSet.length > 0) {
+                    let feature = feaSet[0];
+                    let map_num = feature.properties.map_num;
+                    getpopupHtml(feature, mainDiv);
+                    resolve({ map_num, feature });
+                }
+            });
+        }).then(({ map_num, feature }) => {
+            $.getJSON("../../2d.json", "", function (jsondata) {
+                let datalayers = jsondata.map.operationallayers;
+                let linelayer = datalayers.filter(ele => (ele.name == "管线图层"))[0].featureUrl;
+                let where = "map_num_s='" + map_num + "' or map_num_e='" + map_num + "'";
+                query({
+                    url: linelayer
+                }).where(where).run(function (err, data) {
+                    if (data == null) {
+                        parent.parent.cdkc.alert.warning('未获取此管点相关数据')
+                    }
+                    else {
+                        data = data.features
+                        if (data.length > 0) {
+                            let s_line = data.filter(feature => (feature.properties.map_num_s == map_num));
+                            let e_line = data.filter(feature => (feature.properties.map_num_e == map_num));
+                            if (s_line.length > 0) {
+                                s_line_pop(s_line, feature.properties);
+                            }
+                            else if (e_line.length > 0) {
+                                e_line_pop(e_line, feature.properties);
+                            }
+                        }
+                        else {
+                            parent.parent.cdkc.alert.warning('暂无此管点相关数据')
+                        }
+                    }
+
+                })
+            });
+        }).catch(err => console.log(err));
+
+        function s_line_pop(data, thisFeat) {
+            let linefeat = data[0].properties;
+            let s_point = linefeat.map_num_s;
+            let e_point = linefeat.map_num_e;
+            if (s_point) $("#s_mapnum").text(s_point);
+            if (e_point) $("#e_mapnum").text(e_point);
+            let where = "map_num='" + s_point + "' or map_num='" + e_point + "'";
+            new Promise((resolve, reject) => {
+                query({
+                    url: pointurl
+                }).where(where).run(function (error, results) {
+                    if (results == null) reject(new Error("no feature."));
+                    resolve(results.features);
+                });
+            }).then(feaSet => {
+                let s_feat = feaSet.filter(ele => (ele.properties.map_num == s_point))[0].properties;
+                let e_feat = feaSet.filter(ele => (ele.properties.map_num == e_point))[0].properties;
+                return new Promise((resolve) => {
+                    $.getJSON("../popup_gd.json", "", function (jsondata) {
+                        for (const item of jsondata.fields) {
+                            const [name, unit, fixed] = [item.field.name, item.field.unit, item.field.fixed];
+                            if (s_feat[name]) {
+                                if (fixed) {
+                                    s_feat[name] = parseFloat(s_feat[name]).toFixed(fixed)
+                                }
+                                if (unit) {
+                                    s_feat[name] = s_feat[name] + "" + unit
+                                }
+                            }
+                            if (e_feat[name]) {
+                                if (fixed) {
+                                    e_feat[name] = parseFloat(e_feat[name]).toFixed(fixed)
+                                }
+                                if (unit) {
+                                    e_feat[name] = e_feat[name] + " " + unit
+                                }
+                            }
+                            if (thisFeat[name]) {
+                                if (fixed) {
+                                    thisFeat[name] = parseFloat(thisFeat[name]).toFixed(fixed)
+                                }
+                                if (unit) {
+                                    thisFeat[name] = thisFeat[name] + " " + unit
+                                }
+                            }
+                        }
+                        resolve({ s_feat, e_feat, thisFeat })
+                    })
+                })
+            }).then(({ s_feat, e_feat, thisFeat }) => {
+                //地面高程
+                $(".gaocheng").html(thisFeat.surf_h ? ("地面高程：" + thisFeat.surf_h) : ("地面高程"));
+                //井深
+                $(".mid-shen").html(thisFeat.cen_deep || "井深");
+                //埋深
+                $(".left-shen").html(s_feat.bury_deep || "埋深");
+                $(".right-shen").html(e_feat.bury_deep || "埋深");
+                //管径
+                $(".left-cir .left-caliber").html(s_feat.d_s || "管径");
+                $(".right-cir .left-caliber").html(e_feat.d_s || "管径");
+                //材质
+                $("#s_material").text(s_feat.material ? ("材质：" + s_feat.material) : (""));
+                $("#e_material").text(e_feat.material ? ("材质：" + e_feat.material) : (""));
+            }).catch(err => console.log(err));
+        }
+
+        function e_line_pop(data, thisFeat) {
+            let linefeat = data[0].properties;
+            let s_point = linefeat.map_num_s;
+            let e_point = linefeat.map_num_e;
+            if (s_point) $("#s_mapnum").text(s_point);
+            if (e_point) $("#e_mapnum").text(e_point);
+            let where = "";
+            if (s_point) {
+                where = "map_num='" + s_point + "' or map_num='" + e_point + "'";
+            }
+            else {
+                where = "map_num='" + e_point + "'";
+            }
+            $("#e_mapnum").text(e_point);
+            new Promise((resolve, reject) => {
+                query({
+                    url: pointurl
+                }).where(where).run(function (error, results) {
+                    if (results == null) reject(new Error("no feature."));
+                    resolve(results.features);
+                });
+            }).then(feaSet => {
+                let e_feat = feaSet.filter(ele => (ele.properties.map_num == e_point))[0].properties;
+                let s_feat = feaSet.filter(ele => (ele.properties.map_num == s_point))[0].properties;
+                return new Promise((resolve) => {
+                    $.getJSON("../popup_gd.json", "", function (jsondata) {
+                        for (const item of jsondata.fields) {
+                            const [name, unit, fixed] = [item.field.name, item.field.unit, item.field.fixed];
+                            if (s_feat[name]) {
+                                if (fixed) {
+                                    s_feat[name] = parseFloat(s_feat[name]).toFixed(fixed)
+                                }
+                                if (unit) {
+                                    s_feat[name] = s_feat[name] + " " + unit
+                                }
+                            }
+                            if (e_feat[name]) {
+                                if (fixed) {
+                                    e_feat[name] = parseFloat(e_feat[name]).toFixed(fixed)
+                                }
+                                if (unit) {
+                                    e_feat[name] = e_feat[name] + " " + unit
+                                }
+                            }
+                            if (thisFeat[name]) {
+                                if (fixed) {
+                                    thisFeat[name] = parseFloat(thisFeat[name]).toFixed(fixed)
+                                }
+                                if (unit) {
+                                    thisFeat[name] = thisFeat[name] + " " + unit
+                                }
+                            }
+                        }
+                        resolve({ s_feat, e_feat, thisFeat })
+                    })
+                })
+            }).then(({ s_feat, e_feat, thisFeat }) => {
+                //地面高程
+                $(".gaocheng").html(thisFeat.surf_h ? ("地面高程：" + thisFeat.surf_h) : ("地面高程"));
+                //井深
+                $(".mid-shen").html(thisFeat.cen_deep || "井深");
+                //埋深
+                $(".right-shen").html(e_feat.bury_deep || "埋深");
+                //管径
+                $(".right-cir .left-caliber").html(e_feat.d_s || "管径");
+                //材质
+                $("#e_material").text(e_feat.material ? ("材质：" + e_feat.material) : (""));
+
+                if (s_feat) {
+                    //埋深
+                    $(".left-shen").html(s_feat.bury_deep || "埋深");
+                    //管径
+                    $(".left-cir .left-caliber").html(s_feat.d_s ? (s_feat.d_s) : ("管径"));
+                    //材质
+                    $("#s_material").text(s_feat.material ? ("材质：" + s_feat.material) : (""));
+                }
+            }).catch(err => console.log(err));
+        }
+
+        function getpopupHtml(feature, mainDiv) {
+            $.getJSON("../popup_gd.json", "", function (jsondata) {
+                var html = "<table width='100%' height='100%'   >";
+                for (var i = 0; i < jsondata.fields.length; i++) {
+                    var name = jsondata.fields[i].field.name;
+                    var alias = jsondata.fields[i].field.alias;
+                    var translateType = jsondata.fields[i].field.translateType;
+                    var unit = jsondata.fields[i].field.unit
+                    var fixed = jsondata.fields[i].field.fixed
+                    if (feature.properties[name]) {
+                        if (translateType) {
+                            var translate = parent.service.getNameCN(feature.properties[name], name)
+                            html += "<tr><td  width='70px'>" + alias + ":</td><td>" + translate + "</td></tr>";
+                        }
+                        else {
+                            var value = jsondata.fields[i].field.value;
+                            if (value) {
+                                html += "<tr><td  width='70px'>" + alias + ":</td><td>" + value + "</td></tr>";
+                            } else {
+                                let thisname = feature.properties[name];
+                                if (fixed) {
+                                    thisname = parseFloat(thisname).toFixed(fixed)
+                                }
+                                if (unit) {
+                                    thisname = thisname + " " + unit
+                                }
+                                html += "<tr><td  width='70px'>" + alias + ":</td><td>" + thisname + "</td></tr>"
+                            }
+                        }
+                    }
+                }
+                const date1 = feature.properties.build_date ?? ''
+                const date2 = feature.properties.update_time ?? ''
+                
+                html += "<tr><td  width='90px'>建设日期:</td><td>" + date1 + "</td></tr>"
+                html += "<tr><td  width='90px'>维护时间:</td><td>" + date2 + "</td></tr>"
+
+                html += "</table>";
+                mainDiv.innerHTML = html;
+                document.getElementById("popTitle").innerHTML = feature.properties[jsondata.title];
+                $('#context').mCustomScrollbar({
+                    axis: "y",
+                    theme: "minimal"
+                })
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="title">
+        <span id="popTitle"></span>
+    </div>
+    <!-- <div id="context" class='context' style="display:none;">
+
+
+    </div> -->
+    <div class='context' style="display: flex;justify-content: space-between;">
+        <div id="context" class="context_line">
+        </div>
+        <div id="context3" class='context3'>
+            <div class="gaocheng">
+                地面高程
+            </div>
+            <div class="right-line" id="rightLine">
+                <div class="right-shen">埋深</div>
+            </div>
+            <div class="left-line">
+                <div class="left-shen">埋深</div>
+            </div>
+            <div class="right-cir">
+                <div class="right-bottom"></div>
+                <div class="left-caliber">管径</div>
+                <div class="right-m">
+                    <p id="e_mapnum"></p>
+                    <p id="e_material"></p>
+                </div>
+            </div>
+            <div class="mid-cir">
+                <div class="mid-bottom"></div>
+                <div class="mid-line">
+                    <div class="mid-shen">井深</div>
+                </div>
+            </div>
+            <div class="left-cir">
+                <div class="left-bottom"></div>
+                <div class="left-caliber">管径</div>
+                <div class="left-m">
+                    <p id="s_mapnum"></p>
+                    <p id="s_material"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x5-fullscreen" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <title></title>
+    <script type="text/javascript" src="../../../../lib/include-lib.js" libpath="../lib/"
+        include="jquery,fo-awesome,bootstrap,layer,kcgis2d,kckj,kckjutil,toastr,jquery.mCustomScrollbar"></script>
+    <link rel="stylesheet" href="../../../../res/font-icon/iconfont.css" />
+    <link rel="stylesheet" href="../../../../res/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="res/css/index.css" />
+    <link rel="stylesheet" href="./view.css">
+    <script src="./index.js"></script>
+</head>
+
+
+<body class="popup">
+    <div class="containner-header">
+        <div class="header-title">告警详情</div>
+    </div>
+    <div class='containner-content' id="device-content">
+        <div id="device-tab" class="device-tab" style="display: none;">
+            <div id="tab-all" data-id='' class="click-tab">当前设备</div>
+            <div id="tab-zx" data-id="1">其他设备</div>
+        </div>
+        <div id="device-connect" class="device-connect" style="display: none;">
+            <div style="border-left:4px solid #FF0000" class="device-list">
+                <div style="color:#FF0000" class="device-list-top ">
+                    <div id="device-name">设备名称</div>
+                    <icon data-flag="false" class="icon iconfont iconjsy_arrow icons"
+                        style="transform: rotate(180deg);"></icon>
+                </div>
+                <span class="device-address">地址：设备位置</span>
+                <div class="device-detail">
+                    <div class="device-detail-connect">
+                        <div class="waring-type"> -- </div>
+                        <div class="warning-div">
+                            <div class="child-con" id="alarm-time"> 告警时间：-- </div>
+                            <div class="child-con" id="alarm-info"> 告警详情：-- </div>
+                            <div class="child-con" id="alarm-close"> 是否消警：-- </div>
+                        </div>
+                        <div class="params-div" style="display: none;">
+                            <div class="child-con" style="font-weight: bold;" id="device-params">实时数据：</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="device-list" style="display: none;">
+                <div style="display:none" class="waring-min"><span>告警</span></div>
+                <div style="color:#40ACFF" class="device-list-top ">
+                    <span>武珈山上家属区主管</span>
+                    <icon data-flag="false" class="icon iconfont iconjsy_arrow icons"
+                        style="transform: rotate(180deg);"></icon>
+                </div>
+                <div class="device-num">瞬时流量：0m³/h</div>
+                <div class="device-detail">
+                    <div class="device-detail-connect">
+                        <div class="waring-type">告警状态:正常</div>
+                        <div class="child-con">设备编号：713634693</div>
+                        <div class="child-con">上报时间：2023-02-16 14:07:58</div>
+                        <div class="child-con">采集类型：流量表</div>
+                        <div class="child-con">正累计流量:56225.3m³</div>
+                        <div class="child-con">净流量:56214.902m³</div>
+                        <div class="child-con">瞬时流量：0m³/h</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

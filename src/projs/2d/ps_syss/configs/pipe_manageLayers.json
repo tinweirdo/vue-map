@@ -1,0 +1,754 @@
+﻿[
+  {
+    "name": "综合管网",
+    "id": 2,
+    "order": 1,
+    "type": "group"
+  },
+  {
+    "name": "排水",
+    "id": 21,
+    "order": 2,
+    "open": "true",
+    "type": "group",
+    "pid": 2
+  },
+  {
+    "name": "污水",
+    "id": 210,
+    "order": 1,
+    "open": "false",
+    "type": "group",
+    "pid": 21
+  },
+  {
+    "name": "管点",
+    "id": 211,
+    "type": "data",
+    "pid": 210,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='WS'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 212,
+    "type": "data",
+    "pid": 210,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='WS'",
+    "layerName": "管线图层"
+  },
+
+  {
+    "name": "雨水",
+    "id": 211,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 21
+  },
+  {
+    "name": "管点",
+    "id": 2111,
+    "type": "data",
+    "pid": 211,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='YS'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 2112,
+    "type": "data",
+    "pid": 211,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='YS'",
+    "layerName": "管线图层"
+  },
+
+
+  {
+    "name": "雨污合水",
+    "id": 212,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 21
+  },
+  {
+    "name": "管点",
+    "id": 2121,
+    "type": "data",
+    "pid": 212,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='HS'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 2122,
+    "type": "data",
+    "pid": 212,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='HS'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "电力",
+    "id": 22,
+    "order": 2,
+    "open": "true",
+    "type": "group",
+    "pid": 2
+  },
+  {
+    "name": "管点",
+    "id": 221,
+    "type": "data",
+    "pid": 22,
+    "open": "false",
+    "visible": true,
+    "where": " OR subtype='DL'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 222,
+    "type": "data",
+    "pid": 22,
+    "open": "false",
+    "visible": true,
+    "where": " OR subtype='DL'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "垃圾真空",
+    "id": 23,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 2
+  },
+  {
+    "name": "管点",
+    "id": 231,
+    "type": "data",
+    "pid": 23,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='TP'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 232,
+    "type": "data",
+    "pid": 23,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='TP'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "给水",
+    "id": 24,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 2
+  },
+  {
+    "name": "管点",
+    "id": 241,
+    "type": "data",
+    "pid": 24,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='JS'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 242,
+    "type": "data",
+    "pid": 24,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='JS'",
+    "layerName": "管线图层"
+  },
+
+  {
+    "name": "中水",
+    "id": 25,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 2
+  },
+  {
+    "name": "管点",
+    "id": 251,
+    "type": "data",
+    "pid": 25,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='JM'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 252,
+    "type": "data",
+    "pid": 25,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='JM'",
+    "layerName": "管线图层"
+  },
+
+  {
+    "name": "热水",
+    "id": 26,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 2
+  },
+  {
+    "name": "管点",
+    "id": 261,
+    "type": "data",
+    "pid": 26,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='RS'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 262,
+    "type": "data",
+    "pid": 26,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='RS'",
+    "layerName": "管线图层"
+  },
+
+  {
+    "name": "蒸汽",
+    "id": 27,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 2
+  },
+  {
+    "name": "管点",
+    "id": 271,
+    "type": "data",
+    "pid": 27,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='RZ'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 272,
+    "type": "data",
+    "pid": 27,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='RZ'",
+    "layerName": "管线图层"
+  },
+
+  {
+    "name": "燃气",
+    "id": 28,
+    "order": 2,
+    "open": "true",
+    "type": "group",
+    "pid": 2
+  },
+  {
+    "name": "天然气",
+    "id": 281,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 28
+  },
+
+  {
+    "name": "管点",
+    "id": 2811,
+    "type": "data",
+    "pid": 281,
+    "open": "false",
+    "visible": false,
+    "where": "OR subtype='ZQ' OR subtype='RZ' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 2812,
+    "type": "data",
+    "pid": 281,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='ZQ' OR subtype='RZ' ",
+    "layerName": "管线图层"
+  },
+
+  {
+    "name": "液化气",
+    "id": 282,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 28
+  },
+  {
+    "name": "管点",
+    "id": 2821,
+    "type": "data",
+    "pid": 282,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='YH'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 2822,
+    "type": "data",
+    "pid": 282,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='YH'",
+    "layerName": "管线图层"
+  },
+
+
+  {
+    "name": "煤气",
+    "id": 283,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 28
+  },
+  {
+    "name": "管点",
+    "id": 2831,
+    "type": "data",
+    "pid": 283,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='MQ'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 2832,
+    "type": "data",
+    "pid": 283,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='MQ'",
+    "layerName": "管线图层"
+  },
+
+
+  {
+    "name": "输油",
+    "id": 29,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 2
+  },
+  {
+    "name": "管点",
+    "id": 291,
+    "type": "data",
+    "pid": 29,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='MY'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 292,
+    "type": "data",
+    "pid": 29,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='MY'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "强电（电力）",
+    "id": 30,
+    "order": 2,
+    "open": "true",
+    "type": "group",
+    "pid": 2
+  },
+  {
+    "name": "电力",
+    "id": 301,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 30
+  },
+  {
+    "name": "管点",
+    "id": 3011,
+    "type": "data",
+    "pid": 301,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='GD'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 3012,
+    "type": "data",
+    "pid": 301,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='GD'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "路灯",
+    "id": 302,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 30
+  },
+  {
+    "name": "管点",
+    "id": 3021,
+    "type": "data",
+    "pid": 302,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='LD'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 3022,
+    "type": "data",
+    "pid": 302,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='LD'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "交通信号",
+    "id": 303,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 30
+  },
+  {
+    "name": "管点",
+    "id": 3031,
+    "type": "data",
+    "pid": 303,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='XH'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 3032,
+    "type": "data",
+    "pid": 303,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='XH'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "监控",
+    "id": 304,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 30
+  },
+  {
+    "name": "管点",
+    "id": 3041,
+    "type": "data",
+    "pid": 304,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='DP'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 3042,
+    "type": "data",
+    "pid": 304,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='DP'",
+    "layerName": "管线图层"
+  },
+
+  {
+    "name": "弱电（通信）",
+    "id": 31,
+    "order": 2,
+    "open": "true",
+    "type": "group",
+    "pid": 2
+  },
+  {
+    "name": "移动",
+    "id": 311,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 31
+  },
+  {
+    "name": "管点",
+    "id": 3111,
+    "type": "data",
+    "pid": 311,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='YD'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 3112,
+    "type": "data",
+    "pid": 311,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='YD'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "联通",
+    "id": 312,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 31
+  },
+  {
+    "name": "管点",
+    "id": 3121,
+    "type": "data",
+    "pid": 312,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='WT'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 3122,
+    "type": "data",
+    "pid": 312,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='WT'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "电信",
+    "id": 313,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 31
+  },
+  {
+    "name": "管点",
+    "id": 3131,
+    "type": "data",
+    "pid": 313,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='DX'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 3132,
+    "type": "data",
+    "pid": 313,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='DX'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "电视（广电）",
+    "id": 314,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 31
+  },
+  {
+    "name": "管点",
+    "id": 3141,
+    "type": "data",
+    "pid": 314,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='TV'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 3142,
+    "type": "data",
+    "pid": 314,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='TV'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "传输局",
+    "id": 315,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 31
+  },
+  {
+    "name": "管点",
+    "id": 3151,
+    "type": "data",
+    "pid": 315,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='CT'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 3152,
+    "type": "data",
+    "pid": 315,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='CT'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "军用",
+    "id": 316,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 31
+  },
+  {
+    "name": "管点",
+    "id": 3161,
+    "type": "data",
+    "pid": 316,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='JY'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 3162,
+    "type": "data",
+    "pid": 316,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='JY'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "工业管道",
+    "id": 32,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 2
+  },
+  {
+    "name": "管点",
+    "id": 321,
+    "type": "data",
+    "pid": 32,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='GY'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 322,
+    "type": "data",
+    "pid": 32,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='GY'",
+    "layerName": "管线图层"
+  },
+  {
+    "name": "不明",
+    "id": 33,
+    "order": 2,
+    "open": "false",
+    "type": "group",
+    "pid": 2
+  },
+  {
+    "name": "管点",
+    "id": 331,
+    "type": "data",
+    "pid": 33,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='BM'",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管线",
+    "id": 332,
+    "type": "data",
+    "pid": 33,
+    "open": "false",
+    "visible": false,
+    "where": " OR subtype='BM'",
+    "layerName": "管线图层"
+  } 
+]

@@ -1,6 +1,32 @@
 
 <script setup>
-import { CDKC_LIBS_HOST } from '../env';
+import { ref } from 'vue';
+import { useMap } from '../hooks/map';
+import locateMarker from '../assets/mapicon/marker/locate.png';
+
+const { map } = useMap();
+const center = map.value.getCenter();
+let lat = ref(center.lng);
+let lng = ref(center.lat);
+let markerGroup = ref(null);
+
+function locate() {
+    if(markerGroup.value) markerGroup.value.clearLayers();
+    const markers = [];
+    const coords = [lng.value, lat.value];
+    map.value.setView(coords);
+
+    const icon = L.icon({
+        iconUrl: locateMarker,
+    });
+
+    const marker = L.marker(coords, { icon });
+    markers.push(marker);
+
+    markerGroup.value = L.layerGroup(markers);
+    map.value.addLayer(markerGroup.value);
+
+}
 
 </script>
 
@@ -9,17 +35,17 @@ import { CDKC_LIBS_HOST } from '../env';
 
         <div class="input-group">
             <span class="input-group-addon">经度</span>
-            <input type="text" class="form-control" value="0" placeholder="请输入经度数值0-180" />
+            <input type="text" class="form-control" v-model.number="lat" placeholder="请输入经度数值0-180" />
         </div>
 
         <div class="input-group">
             <span class="input-group-addon">纬度</span>
-            <input type="text" class="form-control" value="0" placeholder="请输入纬度数值0-180" />
+            <input type="text" class="form-control" v-model.number="lng" placeholder="请输入纬度数值0-180" />
         </div>
 
         <div class="input-group text-right">
             <div class="radio radio-inline text-right">
-                <input type="button" class="btn btn-primary" value="确定" />
+                <input type="button" class="btn btn-primary" value="确定" @click="locate" />
             </div>
         </div>
     </div>
@@ -65,6 +91,7 @@ import { CDKC_LIBS_HOST } from '../env';
 }
 
 .container {
+    background-color: rgba(19, 38, 36, 0.9);
     position: absolute;
     z-index: 500;
     bottom: 30px;

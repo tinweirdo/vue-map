@@ -1,0 +1,287 @@
+{
+  "layer": {
+    "name": "管线",
+    "aliasname": "管线",
+    "geometryType": "line",
+    "fields": [
+      {
+        "name": "type",
+        "alias": "管线大类",
+        "width": "100",
+        "isshow": true,
+        "edit": false,
+        "type": "select"
+      },
+      {
+        "name": "subtype",
+        "alias": "管点小类",
+        "width": "100",
+        "isshow": true,
+        "edit": false,
+        "type": "select"
+      },
+      {
+        "name": "map_num_s",
+        "alias": "起点点号",
+        "width": "100",
+        "isshow": true,
+        "edit": false,
+        "notNull": true,
+        "type": "text"
+      },
+      {
+        "name": "map_num_e",
+        "alias": "终点点号",
+        "width": "100",
+        "isshow": true,
+        "edit": false,
+        "notNull": true,
+        "type": "text"
+      },
+      {
+        "name": "cen_deep_sn",
+        "alias": "起点埋深",
+        "width": "100",
+        "isshow": true,
+        "edit": true,
+        "type": "number",
+        "notNull": true
+      },
+      {
+        "name": "cen_deep_en",
+        "alias": "终点埋深",
+        "width": "100",
+        "isshow": true,
+        "edit": true,
+        "type": "number",
+        "notNull": true
+      },
+      {
+        "name": "bury_type",
+        "alias": "敷设方式",
+        "width": "100",
+        "isshow": true,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "d_s",
+        "alias": "断面尺寸",
+        "width": "100",
+        "isshow": true,
+        "edit": true,
+        "type": "text",
+        "notNull": true,
+        "checkExpression": {
+          "regexp": "^[1-9](\\d*)+((\\X|x)[1-9](\\d*))?$",
+          "example": "100 或者 100X100"
+        }
+      },
+      {
+        "name": "material",
+        "alias": "材质",
+        "width": "100",
+        "isshow": true,
+        "edit": true,
+        "type": "text",
+        "notNull": true
+      },
+      {
+        "name": "road_name",
+        "alias": "道路名称",
+        "width": "100",
+        "isshow": true,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "remark",
+        "alias": "备注",
+        "width": "100",
+        "isshow": true,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "field1",
+        "alias": "备用1",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "field2",
+        "alias": "备用2",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text"
+      },
+
+      {
+        "name": "build_date",
+        "alias": "建设日期",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text",
+        "placeholder": "20xx-x-xx",
+        "checkExpression": {
+          "regexp": "^\\d{4}-\\d{1,2}-\\d{1,2}( ([01]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$",
+          "example": "2022-1-1 或者 2022-1-1 00:00:00"
+        }
+      },
+      {
+        "name": "probe_date",
+        "alias": "探测时间",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "flow",
+        "alias": "流向",
+        "width": "100",
+        "isshow": true,
+        "edit": true,
+        "type": "select",
+        "selectOption": [
+          {
+            "f_name": "正向",
+            "f_code": 1,
+            "select": true
+          },
+          {
+            "f_name": "反向",
+            "f_code": 2
+          }
+        ]
+      },
+      {
+        "name": "state",
+        "alias": "使用状态",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "select",
+        "selectOption": [
+          {
+            "f_name": "正常",
+            "f_code": "正常",
+            "select": true
+          },
+          {
+            "f_name": "在建",
+            "f_code": "在建"
+          }
+        ]
+      },
+      {
+        "name": "corrosion_prevention",
+        "alias": "防腐措施",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "thermal_insulation_material",
+        "alias": "保温材质",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "build_date_slot",
+        "alias": "建设周期",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "f_taizu",
+        "alias": "台组号",
+        "width": "100",
+        "isshow": false,
+        "edit": false,
+        "type": "text"
+      },
+      {
+        "name": "supervisor_unit",
+        "alias": "监理单位",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "construction_unit",
+        "alias": "施工单位",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "survey_unit",
+        "alias": "勘测单位",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "belong",
+        "alias": "权属单位",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "start_ele",
+        "alias": "起点高程",
+        "width": "100",
+        "isshow": true,
+        "edit": false,
+        "type": "text"
+      },
+      {
+        "name": "end_ele",
+        "alias": "终点高程",
+        "width": "100",
+        "isshow": true,
+        "edit": false,
+        "type": "text"
+      },
+      {
+        "name": "field3",
+        "alias": "备用3",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "field4",
+        "alias": "备用4",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text"
+      },
+      {
+        "name": "field5",
+        "alias": "备用5",
+        "width": "100",
+        "isshow": false,
+        "edit": true,
+        "type": "text"
+      }
+    ]
+  }
+}

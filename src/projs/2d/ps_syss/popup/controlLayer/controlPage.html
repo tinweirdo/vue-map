@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="../../../../../lib/include-lib.js" libpath="../../../../../"
+        include="jquery"></script>
+    <script type="text/javascript" src="../../../../../lib/cdkc/_index.js" libpath="../../../../../"
+        include="content"></script>
+    <link href="popup.css" rel="stylesheet" />
+    <style>
+        .context{
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="context" class='context'>
+        <ul class="controlDevice">
+            <li>
+                <span class="controlDevice_title">激活设备</span>
+                <img id="activation-btn" state="wjh" class="isActive" src="images/wjh.png" alt="">
+                <span class="isisActive_alt">
+                    <span class="active_yes" style="margin-right: 20px;">已激活</span>
+                    <span class="active_no active">未激活</span>
+                </span>
+            </li>
+            <li class="info">
+                <span>注意</span>: 控制前需先<span>[激活设备]</span>
+            </li>
+        </ul>
+        <div id="param-table"></div>
+    </div>
+
+    <script src="controlPage.js"></script>
+</body>
+
+</html>

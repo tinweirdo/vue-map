@@ -1,0 +1,947 @@
+{
+  "geometryEdit": false,
+  "gdlx": [
+    {
+      "name": "WS",
+      "alias": "污水",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" }
+      ]
+    },
+    {
+      "name": "YD",
+      "alias": "移动",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" }
+      ]
+    },
+    {
+      "name": "YS",
+      "alias": "雨水",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" },
+        { "name": "起止点", "alias": "起止点" },
+        { "name": "CSK", "alias": "出水口" },
+        { "name": "YJ", "alias": "雨水井" }
+      ]
+    },
+    {
+      "name": "JS",
+      "alias": "给水",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" },
+        { "name": "起止点", "alias": "起止点" },
+        { "name": "CSK", "alias": "出水口" },
+        { "name": "YJ", "alias": "雨水井" },
+        { "name": "JF", "alias": "阀门" },
+        { "name": "SBJ", "alias": "水表井" },
+        { "name": "XFS", "alias": "消防栓" },
+        { "name": "JFJ", "alias": "阀门井" },
+        { "name": "JJ", "alias": "检修井" }
+      ]
+    },
+    {
+      "name": "GD",
+      "alias": "供电",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" },
+        { "name": "起止点", "alias": "起止点" },
+        { "name": "CSK", "alias": "出水口" },
+        { "name": "YJ", "alias": "雨水井" },
+        { "name": "JF", "alias": "阀门" },
+        { "name": "SBJ", "alias": "水表井" },
+        { "name": "XFS", "alias": "消防栓" },
+        { "name": "JFJ", "alias": "阀门井" },
+        { "name": "JJ", "alias": "检修井" },
+        { "name": "HWG", "alias": "环网柜" },
+        { "name": "DJ", "alias": "电井" },
+        { "name": "KZG", "alias": "控制柜" },
+        { "name": "FX", "alias": "FX" },
+        { "name": "变坡点", "alias": "变坡点" }
+      ]
+    },
+    {
+      "name": "DX",
+      "alias": "电信",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" },
+        { "name": "起止点", "alias": "起止点" },
+        { "name": "CSK", "alias": "出水口" },
+        { "name": "YJ", "alias": "雨水井" }
+      ]
+    },
+    {
+      "name": "TX",
+      "alias": "共通",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" }
+      ]
+    },
+    {
+      "name": "RL",
+      "alias": "热力",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" }
+      ]
+    },
+    {
+      "name": "LD",
+      "alias": "路灯",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "九分支", "alias": "九分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "FZ", "alias": "FZ" },
+        { "name": "DG", "alias": "DG" },
+        { "name": "DJ", "alias": "电井" }
+      ]
+    },
+    {
+      "name": "LT",
+      "alias": "联通",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "九分支", "alias": "九分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "CD", "alias": "出地" }
+      ]
+    },
+    {
+      "name": "XH",
+      "alias": "信号",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" },
+        { "name": "起止点", "alias": "起止点" },
+        { "name": "CSK", "alias": "出水口" },
+        { "name": "YJ", "alias": "雨水井" }
+      ]
+    },
+    {
+      "name": "SY",
+      "alias": "输油",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" }
+      ]
+    },
+    {
+      "name": "RS",
+      "alias": "热水",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" },
+        { "name": "起止点", "alias": "起止点" },
+        { "name": "CSK", "alias": "出水口" },
+        { "name": "YJ", "alias": "雨水井" },
+        { "name": "JF", "alias": "阀门" },
+        { "name": "SBJ", "alias": "水表井" },
+        { "name": "XFS", "alias": "消防栓" },
+        { "name": "JFJ", "alias": "阀门井" },
+        { "name": "JJ", "alias": "检修井" },
+        { "name": "HWG", "alias": "环网柜" },
+        { "name": "DJ", "alias": "电井" },
+        { "name": "KZG", "alias": "控制柜" },
+        { "name": "FX", "alias": "FX" },
+        { "name": "变坡点", "alias": "变坡点" },
+        { "name": "架空点", "alias": "架空点" }
+      ]
+    },
+    {
+      "name": "CS",
+      "alias": "传输",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" }
+      ]
+    },
+    {
+      "name": "JK",
+      "alias": "监控",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" },
+        { "name": "起止点", "alias": "起止点" },
+        { "name": "CSK", "alias": "出水口" },
+        { "name": "YJ", "alias": "雨水井" }
+      ]
+    },
+    {
+      "name": "TR",
+      "alias": "天然气",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" },
+        { "name": "起止点", "alias": "起止点" },
+        { "name": "CSK", "alias": "出水口" },
+        { "name": "YJ", "alias": "雨水井" }
+      ]
+    },
+    {
+      "name": "TV",
+      "alias": "TV",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" },
+        { "name": "起止点", "alias": "起止点" },
+        { "name": "CSK", "alias": "出水口" },
+        { "name": "YJ", "alias": "雨水井" }
+      ]
+    },
+    {
+      "name": "JY",
+      "alias": "军用",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" }
+      ]
+    },
+    {
+      "name": "HS",
+      "alias": "合水",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" }
+      ]
+    },
+    {
+      "name": "EX",
+      "alias": "保密",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" }
+      ]
+    },
+    {
+      "name": "BM",
+      "alias": "不明",
+      "gdtz": [
+        { "name": "ZX", "alias": "直线点" },
+        { "name": "PXD", "alias": "偏心点" },
+        { "name": "JBD", "alias": "井边点" },
+        { "name": "HFC", "alias": "化粪池" },
+        { "name": "3T", "alias": "三通" },
+        { "name": "YB", "alias": "雨篦" },
+        { "name": "WJ", "alias": "污水井" },
+        { "name": "FP", "alias": "非普查" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "YLK", "alias": "预留口" },
+        { "name": "探测点", "alias": "探测点" },
+        { "name": "4T", "alias": "四通" },
+        { "name": "ZZ", "alias": "转折点" },
+        { "name": "DT", "alias": "多通" },
+        { "name": "BC", "alias": "变材" },
+        { "name": "SG", "alias": "上杆" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "六分支", "alias": "六分支" },
+        { "name": "七分支", "alias": "七分支" },
+        { "name": "CD", "alias": "出地" },
+        { "name": "RK", "alias": "人孔" },
+        { "name": "BJ", "alias": "变径" },
+        { "name": "RF", "alias": "阀门" },
+        { "name": "RFJ", "alias": "阀门井" },
+        { "name": "RJ", "alias": "检修井" }
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "layer": {
+        "name": "管点",
+        "aliasname": "管点",
+        "geometryType": "point",
+        "url": "syzhpsMap/FeatureServer/syhfssPointLayer",
+        "editfields": [
+          {
+            "outfield": {
+              "name": "map_name",
+              "alias": "图幅号",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "map_num",
+              "alias": "图上点号",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "exp_num",
+              "alias": "物探点号",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "sur_num",
+              "alias": "测量点号",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "type",
+              "alias": "管线类型",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "subtype",
+              "alias": "管线子类型",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "symbol",
+              "alias": "代码",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "feature",
+              "alias": "特征",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "subside",
+              "alias": "附属物",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "x",
+              "alias": "x坐标",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "y",
+              "alias": "y坐标",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "surf_h",
+              "alias": "地面高程(米)",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "top_h_max",
+              "alias": "最高管顶高程(米)",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "bot_h_min",
+              "alias": "最低管底高程(米)",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "cen_deep",
+              "alias": "井深(米)",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "certainty",
+              "alias": "确定性",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "angle",
+              "alias": "角度",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "remark",
+              "alias": "备注",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "state",
+              "alias": "状态",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "proj_num",
+              "alias": "工程号",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "rec_num",
+              "alias": "建设许可证号",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "chk_num",
+              "alias": "验收合格证号",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          },
+          {
+            "outfield": {
+              "name": "belong",
+              "alias": "权属单位",
+              "value": "",
+              "type": "textinput",
+              "valid": "",
+              "disabled":false
+            }
+          }
+        ]
+
+      }
+    }
+  ]
+}

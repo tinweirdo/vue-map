@@ -1,0 +1,231 @@
+﻿{
+  "key": [
+    "tFbbOTdy1e7hlVbrkMU0x9jG",
+    "00935d64ed6348fd293785331c58eab0"
+  ],
+  "url": "https://api.map.baidu.com/place/v2/search",
+  "region": "武汉市",
+  "LayerUrl": "syzhpsMap/MapServer",
+  "FeatureUrl": "syzhpsMap/FeatureServer",
+  "LayerName": "",
+  "SearchLayers": "syhfssPointLayer,syhfssLineLayer",
+  "searchFields": "road_name,map_num",
+  "where": "defaultversion='1'",
+  "layers": {
+    "syhfssPointLayer": "管点图层",
+    "syhfssLineLayer": "管线图层"
+  },
+  "showfield": {
+    "syhfssLineLayer": [
+      "road_name"
+    ],
+    "syhfssPointLayer": [
+      "map_num",
+      "road_name"
+    ]
+  },
+  "translateType": [
+    {
+      "name": "TR",
+      "alias": "天燃气"
+    }
+  ],
+  "translateFeature": [
+    {
+      "name": "KZG",
+      "alias": "控制柜"
+    },
+    {
+      "name": "SBJ",
+      "alias": "水表井"
+    },
+    {
+      "name": "SB",
+      "alias": "水表"
+    },
+    {
+      "name": "YLK",
+      "alias": "预留口"
+    },
+    {
+      "name": "SYJ",
+      "alias": "水源井"
+    },
+    {
+      "name": "BJ",
+      "alias": "变径"
+    },
+    {
+      "name": "DT",
+      "alias": "多通"
+    },
+    {
+      "name": "HWG",
+      "alias": "环网柜"
+    },
+    {
+      "name": "JXX",
+      "alias": "接线箱"
+    },
+    {
+      "name": "BYQ",
+      "alias": "变压器"
+    },
+    {
+      "name": "YB",
+      "alias": "雨篦"
+    },
+    {
+      "name": "JSK",
+      "alias": "进水口"
+    },
+    {
+      "name": "CSK",
+      "alias": "出水口"
+    },
+    {
+      "name": "HFC",
+      "alias": "化粪池"
+    },
+    {
+      "name": "PQ",
+      "alias": "排气阀"
+    },
+    {
+      "name": "RK",
+      "alias": "入孔"
+    },
+    {
+      "name": "ZZ",
+      "alias": "转折点"
+    },
+    {
+      "name": "SG",
+      "alias": "上杆"
+    },
+    {
+      "name": "DG",
+      "alias": "灯杆"
+    },
+    {
+      "name": "ZX",
+      "alias": "直线点"
+    },
+    {
+      "name": "FZ",
+      "alias": "分支点"
+    },
+    {
+      "name": "FP",
+      "alias": "非普查"
+    },
+    {
+      "name": "XB",
+      "alias": "箱变"
+    },
+    {
+      "name": "DLYX",
+      "alias": "电缆余线"
+    },
+    {
+      "name": "FX",
+      "alias": "分支箱"
+    },
+    {
+      "name": "RH",
+      "alias": "入户"
+    },
+    {
+      "name": "LRK",
+      "alias": "人孔"
+    },
+    {
+      "name": "LSK",
+      "alias": "手孔"
+    },
+    {
+      "name": "PDS",
+      "alias": "配电室"
+    },
+    {
+      "name": "PXD",
+      "alias": "偏心点"
+    },
+    {
+      "name": "BDZ",
+      "alias": "变电站"
+    },
+    {
+      "name": "RFJ",
+      "alias": "阀门井"
+    },
+    {
+      "name": "HRZ",
+      "alias": "换热站"
+    },
+    {
+      "name": "CD",
+      "alias": "出地"
+    },
+    {
+      "name": "RJ",
+      "alias": "检修井"
+    },
+    {
+      "name": "3T",
+      "alias": "三通"
+    },
+    {
+      "name": "RF",
+      "alias": "阀门"
+    },
+    {
+      "name": "GD",
+      "alias": "管帽"
+    },
+    {
+      "name": "4T",
+      "alias": "四通"
+    },
+    {
+      "name": "ZZ",
+      "alias": "转折点"
+    },
+    {
+      "name": "JFJ",
+      "alias": "阀门井"
+    },
+    {
+      "name": "XFJ",
+      "alias": "消防井"
+    },
+    {
+      "name": "XFS",
+      "alias": "消防栓"
+    },
+    {
+      "name": "JJ",
+      "alias": "检修井"
+    },
+    {
+      "name": "JF",
+      "alias": "阀门"
+    },
+    {
+      "name": "TYX",
+      "alias": "调压箱"
+    },
+    {
+      "name": "BC",
+      "alias": "变材"
+    },
+    {
+      "name": "MFJ",
+      "alias": "阀门井"
+    },
+    {
+      "name": "NSG",
+      "alias": "凝水缸"
+    }
+  ]
+}
