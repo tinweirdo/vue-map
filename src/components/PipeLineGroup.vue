@@ -1,19 +1,30 @@
 <script setup>
 import L from 'leaflet'
-import PipeLine from './PipeLine.vue';
 import { useMap } from '../hooks/map';
 import { onUnmounted, ref } from 'vue';
-import { provideLayer } from '../hooks/pipeline-layer'
-defineProps({ pipelines: { type: Array, default: () => [] } })
+import { provideLayer } from '../hooks/pipeline-layer';
+import * as service from '../hooks/service'
 
-const layer = ref()
+const props = defineProps({
+    url: { type: Object, default: () => null },
+    config:{ type: Object, default: () => null }
+});
 
-const { map } = useMap()
+// pipe url
+const { pointUrl, lineUrl } = props.url;
+// config
+const { where } = props.config;
 
-layer.value = L.geoJSON()
+service.queryFeats(pointUrl, where)
 
-layer.value.addTo(map.value)
-provideLayer(layer)
+const layer = ref();
+
+const { map } = useMap();
+
+layer.value = L.geoJSON();
+
+layer.value.addTo(map.value);
+provideLayer(layer);
 
 onUnmounted(() => {
     // rm layer from map
@@ -21,6 +32,4 @@ onUnmounted(() => {
 
 </script>
 
-<template>
-    <PipeLine v-for="pipeline in pipelines" :pipeline="pipeline" :key="pipeline.id" />
-</template>p
+<template></template>
