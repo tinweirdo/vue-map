@@ -1,0 +1,545 @@
+{
+    "title": "name",
+    "terPloygonUrl": "terrainMap/FeatureServer/terPolygon",
+    "fields": {
+        "baseInfo": [
+            {
+                "name": "globalId",
+                "alias": "设备编码",
+                "visible": true
+            },
+            {
+                "name": "device_name",
+                "alias": "设备名称",
+                "visible": true
+            },
+            {
+                "name": "st",
+                "alias": "监测点编号",
+                "visible": true
+            },
+            {
+                "name": "name",
+                "alias": "监测点名称",
+                "visible": true
+            },
+            {
+                "name": "device_desc",
+                "alias": "设备描述",
+                "visible": true
+            },
+            {
+                "name": "rader_height",
+                "alias": "雷达液位高度",
+                "unit": "m",
+                "visible": true
+            },
+            {
+                "name": "device_address",
+                "alias": "设备地址",
+                "visible": true
+            },
+            {
+                "name": "x",
+                "alias": "X坐标",
+                "visible": true,
+                "fixed": 6
+            },
+            {
+                "name": "y",
+                "alias": "Y坐标",
+                "visible": true,
+                "fixed": 6
+            },
+
+            {
+                "name": "pipe_type",
+                "alias": "监测管网类别",
+                "visible": true
+            },
+            {
+                "name": "pipe_subtype",
+                "alias": "监测点类型",
+                "visible": true
+            },
+            {
+                "name": "warning_state",
+                "alias": "是否告警",
+                "visible": true
+            },
+            {
+                "name": "online_state",
+                "alias": "设备在线状态",
+                "visible": true
+            },
+            {
+                "name": "enable_warning",
+                "alias": "是否激活告警",
+                "visible": true
+            },
+          
+            {
+                "name": "last_edited_date",
+                "alias": "采集时间",
+                "visible": true
+            }
+        ],
+        "otherInfo": [
+            {
+                "name": "tt",
+                "alias": "数据观测时间",
+                "visible": true
+            },
+            {
+                "name": "z",
+                "alias": "水位1",
+                "unit": "m",
+                "visible": true
+            },
+            {
+                "name": "zb",
+                "alias": "水位2",
+                "unit": "m",
+                "visible": true
+            },
+            {
+                "name": "sbl1",
+                "alias": "瞬时流量1",
+                "unit": "m³/h",
+                "visible": true
+            },
+            {
+                "name": "sbl2",
+                "alias": "瞬时流量2",
+                "unit": "m³/h",
+                "visible": true
+            },
+            {
+                "name": "va",
+                "alias": "瞬时流速1",
+                "unit": "m/s",
+                "visible": true
+            },
+            {
+                "name": "vj",
+                "alias": "瞬时流速2",
+                "unit": "m/s",
+                "visible": true
+            },
+            {
+                "name": "pj",
+                "alias": "当前降雨量",
+                "unit": "mm",
+                "visible": true
+            },
+            {
+                "name": "pt",
+                "alias": "累计降雨量",
+                "unit": "mm",
+                "visible": true
+            },
+            {
+                "name": "pn05",
+                "alias": "降雨量(5min)",
+                "unit": "mm",
+                "visible": true
+            },
+            {
+                "name": "dtemp",
+                "alias": "设备温度",
+                "unit": "℃",
+                "visible": true
+            },
+            {
+                "name": "signal",
+                "alias": "设备信号强度",
+                "unit": "%",
+                "visible": true
+            },
+            {
+                "name": "vt",
+                "alias": "设备电压",
+                "unit": "V",
+                "visible": true
+            },
+            {
+                "name": "c",
+                "alias": "水温",
+                "unit": "℃",
+                "visible": true
+            },
+            {
+                "name": "pm25",
+                "alias": "PM2.5",
+                "unit": "ug/m³",
+                "visible": true
+            },
+            {
+                "name": "pm10",
+                "alias": "PM10",
+                "unit": "ug/m³",
+                "visible": true
+            },
+            {
+                "name": "ai",
+                "alias": "气温",
+                "unit": "℃",
+                "visible": true
+            },
+            {
+                "name": "mst",
+                "alias": "空气湿度",
+                "unit": "%RH",
+                "visible": true
+            },
+            {
+                "name": "turb",
+                "alias": "浊度悬浮物",
+                "unit": "mg/L或NTU",
+                "visible": true
+            },
+            {
+                "name": "q1",
+                "alias": "瞬时流量1",
+                "unit": "m³/s",
+                "visible": true
+            },
+            {
+                "name": "q2",
+                "alias": "瞬时流量2",
+                "unit": "m³/s",
+                "visible": true
+            },
+            {
+                "name": "tp",
+                "alias": "总磷",
+                "unit": "mg/L",
+                "visible": true
+            },
+            {
+                "name": "tn",
+                "alias": "总氮",
+                "unit": "mg/L",
+                "visible": true
+            },
+            {
+                "name": "q",
+                "alias": "总瞬时流量",
+                "unit": "m³/s",
+                "visible": true
+            },
+            {
+                "name": "cq1",
+                "alias": "流量计1累计流量",
+                "unit": "m³",
+                "visible": true
+            },
+            {
+                "name": "cq2",
+                "alias": "流量计2累计流量",
+                "unit": "m³",
+                "visible": true
+            },
+            {
+                "name": "pd",
+                "alias": "昨日雨量",
+                "unit": "mm",
+                "visible": true
+            },
+            {
+                "name": "pn01",
+                "alias": "降雨量(1min)",
+                "unit": "mm",
+                "visible": true
+            },
+            {
+                "name": "pn10",
+                "alias": "降雨量(10min)",
+                "unit": "mm",
+                "visible": true
+            },
+            {
+                "name": "pn30",
+                "alias": "降雨量(30min)",
+                "unit": "mm",
+                "visible": true
+            },
+            {
+                "name": "p1",
+                "alias": "降雨量(1h)",
+                "unit": "mm",
+                "visible": true
+            },
+            {
+                "name": "m10",
+                "alias": "土壤湿度(10cm)",
+                "unit": "%",
+                "visible": true
+            },
+            {
+                "name": "m20",
+                "alias": "土壤湿度(20cm)",
+                "unit": "%",
+                "visible": true
+            },
+            {
+                "name": "m30",
+                "alias": "土壤湿度(30cm)",
+                "unit": "%",
+                "visible": true
+            },
+            {
+                "name": "m40",
+                "alias": "土壤湿度(40cm)",
+                "unit": "%",
+                "visible": true
+            },
+            {
+                "name": "m50",
+                "alias": "土壤湿度(50cm)",
+                "unit": "%",
+                "visible": true
+            },
+            {
+                "name": "m60",
+                "alias": "土壤湿度(60cm)",
+                "unit": "%",
+                "visible": true
+            },
+            {
+                "name": "m80",
+                "alias": "土壤湿度(80cm)",
+                "unit": "%",
+                "visible": true
+            },
+            {
+                "name": "m100",
+                "alias": "土壤湿度(100cm)",
+                "unit": "%",
+                "visible": true
+            },
+            {
+                "name": "t10",
+                "alias": "土壤温度(10cm)",
+                "unit": "℃",
+                "visible": true
+            },
+            {
+                "name": "t20",
+                "alias": "土壤温度(20cm)",
+                "unit": "℃",
+                "visible": true
+            },
+            {
+                "name": "t30",
+                "alias": "土壤温度(30cm)",
+                "unit": "℃",
+                "visible": true
+            },
+            {
+                "name": "t40",
+                "alias": "土壤温度(40cm)",
+                "unit": "℃",
+                "visible": true
+            },
+            {
+                "name": "t50",
+                "alias": "土壤温度(50cm)",
+                "unit": "℃",
+                "visible": true
+            },
+            {
+                "name": "t60",
+                "alias": "土壤温度(60cm)",
+                "unit": "℃",
+                "visible": true
+            },
+            {
+                "name": "t80",
+                "alias": "土壤温度(80cm)",
+                "unit": "℃",
+                "visible": true
+            },
+            {
+                "name": "t100",
+                "alias": "土壤温度(100cm)",
+                "unit": "℃",
+                "visible": true
+            },
+            {
+                "name": "ph",
+                "alias": "PH值",
+                "visible": true
+            },
+            {
+                "name": "do",
+                "alias": "溶解氧",
+                "unit": "mg/L",
+                "visible": true
+            },
+          {
+            "name": "cond",
+            "alias": "水质综合值",
+            "unit": "uS/cm",
+            "visible": true
+          },
+            {
+                "name": "redox",
+                "alias": "氧化还原电位",
+                "unit": "mV",
+                "visible": true
+            },
+            {
+                "name": "rad",
+                "alias": "总辐射",
+                "unit": "W/m2",
+                "visible": true
+            },
+            {
+                "name": "gh01",
+                "alias": "闸门1开启高度",
+                "unit": "m",
+                "visible": true
+            },
+            {
+                "name": "gh02",
+                "alias": "闸门2开启高度",
+                "unit": "m",
+                "visible": true
+            },
+            {
+                "name": "gh03",
+                "alias": "闸门3开启高度",
+                "unit": "m",
+                "visible": true
+            },
+            {
+                "name": "gh04",
+                "alias": "闸门4开启高度",
+                "unit": "m",
+                "visible": true
+            },
+            {
+                "name": "fl",
+                "alias": "气压",
+                "unit": "kPa",
+                "visible": true
+            },
+            {
+                "name": "nh4n",
+                "alias": "氨氮",
+                "unit": "mg/L",
+                "visible": true
+            },
+            {
+                "name": "hno3",
+                "alias": "硝酸盐",
+                "unit": "mg/L",
+                "visible": true
+            },
+            {
+                "name": "codmn",
+                "alias": "化学需氧量",
+                "unit": "mg/L",
+                "visible": true
+            },
+            {
+                "name": "chla",
+                "alias": "叶绿素a",
+                "unit": "ug/L",
+                "visible": true
+            },
+            {
+                "name": "algae",
+                "alias": "蓝绿藻",
+                "unit": "cells/mL",
+                "visible": true
+            },
+            {
+                "name": "us",
+                "alias": "风速",
+                "unit": "m/s",
+                "visible": true
+            },
+            {
+                "name": "uc",
+                "alias": "风向",
+                "visible": true
+            },
+            {
+                "name": "bat",
+                "alias": "电池电量(12V锂电池)",
+                "unit": "%",
+                "visible": true
+            }
+        ]
+    },
+    "translateType": {
+        "uc": [
+            {
+                "name": "1",
+                "alias": "北"
+            },
+            {
+                "name": "2",
+                "alias": "东北北"
+            },
+            {
+                "name": "3",
+                "alias": "东北"
+            },
+            {
+                "name": "4",
+                "alias": "东北东"
+            },
+            {
+                "name": "5",
+                "alias": "东"
+            },
+            {
+                "name": "6",
+                "alias": "东南东"
+            },
+            {
+                "name": "7",
+                "alias": "东南"
+            },
+            {
+                "name": "8",
+                "alias": "东南南"
+            },
+            {
+                "name": "9",
+                "alias": "南"
+            },
+            {
+                "name": "10",
+                "alias": "西南南"
+            },
+            {
+                "name": "11",
+                "alias": "西南"
+            },
+            {
+                "name": "12",
+                "alias": "西南西"
+            },
+            {
+                "name": "13",
+                "alias": "西"
+            },
+            {
+                "name": "14",
+                "alias": "西北西"
+            },
+            {
+                "name": "15",
+                "alias": "西北"
+            },
+            {
+                "name": "16",
+                "alias": "西北北"
+            }
+        ]
+    }
+}

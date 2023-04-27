@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="../../../../../lib/include-lib.js" libpath="../../../../../"
+        include="jquery"></script>
+    <script type="text/javascript" src="../../../../../lib/cdkc/_index.js" libpath="../../../../../"
+        include="content"></script>
+    <link href="popup.css" rel="stylesheet" />
+</head>
+
+<body>
+    <script>
+        function initIframe() {
+            const el = document
+                .getElementById("params-iframe")
+                .contentWindow
+                .document
+                .getElementById("echart_main")
+                
+            if (el) el.style.height = '70%'
+        }
+    </script>
+    <div id="context" class='context'>
+        <iframe id="params-iframe" frameborder="0" onload="initIframe()"></iframe>
+    </div>
+    <script>
+        document.getElementById("params-iframe").src = `../../../../../widgets_ps/syss_trend/view.html?code=${parent.device_code}`
+    </script>
+
+</body>
+
+
+</html>

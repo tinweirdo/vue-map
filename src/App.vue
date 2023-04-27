@@ -1,27 +1,19 @@
 <script setup>
-import Map from './components/Map.vue'
-import Locate from './map/Locate.vue';
-import PipeLineGroup from './components/PipeLineGroup.vue';
-import { freeBus } from './geojson';
-const pipelines = [
-  { id: 1, data: freeBus }
-]
+import LeftPane from './views/LeftPane.vue'
+import Map2d from './components/Map2d.vue'
+import Map3d from './components/Map3d.vue'
 
 </script>
 
 <template>
-  <leftPane>
-
-  </leftPane>
-  <Map>
-    <PipeLineGroup :pipelines="pipelines" />
-    <Locate/>
-  </Map>
-
+  <LeftPane />
+  <Map2d />
+  <Map3d />
 </template>
 
 <style>
-body, #app {
+body,
+#app {
   margin: 0;
   padding: 0;
 }

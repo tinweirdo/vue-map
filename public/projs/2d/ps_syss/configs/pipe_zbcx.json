@@ -1,0 +1,1450 @@
+{
+  "dateFields": [
+    "MDATE",
+    "SUR_DATE",
+    "MSRQ"
+  ],
+  "gdlx": [
+    {
+      "name": "JY",
+      "alias": "军用",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "JK",
+      "alias": "监控",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "YD",
+      "alias": "移动",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "DX",
+      "alias": "电信",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "DT",
+      "alias": "电力通信",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "DS",
+      "alias": "电视",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "CT",
+      "alias": "长途通信",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "TR",
+      "alias": "天然气",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "SS",
+      "alias": "自来水",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "LT",
+      "alias": "联通",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "GD",
+      "alias": "供电",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "XH",
+      "alias": "交通信号",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "LD",
+      "alias": "路灯",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "WS",
+      "alias": "污水",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "YS",
+      "alias": "雨水",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    },
+    {
+      "name": "HS",
+      "alias": "合水",
+      "gdtz": [
+        { "name": "污水井", "alias": "污水井" },
+        { "name": "预留口", "alias": "预留口" },
+        { "name": "非普查", "alias": "非普查" },
+        { "name": "雨水井", "alias": "雨水井" },
+        { "name": "五通", "alias": "五通" },
+        { "name": "雨篦", "alias": "雨篦" },
+        { "name": "三通", "alias": "三通" },
+        { "name": "出水口", "alias": "出水口" },
+        { "name": "弯头", "alias": "弯头" },
+        { "name": "四通", "alias": "四通" },
+        { "name": "进水口", "alias": "进水口" },
+        { "name": "化粪池", "alias": "化粪池" },
+        { "name": "变径", "alias": "变径" },
+        { "name": "转折点", "alias": "转折点" },
+        { "name": "上杆", "alias": "上杆" },
+        { "name": "人孔", "alias": "人孔" },
+        { "name": "三分支", "alias": "三分支" },
+        { "name": "手孔", "alias": "手孔" },
+        { "name": "接线箱", "alias": "接线箱" },
+        { "name": "监控器", "alias": "监控器" },
+        { "name": "分支点", "alias": "分支点" },
+        { "name": "四分支", "alias": "四分支" },
+        { "name": "井边框", "alias": "井边框" },
+        { "name": "检修井", "alias": "检修井" },
+        { "name": "控制柜", "alias": "控制柜" },
+        { "name": "环网柜", "alias": "环网柜" },
+        { "name": "变电室", "alias": "变电室" },
+        { "name": "变压器室", "alias": "变压器室" },
+        { "name": "井边点", "alias": "井边点" },
+        { "name": "配电室", "alias": "配电室" },
+        { "name": "调压柜", "alias": "调压柜" },
+        { "name": "变压器", "alias": "变压器" },
+        { "name": "多通", "alias": "多通" },
+        { "name": "偏心点", "alias": "偏心点" },
+        { "name": "五分支", "alias": "五分支" },
+        { "name": "发射塔", "alias": "发射塔" },
+        { "name": "多分支", "alias": "多分支" },
+        { "name": "通讯机房", "alias": "通讯机房" },
+        { "name": "交通信号灯", "alias": "交通信号灯" },
+        { "name": "出地", "alias": "出地" },
+        { "name": "阀门井", "alias": "阀门井" },
+        { "name": "盖堵", "alias": "盖堵" },
+        { "name": "调压箱", "alias": "调压箱" },
+        { "name": "阀门", "alias": "阀门" },
+        { "name": "消防栓", "alias": "消防栓" },
+        { "name": "排污阀", "alias": "排污阀" },
+        { "name": "消防井", "alias": "消防井" },
+        { "name": "水表井", "alias": "水表井" },
+        { "name": "流量表", "alias": "流量表" },
+        { "name": "水表", "alias": "水表" },
+        { "name": "变材", "alias": "变材" },
+        { "name": "排气阀", "alias": "排气阀" },
+        { "name": "路灯", "alias": "路灯" },
+        { "name": "路灯控制箱", "alias": "路灯控制箱" },
+        { "name": "广告牌", "alias": "广告牌" },
+        { "name": "排水泵站", "alias": "排水泵站" }
+      ]
+    }
+  ],
+  "gxlx": [
+    { "name": "JY", "alias": "军用" },
+    { "name": "JK", "alias": "监控" },
+    { "name": "YD", "alias": "移动" },
+    { "name": "DX", "alias": "电信" },
+    { "name": "DT", "alias": "电力通信" },
+    { "name": "DS", "alias": "电视" },
+    { "name": "CT", "alias": "长途通信" },
+    { "name": "TR", "alias": "天然气" },
+    { "name": "SS", "alias": "自来水" },
+    { "name": "LT", "alias": "联通" },
+    { "name": "GD", "alias": "供电" },
+    { "name": "XH", "alias": "交通信号" },
+    { "name": "LD", "alias": "路灯" },
+    { "name": "WS", "alias": "污水" },
+    { "name": "YS", "alias": "雨水" },
+    { "name": "HS", "alias": "合水" }
+  ],
+  "layers": [
+    {
+      "layer": {
+        "name": "管点图层",
+        "aliasname": "管点图层",
+        "layerInfo": "popup_gd.json",
+        "url": "syzhpsMap/FeatureServer/syhfssPointLayer",
+        "where": "defaultversion='1'",
+        "titlefield": "type",
+        "wherefields": [
+          {
+            "wherefield": {
+              "name": "map_num",
+              "alias": "图上点号"
+            }
+          }
+        ],
+        "outfields": [
+          {
+            "outfield": {
+              "name": "map_name",
+              "alias": "图幅号",
+              "width": "70",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "map_num",
+              "alias": "图上点号",
+              "width": "100",
+              "sortable": true,
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "exp_num",
+              "alias": "物探点号",
+              "width": "150",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "sur_num",
+              "alias": "测量点号",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "type",
+              "alias": "管线类型",
+              "width": "100",
+              "translateType": "pipe_line_type",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "subtype",
+              "alias": "管线子类型",
+              "width": "100",
+              "translateType": "pipe_line_subtype",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "symbol",
+              "alias": "代码",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "feature",
+              "alias": "特征",
+              "width": "100",
+              "translateType": "pipe_point_feature",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "subside",
+              "alias": "附属物",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "x",
+              "alias": "x坐标",
+              "width": "100",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "y",
+              "alias": "y坐标",
+              "width": "100",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "surf_h",
+              "alias": "地面高程(米)",
+              "width": "100",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "top_h_max",
+              "alias": "最高管顶高程(米)",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "bot_h_min",
+              "alias": "最低管底高程(米)",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "cen_deep",
+              "alias": "井深(米)",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "certainty",
+              "alias": "确定性",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "angle",
+              "alias": "角度",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "remark",
+              "alias": "备注",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "state",
+              "alias": "状态",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "proj_num",
+              "alias": "工程号",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "rec_num",
+              "alias": "建设许可证号",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "chk_num",
+              "alias": "验收合格证号",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "belong",
+              "alias": "权属单位",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "build_date",
+              "alias": "建设时间",
+              "width": "100",
+              "isshow": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "layer": {
+        "name": "管线图层",
+        "aliasname": "管线图层",
+        "layerInfo": "popup_gx.json",
+        "url": "syzhpsMap/FeatureServer/syhfssLineLayer",
+        "where": "defaultversion='1'",
+        "titlefield": "bh",
+        "wherefields": [
+          {
+            "wherefield": {
+              "name": "exp_num_s",
+              "alias": "起点号"
+            }
+          }
+        ],
+        "outfields": [
+          {
+            "outfield": {
+              "name": "objectId",
+              "alias": "唯一编码",
+              "width": "100",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "exp_num_s",
+              "alias": "起点号",
+              "width": "100",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "exp_num_e",
+              "alias": "终点号",
+              "width": "100",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "type",
+              "alias": "管线类型",
+              "width": "100",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "subtype",
+              "alias": "管线子类型",
+              "translateType": "pipe_line_subtype",
+              "width": "100",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "grade",
+              "alias": "管线分级",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "symbol",
+              "alias": "代码",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "material",
+              "alias": "管线材料",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "top_h_sn",
+              "alias": "起点管顶高程(米)",
+              "width": "100",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "top_h_en",
+              "alias": "终点管顶高程(米)",
+              "width": "100",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "bot_h_sn",
+              "alias": "起点管底高程(米)",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "bot_h_en",
+              "alias": "终点管底高程(米)",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "cen_deep_sn",
+              "alias": "起点埋深(米)",
+              "width": "100",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "cen_deep_en",
+              "alias": "终点埋深(米)",
+              "width": "100",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "certainty",
+              "alias": "确定性",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "d_s",
+              "alias": "管径/断面尺寸",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "cab_num",
+              "alias": "缆线根数",
+              "width": "100",
+              "isshow": true
+            }
+          },
+          {
+            "outfield": {
+              "name": "remark",
+              "alias": "备注",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "state",
+              "alias": "状态",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "proj_num",
+              "alias": "工程号",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "rec_num",
+              "alias": "建设许可证",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "chk_num",
+              "alias": "验收合格证号",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "belong",
+              "alias": "权属单位",
+              "width": "100",
+              "isshow": false
+            }
+          },
+          {
+            "outfield": {
+              "name": "build_date",
+              "alias": "建设时间",
+              "width": "100",
+              "isshow": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

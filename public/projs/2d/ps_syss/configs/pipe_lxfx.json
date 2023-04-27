@@ -1,0 +1,8 @@
+{
+  "layer": {
+    "name": "管线图层",
+    "aliasname": "管线图层",
+    "layerInfo": "popup_gx.json",
+    "NetworkUrl": "syzhpsMap/FeatureServer/syhfssNetworkLayer"
+  }
+}

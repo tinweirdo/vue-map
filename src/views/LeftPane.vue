@@ -1,10 +1,20 @@
-<script></script>
-
 <template>
-    <div>
-        <h1></h1>
-        <h2></h2>
-        <h3></h3>
-        <slot></slot>
+    <div class="menu">
+        <button @click="switchMap">切换地图</button>
     </div>
 </template>
+
+<script setup>
+// 切换地图
+function switchMap() {
+console.log('111 :>> ', 111);
+}
+</script>
+<style scoped>
+.menu{
+    position: fixed;
+    z-index: 401;
+    right: 10px;
+    top: 10px;
+}
+</style>

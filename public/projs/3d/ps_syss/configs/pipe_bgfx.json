@@ -1,0 +1,7 @@
+{
+  "layer":{
+    "url": "syzhpsMap/FeatureServer/syhfssLineLayer",
+    "pointUrl": "syzhpsMap/MapServer/syhfssPointLayer",
+    "NetworkUrl": "syzhpsMap/FeatureServer/syhfssNetworkLayer"
+  }
+}

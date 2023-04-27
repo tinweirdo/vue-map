@@ -1,0 +1,470 @@
+{
+  "point": {
+    "url": "syzhpsMap/FeatureServer/syhfssPointLayer",
+    "fullUrl": "syzhpsMap/FeatureServer/syhfssPointLayer",
+    "sheet": "管点",
+    "field": {
+      "map_name": {
+        "name": "图幅号",
+        "type": "string",
+        "nullable": true
+      },
+      "map_num": {
+        "name": "图上点号",
+        "type": "string",
+        "nullable": false
+      },
+      "exp_num": {
+        "name": "物探点号",
+        "type": "string",
+        "nullable": true
+      },
+      "sur_num": {
+        "name": "测量点号",
+        "type": "number",
+        "nullable": true
+      },
+      "type": {
+        "name": "管线类型",
+        "type": "string",
+        "nullable": false
+      },
+      "symbol": {
+        "name": "代码",
+        "type": "string",
+        "nullable": true
+      },
+      "feature": {
+        "name": "特征",
+        "type": "string",
+        "nullable": false
+      },
+      "subside": {
+        "name": "附属物",
+        "type": "string",
+        "nullable": true
+      },
+      "x": {
+        "name": "x坐标",
+        "type": "number",
+        "nullable": false
+      },
+      "y": {
+        "name": "y坐标",
+        "type": "number",
+        "nullable": false
+      },
+      "surf_h": {
+        "name": "地面高程",
+        "type": "number",
+        "nullable": false
+      },
+      "cen_deep": {
+        "name": "井深",
+        "type": "number",
+        "nullable": true
+      },
+      "angle": {
+        "name": "角度",
+        "type": "number",
+        "nullable": true
+      },
+      "remark": {
+        "name": "备注",
+        "type": "string",
+        "nullable": true
+      },
+      "proj_num": {
+        "name": "工程号",
+        "type": "string",
+        "nullable": false
+      },
+      "belong": {
+        "name": "权属单位",
+        "type": "string",
+        "nullable": true
+      },
+      "subtype": {
+        "name": "管点子类型",
+        "type": "string",
+        "nullable": false
+      },
+      "bury_deep": {
+        "name": "埋深",
+        "type": "string",
+        "nullable": true
+      },
+      "d_s": {
+        "name": "管径/断面尺寸",
+        "type": "string",
+        "nullable": true
+      },
+      "build_data": {
+        "name": "建设日期",
+        "type": "date",
+        "nullable": true
+      },
+      "material": {
+        "name": "材质",
+        "type": "string",
+        "nullable": true
+      },
+      "jgtype": {
+        "name": "井盖类型",
+        "type": "string",
+        "nullable": true
+      },
+      "cov_spe": {
+        "name": "井盖规格",
+        "type": "string",
+        "nullable": true
+      },
+      "jgmat": {
+        "name": "井盖材质",
+        "type": "string",
+        "nullable": true
+      },
+      "survey_unit": {
+        "name": "勘测单位",
+        "type": "string",
+        "nullable": true
+      },
+      "accuracy_level": {
+        "name": "精度级别",
+        "type": "string",
+        "nullable": true
+      },
+      "database_time": {
+        "name": "入库时间",
+        "type": "string",
+        "nullable": true
+      },
+      "update_time": {
+        "name": "更新时间",
+        "type": "string",
+        "nullable": true
+      },
+      "road_name": {
+        "name": "道路名称",
+        "type": "string",
+        "nullable": true
+      },
+      "road_code": {
+        "name": "道路代码",
+        "nullable": true,
+        "type": "string"
+      },
+      "delete_maker": {
+        "name": "删除标记",
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "geometry": {
+      "y": "y坐标",
+      "x": "x坐标"
+    },
+    "offset": {
+      "x": 39000060,
+      "y": -55
+    },
+    "wkid": 4527,
+    "key": "图上点号",
+    "x_point": "x坐标",
+    "y_point": "y坐标",
+    "ele_point": "地面高程",
+    "feature_point": "特征",
+    "proj_num": "工程号"
+  },
+  "line": {
+    "url": "syzhpsMap/FeatureServer/syhfssLineLayer",
+    "fullUrl": "syzhpsMap/FeatureServer/syhfssLineLayer",
+    "sheet": "管线",
+    "radius_min": 1,
+    "radius_max": 1200,
+    "line_length": 70,
+    "line_radius": "管径/断面尺寸",
+    "line_type": "管线类型",
+    "line_sonType": "管线子类型",
+    "start_ele": "起点高程",
+    "end_ele": "终点高程",
+    "start_deep": "起点埋深",
+    "end_deep": "终点埋深",
+    "proj_num": "工程号",
+    "field": {
+      "map_num_s": {
+        "name": "起点号",
+        "type": "string",
+        "nullable": false
+      },
+      "map_num_e": {
+        "name": "终点号",
+        "type": "string",
+        "nullable": false
+      },
+      "type": {
+        "name": "管线类型",
+        "type": "string",
+        "nullable": false
+      },
+      "subtype": {
+        "name": "管线子类型",
+        "type": "string",
+        "nullable": false
+      },
+      "symbol": {
+        "name": "代码",
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "name": "管线材料",
+        "type": "string",
+        "nullable": false
+      },
+      "cen_deep_sn": {
+        "name": "起点埋深",
+        "type": "number",
+        "nullable": true
+      },
+      "cen_deep_en": {
+        "name": "终点埋深",
+        "type": "number",
+        "nullable": false
+      },
+      "d_s": {
+        "name": "管径/断面尺寸",
+        "type": "string",
+        "nullable": false
+      },
+      "cab_num": {
+        "name": "缆线根数",
+        "type": "string",
+        "nullable": true
+      },
+      "remark": {
+        "name": "备注",
+        "type": "string",
+        "nullable": true
+      },
+      "state": {
+        "name": "状态",
+        "type": "string",
+        "nullable": true
+      },
+      "proj_num": {
+        "name": "工程号",
+        "type": "string",
+        "nullable": false
+      },
+      "belong": {
+        "name": "权属单位",
+        "type": "string",
+        "nullable": false
+      },
+      "flow": {
+        "name": "流向",
+        "type": "number",
+        "nullable": true
+      },
+      "build_date": {
+        "name": "建设日期",
+        "type": "date",
+        "nullable": true
+      },
+      "start_ele": {
+        "name": "起点高程",
+        "type": "string",
+        "nullable": true
+      },
+      "end_ele": {
+        "name": "终点高程",
+        "type": "string",
+        "nullable": true
+      },
+      "bury_type": {
+        "name": "埋设方式",
+        "type": "string",
+        "nullable": false
+      },
+      "line_type": {
+        "name": "线型",
+        "type": "string",
+        "nullable": true
+      },
+      "survey_unit": {
+        "name": "勘测单位",
+        "type": "string",
+        "nullable": true
+      },
+      "p_value": {
+        "name": "压力值",
+        "type": "string",
+        "nullable": true
+      },
+      "all_hole": {
+        "name": "总孔数",
+        "type": "string",
+        "nullable": true
+      },
+      "used_hole": {
+        "name": "已用孔数",
+        "type": "string",
+        "nullable": true
+      },
+      "database_time": {
+        "name": "入库时间",
+        "type": "string",
+        "nullable": true
+      },
+      "update_time": {
+        "name": "更新时间",
+        "type": "string",
+        "nullable": true
+      },
+      "road_name": {
+        "name": "道路名称",
+        "type": "string",
+        "nullable": true
+      },
+      "road_code": {
+        "name": "道路代码",
+        "type": "string",
+        "nullable": true
+      },
+      "delete_maker": {
+        "name": "删除标记",
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "geometry": {
+      "start": {
+        "rel": "起点号",
+        "y": "x坐标",
+        "x": "y坐标"
+      },
+      "end": {
+        "rel": "终点号",
+        "y": "x坐标",
+        "x": "y坐标"
+      }
+    },
+    "offset": {
+      "x": 39000060,
+      "y": -55
+    },
+    "wkid": 4527,
+    "key": "编号",
+    "start_line": "起点号",
+    "end_line": "终点号"
+  },
+  "check_point": [
+    {
+      "name": "字段结构检查",
+      "value": "point_zdjg",
+      "level": 1,
+      "isCheck": true
+    },
+    {
+      "name": "必填项检查",
+      "value": "point_btx",
+      "level": 2,
+      "isCheck": true
+    },
+    {
+      "name": "唯一性检查",
+      "value": "point_wyx",
+      "level": 3,
+      "isCheck": true
+    },
+    {
+      "name": "空间重叠检查",
+      "value": "point_kjcd",
+      "level": 4,
+      "isCheck": true
+    },
+    {
+      "name": "孤立点检查",
+      "value": "point_gld",
+      "level": 5,
+      "isCheck": true
+    }
+  ],
+  "check_line": [
+    {
+      "name": "字段结构检查",
+      "value": "line_zdjg",
+      "level": 1,
+      "isCheck": true
+    },
+    {
+      "name": "必填项检查",
+      "value": "line_btx",
+      "level": 2,
+      "isCheck": true
+    },
+    {
+      "name": "唯一性检查",
+      "value": "line_wyx",
+      "level": 3,
+      "isCheck": true
+    },
+    {
+      "name": "字段属性正确性检查",
+      "value": "check_zdsxzqx",
+      "level": 4,
+      "isCheck": true
+    },
+    {
+      "name": "孤立管线检查",
+      "value": "check_glgx",
+      "level": 5,
+      "isCheck": true
+    },
+    {
+      "name": "管线长度检查",
+      "value": "line_gxcd",
+      "level": 6,
+      "isCheck": false
+    },
+    {
+      "name": "管径/断面尺寸检查",
+      "value": "check_gj",
+      "level": 7,
+      "isCheck": true
+    },
+    {
+      "name": "排水流向检查",
+      "value": "check_pslx",
+      "level": 8,
+      "isCheck": true
+    }
+  ],
+  "check_relationship": [
+    {
+      "name": "类型一致性检查",
+      "value": "relationshp_lxyzx",
+      "level": 1,
+      "isCheck": true
+    },
+    {
+      "name": "高程一致性检查",
+      "value": "relationshp_gcyzx",
+      "level": 2,
+      "isCheck": true
+    },
+    {
+      "name": "属性一致性检查",
+      "value": "relationshp_sxyzx",
+      "level": 3,
+      "isCheck": true
+    },
+    {
+      "name": "多通一致性检查",
+      "value": "relationshp_dtyzx",
+      "level": 4,
+      "isCheck": true
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "layer": {
+    "name": "管线图层",
+    "aliasname": "管线",
+    "layerInfo": "popup_gx.json",
+    "outfields": [
+      {
+        "name": "objectId",
+        "alias": "唯一编码",
+        "width": 100,
+        "show": false
+      },
+      {
+        "name": "exp_num_s",
+        "alias": "起点号",
+        "width": 100,
+        "show": true
+      },
+      {
+        "name": "exp_num_e",
+        "alias": "终点号",
+        "width": 100,
+        "show": true
+      },
+      {
+        "name": "type",
+        "alias": "管线类型",
+        "width": 100,
+        "show": false
+      },
+      {
+        "name": "subtype",
+        "alias": "管线子类型",
+        "width": 100,
+        "show": false
+      },
+
+      {
+        "name": "top_h_sn",
+        "alias": "起点管顶高程(米)",
+        "width": 120,
+        "show": true
+      },
+      {
+        "name": "top_h_en",
+        "alias": "终点管顶高程(米)",
+        "width": 120,
+        "show": true
+      },
+      {
+        "name": "cen_deep_sn",
+        "alias": "起点埋深(米)",
+        "width": 100,
+        "show": true
+      },
+      {
+        "name": "cen_deep_en",
+        "alias": "终点埋深(米)",
+        "width": 100,
+        "show": true
+      },
+      {
+        "name": "d_s",
+        "alias": "管径/断面尺寸",
+        "width": 100,
+        "show": true
+      },
+      {
+        "name": "build_date",
+        "alias": "建设时间",
+        "width": 160,
+        "show": false
+      },
+      {
+        "name": "bot_h_sn",
+        "alias": "起点管底高程(米)",
+        "width": 120,
+        "show": true
+      },
+      {
+        "name": "grade",
+        "alias": "管线分级",
+        "width": 100,
+        "show": false
+      },
+      {
+        "name": "symbol",
+        "alias": "代码",
+        "width": 100,
+        "show": false
+      },
+      {
+        "name": "material",
+        "alias": "管线材料",
+        "width": 100,
+        "show": false
+      },
+      {
+        "name": "bot_h_en",
+        "alias": "终点管底高程(米)",
+        "width": 120,
+        "show": true
+      },
+      {
+        "name": "certainty",
+        "alias": "确定性",
+        "width": 100,
+        "show": false
+      },
+      {
+        "name": "cab_num",
+        "alias": "缆线根数",
+        "width": 100,
+        "show": false
+      },
+      {
+        "name": "remark",
+        "alias": "备注",
+        "width": 100,
+        "show": false
+      },
+      {
+        "name": "state",
+        "alias": "状态",
+        "width": 100,
+        "show": false
+      },
+      {
+        "name": "proj_num",
+        "alias": "工程号",
+        "width": 100,
+        "show": false
+      },
+      {
+        "name": "rec_num",
+        "alias": "建设许可证",
+        "width": 100,
+        "show": false
+      },
+      {
+        "name": "chk_num",
+        "alias": "验收合格证号",
+        "width": 100,
+        "show": false
+      },
+      {
+        "name": "belong",
+        "alias": "权属单位",
+        "width": 100,
+        "show": false
+      }
+
+    ]
+  }
+}

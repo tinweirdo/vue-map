@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="../../../../../lib/include-lib.js" libpath="../../../../../lib/"
+        include="jquery,jquery.mCustomScrollbar,kckjutil"></script>
+    <link href="../popup.css" rel="stylesheet" />
+    <script src="popup.js"></script>
+</head>
+
+<body>
+    <div style="width: 100%;height:100%">
+        <div class="title">
+            <span id="popTitle"></span>
+        </div>
+        <!-- <div id="context" class='context'>
+        </div> -->
+        <div class='context' style="display: flex;justify-content: space-between;">
+            <div id="context" class="context_line">
+            </div>
+            <div id="context2" class='context2'>
+                <div class="pipe_line_title">
+                    <span>管道类别：</span>
+                    <span style="color: #ccc;" id="gd_type"></span>
+                    <br>
+                    <span>材质：</span>
+                    <span style="color: #ccc;" id="gd_material"></span>
+                    <br>
+                    <span>流向：</span>
+                    <span style="color: #ccc;" id="gd_flow"></span>
+                    <br>
+                    <span>埋设：</span>
+                    <span style="color: #ccc;" id="gd_burytype"></span>
+                </div>
+                <div class="pipe_line_box">
+                    <div class="show-line-box">
+                        <div class="show-line" id="showLine">
+                            <div class="right-bot" id="rightBot"></div>
+                            <div class="left-bot" id="leftBot"></div>
+                            <div class="listRowToleft"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="gdcd">
+                        <p>管道长度</p>
+                        <p class="gdcd_num" id="gdcd_num"></p>
+                    </div>
+                    <span class="gdcd_line1"> </span>
+                    <span class="gdcd_line2"> </span>
+                    <span class="gdcd_line3"> </span>
+                    <span class="gdcd_line4"> </span>
+                    <div class="gdzj">
+                        <p>管道直径</p>
+                        <p id="gdzj_num"></p>
+                    </div>
+                    <div class="l_gdbg">
+                        <p>埋深</p>
+                        <p id="l_gdbg_num"></p>
+                    </div>
+                    <div class="r_gdbg">
+                        <p>埋深</p>
+                        <p id="r_gdbg_num"></p>
+                    </div>
+
+                    <div class="left_dh">
+                        <span id="left_dh_title">点号</span>
+                        <span id="left_dh_num"></span>
+                    </div>
+                    <div class="right_dh">
+                        <span id="right_dh_title">点号</span>
+                        <span id="right_dh_num"></span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

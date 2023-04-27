@@ -1,0 +1,242 @@
+{
+  "gxlx2": [
+    {
+      "name": "JS",
+      "alias": "给水"
+    }
+  ],
+  "gxlx": [
+    { "name": "JY", "alias": "军用" },
+    { "name": "JK", "alias": "监控" },
+    { "name": "YD", "alias": "移动" },
+    { "name": "DX", "alias": "电信" },
+    { "name": "DT", "alias": "电力通信" },
+    { "name": "DS", "alias": "电视" },
+    { "name": "CT", "alias": "长途通信" },
+    { "name": "TR", "alias": "天然气" },
+    { "name": "SS", "alias": "自来水" },
+    { "name": "LT", "alias": "联通" },
+    { "name": "GD", "alias": "供电" },
+    { "name": "XH", "alias": "交通信号" },
+    { "name": "LD", "alias": "路灯" },
+    { "name": "WS", "alias": "污水" },
+    { "name": "YS", "alias": "雨水" },
+    { "name": "HS", "alias": "合水" }
+  ],
+  "layer": {
+    "dateField": "build_date",
+    "qsdwField": "belong",
+    "typeField": "type",
+    "subtypeField": "subtype",
+    "name": "管线图层",
+    "aliasname": "管线图层",
+    "layerInfo": "popup_gx.json",
+    "url": "syzhpsMap/FeatureServer/syhfssLineLayer",
+    "where": "defaultversion='1'",
+    "titlefield": "bh",
+    "wherefields": [
+      {
+        "wherefield": {
+          "name": "exp_num_s",
+          "alias": "起点号"
+        }
+      }
+    ],
+    "outfields": [
+      {
+        "outfield": {
+          "name": "objectId",
+          "alias": "唯一编码",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "map_num_s",
+          "alias": "起点号",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "map_num_e",
+          "alias": "终点号",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "type",
+          "alias": "管线类型",
+          "width": "100",
+          "translateType": "pipe_line_type",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "subtype",
+          "alias": "管线子类型",
+          "width": "100",
+          "translateType": "pipe_line_subtype",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "grade",
+          "alias": "管线分级",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "symbol",
+          "alias": "代码",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "material",
+          "alias": "管线材料",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "start_ele",
+          "alias": "起点管顶高程(米)",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "end_ele",
+          "alias": "终点管顶高程(米)",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "bot_h_sn",
+          "alias": "起点管底高程(米)",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "bot_h_en",
+          "alias": "终点管底高程(米)",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "cen_deep_sn",
+          "alias": "起点埋深(米)",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "cen_deep_en",
+          "alias": "终点埋深(米)",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "certainty",
+          "alias": "确定性",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "d_s",
+          "alias": "管径/断面尺寸",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "cab_num",
+          "alias": "缆线根数",
+          "width": "100",
+          "isshow": true
+        }
+      },
+      {
+        "outfield": {
+          "name": "remark",
+          "alias": "备注",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "state",
+          "alias": "状态",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "proj_num",
+          "alias": "工程号",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "rec_num",
+          "alias": "建设许可证",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "chk_num",
+          "alias": "验收合格证号",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "belong",
+          "alias": "权属单位",
+          "width": "100",
+          "isshow": false
+        }
+      },
+      {
+        "outfield": {
+          "name": "build_date",
+          "alias": "建设时间",
+          "width": "100",
+          "isshow": true
+        }
+      }
+    ]
+  }
+}

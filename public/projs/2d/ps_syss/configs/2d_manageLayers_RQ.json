@@ -1,0 +1,250 @@
+﻿[
+  {
+    "name": "天燃气",
+    "id": 21141,
+    "pid": 2114,
+    "order": 3,
+    "open": "true",
+    "type": "group"
+  },
+  {
+    "name": "直线点",
+    "id": 211410,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='直线点' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "转折点",
+    "id": 211411,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='转折点' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "出土点",
+    "id": 211412,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='出土点' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "非普查",
+    "id": 211413,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='非普查' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "变材",
+    "id": 211414,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='变材' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "三通",
+    "id": 211415,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='三通' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "四通",
+    "id": 211416,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='四通' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "多通",
+    "id": 211417,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='多通' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "变径",
+    "id": 211418,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='变径' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "管帽",
+    "id": 211419,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='管帽' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "出地",
+    "id": 2114110,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='出地' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "检修井",
+    "id": 2114111,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='检修井' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "凝水缸",
+    "id": 2114112,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='凝水缸' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "阀门井",
+    "id": 2114113,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='阀门井' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "调压箱",
+    "id": 2114114,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='调压箱' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "储配站",
+    "id": 2114115,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='储配站' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "阀门",
+    "id": 2114116,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='阀门' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "调压柜",
+    "id": 2114117,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='调压柜' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "补偿器",
+    "id": 2114118,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='补偿器' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "门站",
+    "id": 2114119,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='门站' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "阴极测试桩",
+    "id": 2114120,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='阴极测试桩' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "储气罐",
+    "id": 2114121,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='储气罐' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "中心点",
+    "id": 2114122,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='中心点' ",
+    "layerName": "管点图层"
+  },
+  {
+    "name": "入户",
+    "id": 2114123,
+    "type": "data",
+    "pid": 21141,
+    "open": "true",
+    "visible": false,
+    "where": " OR feature='入户' ",
+    "layerName": "管点图层"
+  }
+]
