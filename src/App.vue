@@ -1,8 +1,7 @@
 <script setup>
 import LeftPane from './views/LeftPane.vue'
-import Map2d from './components/Map2d.vue'
-import Map3d from './components/Map3d.vue'
-
+import Map2d from './components/map/Map2d.vue'
+import Map3d from './components/map/Map3d.vue'
 </script>
 
 <template>
