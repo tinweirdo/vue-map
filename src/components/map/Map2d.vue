@@ -1,18 +1,15 @@
 <script setup>
 import L from 'leaflet'
 import { shallowRef, onMounted } from 'vue';
-import { provideMap } from '../../utils';
-import mapIndex from '../../map';
+import { provideMap } from '@/utils';
 
-const map = mapIndex.map;
-const map2d = shallowRef();
-provideMap(map2d);
+const map = shallowRef();
+provideMap(map);
 
 onMounted(() => {
     const latlng = L.latLng(31.862834, 117.160521);
-    map2d.value = L.map('map2d').setView(latlng, 14);
-    L.tileLayer('/tileserver/syssvec/MapServer/tile/{z}/{y}/{x}', { tms: false }).addTo(map2d.value);
-    map.showFeatures(map2d.value);
+    map.value = L.map('map2d').setView(latlng, 14);
+    L.tileLayer('/tileserver/syssvec/MapServer/tile/{z}/{y}/{x}', { tms: false }).addTo(map.value);
 });
 
 </script>

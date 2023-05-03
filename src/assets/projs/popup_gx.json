@@ -1,0 +1,120 @@
+{
+  "title": "objectId",
+  "fields": [
+    {
+      "name": "type",
+      "alias": "管线大类",
+      "visible": "true"
+    },
+    {
+      "name": "subtype",
+      "alias": "管线子类",
+      "visible": "true"
+    },
+    {
+      "name": "map_num_s",
+      "alias": "起点号",
+      "visible": "true"
+    },
+    {
+      "name": "map_num_e",
+      "alias": "终点号",
+      "visible": "true"
+    },
+    {
+      "name": "cen_deep_sn",
+      "alias": "起点埋深",
+      "visible": "true",
+      "unit": "m",
+      "fixed": 2
+    },
+    {
+      "name": "cen_deep_en",
+      "alias": "终点埋深",
+      "visible": "true",
+      "unit": "m",
+      "fixed": 2
+    },
+    {
+      "name": "start_ele",
+      "alias": "起点高程",
+      "visible": "true",
+      "unit": "m",
+      "fixed": 3
+    },
+    {
+      "name": "end_ele",
+      "alias": "终点高程",
+      "visible": "true",
+      "unit": "m",
+      "fixed": 3
+    },
+    {
+      "name": "d_s",
+      "alias": "管道直径",
+      "visible": "true"
+    },
+    {
+      "name": "p_value",
+      "alias": "压力值",
+      "visible": "true"
+    },
+    {
+      "name": "material",
+      "alias": "管线材质",
+      "visible": "true"
+    },
+    {
+      "name": "pe_type",
+      "alias": "PE型号",
+      "visible": "true"
+    },
+    {
+      "name": "sdr",
+      "alias": "SDR",
+      "visible": "true"
+    },
+    {
+      "name": "wall_thick",
+      "alias": "壁厚",
+      "visible": "true"
+    },
+    {
+      "name": "inside_diameter",
+      "alias": "内径",
+      "visible": "true"
+    },
+    {
+      "name": "pressure",
+      "alias": "管线压力",
+      "visible": "true"
+    },
+    {
+      "name": "bury_type",
+      "alias": "埋设方式",
+      "visible": "true"
+    },
+    {
+      "name": "len",
+      "alias": "长度",
+      "visible": "true",
+      "unit": "m",
+      "fixed": 2
+    },
+    {
+      "name": "road_name",
+      "alias": "道路名称",
+      "visible": "true"
+    },
+    {
+      "name": "belong",
+      "alias": "权属单位",
+      "visible": "true"
+    },
+    {
+      "name": "created_date",
+      "alias": "创建时间",
+      "visible": "true"
+    }
+  ]
+}

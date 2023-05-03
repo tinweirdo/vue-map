@@ -153,11 +153,6 @@ table td:nth-child(2) {
     overflow-y: auto;
 }
 
-@font-face {
-    font-family: "优设标题黑";
-    src: url('../../../../res/fonts/ysbth.TTF');
-}
-
 .context_top {
     padding-top: 5px;
     display: flex;
@@ -259,7 +254,7 @@ table td:nth-child(2) {
 .listRowToleft {
     width: 100%;
     height: 7px;
-    background-image: url('../../../res/popup/moveIcon.png');
+    /* background-image: url('../../../res/popup/moveIcon.png'); */
     background-size: 20px 10px;
     background-position: 0px center;
     animation: leading .7s linear infinite;
