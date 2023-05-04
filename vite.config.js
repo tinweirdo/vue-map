@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import cesium from 'vite-plugin-cesium';
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
@@ -28,5 +29,8 @@ export default defineConfig({
       { find: 'mapVues', replacement: resolve(__dirname, 'src/components/map') },
     ]
   },
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    cesium()
+  ],
 })

@@ -20,14 +20,8 @@ const is2d = ref(true);
 const is3d = ref(false);
 
 const clickmenu = (value) => {
-  if(value === '二维地图') {
-    is2d.value = true;
-    is3d.value = false;
-  } 
-  else if(value === '三维地图') {
-    is2d.value = false;
-    is3d.value = true;
-  }
+  is2d.value = value === '二维地图' ? true : false;
+  is3d.value = value === '三维地图' ? true : false;
 }
 </script>
 <template>
