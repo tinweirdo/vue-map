@@ -13,4 +13,9 @@ onUnmounted(() => {
     </div>
 </template>
 
-<style></style>
+<style>
+#map3d {
+    width: 100vw;
+    height: 100vh;
+}
+</style>

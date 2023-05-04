@@ -16,7 +16,7 @@ onMounted(() => {
 
 <template>
     <div id="map2d">
-        <slot v-if="map" />
+        <slot v-if="map"/>
     </div>
 </template>
 
