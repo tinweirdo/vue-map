@@ -1,25 +1,10 @@
 
 
 <script setup>
+import { ref } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 
-const emit = defineEmits(['switchMap']);
-
 const router = useRouter();
-
-const is2d = ref('');
-// 切换地图
-const switchMap2d = async () => {
-    router.push({ path:'/map2d' });
-    is2d.value = true;
-    emit('switchMap', '二维地图')
-};
-
-const switchMap3d = async () => {
-    router.push({ path:'/map3d' });
-    is2d.value = false;
-    emit('switchMap', '三维地图')
-};
 </script>
 
 <template>
@@ -27,9 +12,9 @@ const switchMap3d = async () => {
         <div class="switch-box">
             <div class="switch-menu">
                 <span>
-                    <span class="switchTo-2d" @click="switchMap2d">二维</span>
+                    <span class="switchTo-2d" @click="router.push({ path: '/map2d' })">二维</span>
                     /
-                    <span class="switchTo-3d" @click="switchMap3d">三维</span>
+                    <span class="switchTo-3d" @click="router.push({ path: '/map3d' })">三维</span>
                 </span>
             </div>
         </div>
