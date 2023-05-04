@@ -6,24 +6,27 @@ import { onMounted, computed, ref } from 'vue';
 import { fields } from '@/assets/projs/popup_gx.json';
 // const props = defineProps(['attributes', 'geometry', 'entity']);
 const props = defineProps({ attributes: Object, geometry: Array });
-let tableHtml = computed(() => {
-    let html = '';
-    for (const { name, alias, visible, unit, fixed } of fields) {
+const newFields = computed(() => {
+    const arr = [];
+    for (const item of fields) {
+        const { name, visible, unit, fixed } = item;
         if (props.attributes[name] && visible) {
-            let thisname = props.attributes[name];
+            let thisValue = props.attributes[name];
             //保留小数位数
             if (fixed) {
-                thisname = parseFloat(thisname).toFixed(fixed)
+                thisValue = parseFloat(thisValue).toFixed(fixed)
             }
             //添加单位
             if (unit) {
-                thisname = thisname + " " + unit
+                thisValue = thisValue + " " + unit
             }
-            html += "<tr><td  width='90px'>" + alias + ":</td><td>" + thisname + "</td></tr>"
+            item.value = thisValue;
+            arr.push(item);
         }
     }
-    return html;
+    return arr;
 })
+
 const poptitle = computed(() => {
     let text = '';
     if (props.attributes?.map_num_s && props.attributes?.map_num_e)
@@ -74,7 +77,12 @@ onMounted(() => {
         </div>
         <div class='context'>
             <div class="context_line">
-                <table v-for="(item) in fields"></table>
+                <table>
+                    <tr v-for="(item) in newFields">
+                        <td width='90px'>{{ item.alias }}</td>
+                        <td>{{ item.value }}</td>
+                    </tr>
+                </table>
             </div>
             <div class='context2'>
                 <div class="pipe_line_title">
@@ -139,7 +147,7 @@ onMounted(() => {
         </div>
     </div>
 </template>
-<style scoped>
+<style>
 @import './index.css';
 </style>
 
