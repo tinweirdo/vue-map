@@ -1,7 +1,8 @@
 <script setup>
 import L from 'leaflet'
-import { shallowRef, onMounted } from 'vue';
+import { shallowRef, onMounted, inject } from 'vue';
 import { provideMap } from '@/utils';
+
 
 const map = shallowRef();
 provideMap(map);
@@ -16,7 +17,7 @@ onMounted(() => {
 
 <template>
     <div id="leafletContainer">
-        <slot v-if="map"/>
+        <slot v-if="map" />
     </div>
 </template>
 

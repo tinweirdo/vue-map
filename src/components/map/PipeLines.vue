@@ -1,7 +1,7 @@
 <script setup>
 import L from 'leaflet'
 import { ref, onMounted, onUnmounted, watch } from 'vue'
-import LinePopup from 'mapVues/LinePopup/index.vue'
+import LinePopup from '@mapVues/LinePopup/index.vue'
 import { useMap } from '@/utils'
 
 const props = defineProps({ features: Array })
