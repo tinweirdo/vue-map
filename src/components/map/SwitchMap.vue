@@ -1,10 +1,9 @@
 
 
 <script setup>
-import { ref } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
-
-const router = useRouter();
+import { ref, provide } from 'vue';
+const mapmode = ref('2d');
+provide('MAP_MODE', mapmode);
 </script>
 
 <template>
@@ -12,9 +11,9 @@ const router = useRouter();
         <div class="switch-box">
             <div class="switch-menu">
                 <span>
-                    <span class="switchTo-2d" @click="router.push({ path: '/map2d' })">二维</span>
+                    <span class="switch-span" :class="{ current: mapmode === '2d' }" @click="mapmode = '2d'">二维</span>
                     /
-                    <span class="switchTo-3d" @click="router.push({ path: '/map3d' })">三维</span>
+                    <span class="switch-span" :class="{ current: mapmode === '3d' }" @click="mapmode = '3d'">三维</span>
                 </span>
             </div>
         </div>
@@ -62,9 +61,13 @@ const router = useRouter();
     color: rgba(255, 255, 255, 1);
 }
 
-.switchTo-2d,
-.switchTo-3d {
+.switch-span {
     cursor: pointer;
+}
+
+.current {
+    font-family: "优设标题黑";
+    font-size: 17px;
 }
 
 .legend-menu {
