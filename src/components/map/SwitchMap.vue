@@ -1,9 +1,15 @@
 
 
 <script setup>
+
 import { ref, provide } from 'vue';
-const mapmode = ref('2d');
-provide('MAP_MODE', mapmode);
+import { MAP_MODE } from '@/constant';
+
+
+const mapmode = ref(MAP_MODE['MAP_2D']);
+const legendAready = ref(false);
+
+provide('$mapmode', mapmode);
 </script>
 
 <template>
@@ -11,14 +17,14 @@ provide('MAP_MODE', mapmode);
         <div class="switch-box">
             <div class="switch-menu">
                 <span>
-                    <span class="switch-span" :class="{ current: mapmode === '2d' }" @click="mapmode = '2d'">二维</span>
+                    <span class="switch-span" :class="{ current: mapmode === '2d' }" @click="mapmode = 'MAP_2D'">二维</span>
                     /
-                    <span class="switch-span" :class="{ current: mapmode === '3d' }" @click="mapmode = '3d'">三维</span>
+                    <span class="switch-span" :class="{ current: mapmode === '3d' }" @click="mapmode = 'MAP_3D'">三维</span>
                 </span>
             </div>
         </div>
 
-        <div class="legend-menu">
+        <div class="legend-menu" v-if="legendAready">
             <div>加载中...</div>
         </div>
     </div>

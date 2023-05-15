@@ -1,10 +1,20 @@
 <script setup>
-import { ref, inject } from 'vue';
+import { ref, inject,watch } from 'vue';
 import SwitchMap from '@mapVues/SwitchMap.vue'
 import useFeatures from '@/hooks/useFeatures';
 import { MAP_MODE } from './constant';
 
-const mapmode = '2d';
+const app = inject('app');
+
+const aa = inject('$mapmode');
+console.log('aa :>> ', aa);
+
+const mapmode = ref(MAP_MODE['MAP_2D']);
+app.config.globalProperties.$mapmode = mapmode;
+
+watch(app.config.globalProperties.$mapmode, (val) => {
+  console.log('val :>> ', val);
+}, { immediate: true });
 
 import PipeLines from '@mapVues/PipeLines.vue';
 import PipePoints from '@mapVues/PipePoints.vue';
