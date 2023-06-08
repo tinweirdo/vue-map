@@ -1,15 +1,29 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import App from '@/App.vue';
+import { createRouter, createWebHashHistory } from 'vue-router';
+
+import Map from '@mapVues/Map.vue';
+import Login from '@views/Login/Login.vue';
+
+// set Login.vue as the default page
+const routes = [
+  {
+    path: '/',
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login
+  },
+  {
+    path: '/map',
+    name: 'map',
+    component: Map
+  },
+]
 
 const router = createRouter({
-  history: createWebHashHistory(), // hash模式：createWebHashHistory，history模式：createWebHistory
-  routes: [
-    {
-      path: '/home',
-      name: 'home',
-      component: App
-    },
-  ]
+  history: createWebHashHistory(),
+  routes
 })
 
 export default router
