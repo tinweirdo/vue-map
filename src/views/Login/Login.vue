@@ -9,16 +9,12 @@ const username = ref('');
 const password = ref('');
 const router = useRouter();
 
-setTimeout(() => {
-}, 1000);
-
-
 const login = () => {
     console.log('login');
     console.log('username', username.value);
     console.log('password', password.value);
     // when login success,route to Map.vue
-    router.push({ name: 'map' });
+    router.push({ name: 'home' });
 };
 </script>
 

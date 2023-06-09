@@ -34,4 +34,7 @@ export default defineConfig({
     vue(),
     cesium()
   ],
+  devServer: {
+    hot: true
+  }
 })

@@ -34,9 +34,9 @@ const pointFeatures = useFeatures(pointUrl, `road_name='万泽路'`);
             <div class="switch-box">
                 <div class="switch-menu">
                     <span>
-                        <span class="switch-span" :class="{ current: mapmode === '2d' }" @click="mapmode = '2d'">二维</span>
+                        <span class="switch-span" :class="{ current: mapmode === '2d' }" @click="mapmode = MAP_MODE['MAP_2D']">二维</span>
                         /
-                        <span class="switch-span" :class="{ current: mapmode === '3d' }" @click="mapmode = '3d'">三维</span>
+                        <span class="switch-span" :class="{ current: mapmode === '3d' }" @click="mapmode = MAP_MODE['MAP_3D']">三维</span>
                     </span>
                 </div>
             </div>
