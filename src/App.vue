@@ -5,10 +5,11 @@
   <router-view />
 </template>
 
-<style scoped>
+<style>
 body,
 #app {
   margin: 0;
   padding: 0;
 }
+
 </style>

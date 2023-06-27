@@ -14,7 +14,7 @@ const login = () => {
     console.log('username', username.value);
     console.log('password', password.value);
     // when login success,route to Map.vue
-    router.push({ name: 'home' });
+    router.push({ name: 'map' });
 };
 </script>
 

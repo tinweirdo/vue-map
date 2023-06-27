@@ -5,11 +5,15 @@ import { provideMap } from '@/utils';
 
 
 const map = shallowRef();
+const mapOpt = {
+    zoomControl:false,
+    preferCanvas: true,
+}
 provideMap(map);
 
 onMounted(() => {
     const latlng = L.latLng(31.862834, 117.160521);
-    map.value = L.map('leafletContainer').setView(latlng, 14);
+    map.value = L.map('leafletContainer',mapOpt).setView(latlng, 14);
     L.tileLayer('/tileserver/syssvec/MapServer/tile/{z}/{y}/{x}', { tms: false }).addTo(map.value);
 });
 

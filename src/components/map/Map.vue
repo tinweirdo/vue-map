@@ -1,5 +1,5 @@
 <script setup>
-import { ref, inject, provide, watch } from 'vue';
+import { ref } from 'vue';
 import useFeatures from '@/hooks/useFeatures';
 import { MAP_MODE } from '@/constant';
 
@@ -8,6 +8,7 @@ import PipePoints from '@mapVues/PipePoints.vue';
 
 import Map2d from '@mapVues/Map2d.vue';
 import Map3d from '@mapVues/Map3d.vue';
+import Menu from '@views/Menu.vue';
 
 const mapmode = ref(MAP_MODE['MAP_2D']);
 
@@ -19,34 +20,35 @@ const pointFeatures = useFeatures(pointUrl, `road_name='万泽路'`);
 </script>
 
 <template>
-    <div>
-        <Map2d v-if="mapmode === '2d'">
-            <PipeLines :features="lineFeatures" />
-            <PipePoints :features="pointFeatures" />
-        </Map2d>
+  <div>
+    <Menu :mapmode="mapmode" />
+    <Map2d v-if="mapmode === '2d'">
+      <PipeLines :features="lineFeatures" />
+      <PipePoints :features="pointFeatures" />
+    </Map2d>
 
-        <Map3d v-if="mapmode === '3d'">
-            <PipeLines :features="lineFeatures" />
-            <PipePoints :features="pointFeatures" />
-        </Map3d>
-
-        <div class="menu">
-            <div class="switch-box">
-                <div class="switch-menu">
-                    <span>
-                        <span class="switch-span" :class="{ current: mapmode === '2d' }" @click="mapmode = MAP_MODE['MAP_2D']">二维</span>
-                        /
-                        <span class="switch-span" :class="{ current: mapmode === '3d' }" @click="mapmode = MAP_MODE['MAP_3D']">三维</span>
-                    </span>
-                </div>
-            </div>
-
+    <Map3d v-if="mapmode === '3d'">
+      <PipeLines :features="lineFeatures" />
+      <PipePoints :features="pointFeatures" />
+    </Map3d>
+    <div class="menu">
+      <div class="switch-box">
+        <div class="switch-menu">
+          <span>
+            <span class="switch-span" :class="{ current: mapmode === '2d' }"
+              @click="mapmode = MAP_MODE['MAP_2D']">二维</span>
+            /
+            <span class="switch-span" :class="{ current: mapmode === '3d' }"
+              @click="mapmode = MAP_MODE['MAP_3D']">三维</span>
+          </span>
         </div>
+      </div>
+
     </div>
+  </div>
 </template>
 
 <style scoped>
-
 .map {
   width: 100vw;
   height: 100vh;

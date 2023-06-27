@@ -12,8 +12,9 @@
     "@layui/layui-vue": "^1.12.0",
     "axios": "^1.3.6",
     "cesium": "^1.105.0",
-    "element-plus": "^2.3.6",
+    "layui-vue": "^0.0.1",
     "leaflet": "^1.9.3",
+    "view-ui-plus": "^1.3.14",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
