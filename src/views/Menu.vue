@@ -14,7 +14,6 @@ defineProps({
 })
 const selectedKey = ref("");
 const openKeys1 = ref([]);
-
 const exist = ['map-manage', 'locate'];
 
 const openPage = function (id, e) {
@@ -24,6 +23,7 @@ const openPage = function (id, e) {
         type: 'page',
         title: text,
         shade: 0,
+        resize: true,
         content: h(MapManage, { data: '11' }),
         success: () => {
             // 设置样式
