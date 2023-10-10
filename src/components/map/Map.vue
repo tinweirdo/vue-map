@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import useFeatures from '@/hooks/useFeatures';
+import { usetestJson } from '@/hooks/useFeatures';
 import { MAP_MODE } from '@/constant';
 
 import PipeLines from '@mapVues/PipeLines.vue';
@@ -11,12 +11,9 @@ import Map3d from '@mapVues/Map3d.vue';
 import Menu from '@views/Menu.vue';
 
 const mapmode = ref(MAP_MODE['MAP_2D']);
+const lineFeatures = usetestJson("line");
+const pointFeatures = usetestJson("point");
 
-const lineUrl = 'baseMapUrl/syzhpsMap/FeatureServer/syhfssLineLayer';
-const pointUrl = 'baseMapUrl/syzhpsMap/FeatureServer/syhfssPointLayer';
-
-const lineFeatures = useFeatures(lineUrl, `road_name='晥山路'`);
-const pointFeatures = useFeatures(pointUrl, `road_name='万泽路'`);
 </script>
 
 <template>

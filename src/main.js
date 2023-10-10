@@ -2,6 +2,8 @@
 import { createApp } from 'vue';
 import App from '@/App.vue';
 import router from "@/router";
+import proj4leaflet from 'proj4leaflet'
+
 
 import Layui from '@layui/layui-vue';
 

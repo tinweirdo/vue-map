@@ -1,12 +1,10 @@
 <template lang="">
     <div class="body">
-        
+        <p>aaaaaa</p>
     </div>
 </template>
-<script>
-export default {
+<script setup>
 
-}
 </script>
 <style scoped>
 .body {

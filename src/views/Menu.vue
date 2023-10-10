@@ -12,19 +12,25 @@ defineProps({
         default: '2d'
     }
 })
-const selectedKey = ref("");
-const openKeys1 = ref([]);
-const exist = ['map-manage', 'locate'];
+
+const widgetConfig = {
+    'map-manage': MapManage,
+    'locate': Locate
+}
 
 const openPage = function (id, e) {
     const text = e.target.innerText;
+    const data = reactive({
+        remark: "信息"
+    })
     layer.open({
         id,
         type: 'page',
         title: text,
         shade: 0,
         resize: true,
-        content: h(MapManage, { data: '11' }),
+        offset: 'lb',
+        content: h(widgetConfig[id], { data }),
         success: () => {
             // 设置样式
         },
@@ -34,7 +40,7 @@ const openPage = function (id, e) {
 </script>
 
 <template>
-    <lay-menu theme="light" v-if="mapmode == '2d'" v-model:selected-key="selectedKey" v-model:open-keys="openKeys1">
+    <lay-menu theme="light" v-if="mapmode == '2d'">
         <lay-sub-menu>
             <template #title>
                 地图管理
@@ -87,7 +93,7 @@ const openPage = function (id, e) {
         </lay-sub-menu>
     </lay-menu>
 
-    <lay-menu v-if="mapmode == '3d'" v-model:selected-key="selectedKey" v-model:open-keys="openKeys1">
+    <lay-menu v-if="mapmode == '3d'">
         <lay-sub-menu>
             <template #title>
                 地图管理
