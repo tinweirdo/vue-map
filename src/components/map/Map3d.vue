@@ -4,14 +4,16 @@ window.CESIUM_BASE_URL = '/static/Cesium/';
 import { Cartesian3, Ion, Math as CesiumMath, Terrain, Viewer } from 'cesium';
 import "cesium/Build/Cesium/Widgets/widgets.css";
 import { CESIUM_KEY } from '@/env.js';
-import { onMounted } from 'vue';
-
+import { shallowRef, onMounted } from 'vue';
+import { provideViewer } from '@/utils';
+const viewer = shallowRef();
+provideViewer(viewer);
 
 onMounted(() => {
     // Your access token can be found at: https://ion.cesium.com/tokens.
     Ion.defaultAccessToken = CESIUM_KEY;
     // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
-    const viewer = new Viewer('cesiumContainer', {
+    viewer.value = new Viewer('cesiumContainer', {
         animation: false,//动画
         baseLayerPicker: false,//底图
         fullscreenButton: false,//全屏
@@ -25,7 +27,7 @@ onMounted(() => {
         terrain: Terrain.fromWorldTerrain(),
     });
     // Fly the camera to San Francisco at the given longitude, latitude, and height.
-    viewer.camera.flyTo({
+    viewer.value.camera.flyTo({
         destination: Cartesian3.fromDegrees(117.160521, 31.862834, 10000),
         orientation: {
             heading: CesiumMath.toRadians(0.0),
@@ -33,11 +35,14 @@ onMounted(() => {
             roll: 0.0,
         }
     });
+    console.log('viewer :>> ', viewer);
 });
 </script>
 
 <template>
-    <div id="cesiumContainer"></div>
+    <div id="cesiumContainer">
+        <slot v-if="viewer" />
+    </div>
 </template>
 
 <style>

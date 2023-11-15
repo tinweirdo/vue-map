@@ -20,13 +20,13 @@ const pointFeatures = usetestJson("point");
   <div>
     <Menu :mapmode="mapmode" />
     <Map2d v-if="mapmode === '2d'">
-      <PipeLines :features="lineFeatures" />
-      <PipePoints :features="pointFeatures" />
+      <PipeLines :features="lineFeatures" :mapmode="mapmode" />
+      <PipePoints :features="pointFeatures" :mapmode="mapmode" />
     </Map2d>
 
     <Map3d v-if="mapmode === '3d'">
-      <PipeLines :features="lineFeatures" />
-      <PipePoints :features="pointFeatures" />
+      <PipeLines :features="lineFeatures" :mapmode="mapmode" />
+      <PipePoints :features="pointFeatures" :mapmode="mapmode" />
     </Map3d>
     <div class="menu">
       <div class="switch-box">

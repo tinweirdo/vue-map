@@ -44,7 +44,6 @@ onMounted(() => {
 
 <template>
     <div id="leafletContainer">
-
         <slot v-if="map" />
     </div>
 </template>
