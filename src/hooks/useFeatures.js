@@ -16,7 +16,7 @@ export function useFeatures(url, where) {
 
 export function usetestJson(type) {
     const data = ref([]);
-    let url = "../../public/jsondata"
+    let url = "../../public/projdata"
     if (type === "line") {
         url += "/lines.json"
     }
