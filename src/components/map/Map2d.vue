@@ -11,8 +11,8 @@ onMounted(() => {
         minZoom: 3,
         maxZoom: 18,
         attributionControl: false,
-        center: [31.862834, 117.160521],
-        zoom: 12
+        center: [31.862834, 117.154221],
+        zoom: 16
     }
     map.value = L.map('leafletContainer', mapOpt);
     const baseLayers = {

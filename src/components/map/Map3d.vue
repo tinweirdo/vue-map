@@ -19,7 +19,7 @@ onMounted(() => {
         fullscreenButton: false,//全屏
         vrButton: false,//VR
         geocoder: false,//搜索
-        // homeButton: false,
+        homeButton: false,
         sceneModePicker: false,
         timeline: false,//时间轴
         navigationHelpButton: false,
@@ -28,14 +28,13 @@ onMounted(() => {
     });
     // Fly the camera to San Francisco at the given longitude, latitude, and height.
     viewer.value.camera.flyTo({
-        destination: Cartesian3.fromDegrees(117.160521, 31.862834, 10000),
+        destination: Cartesian3.fromDegrees(117.154221, 31.862834, 2000),
         orientation: {
             heading: CesiumMath.toRadians(0.0),
             pitch: CesiumMath.toRadians(-90.0),
             roll: 0.0,
         }
     });
-    console.log('viewer :>> ', viewer);
 });
 </script>
 
