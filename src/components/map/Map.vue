@@ -13,7 +13,7 @@ import Map2d from '@mapVues/Map2d.vue';
 import Map3d from '@mapVues/Map3d.vue';
 import SwitchBar from '@mapVues/SwitchBar.vue';
 
-const mapmode = ref(MAP_MODE['MAP_2D']);
+const mapmode = ref(MAP_MODE['MAP_3D']);
 const lineFeatures = usetestJson("line");
 const pointFeatures = usetestJson("point");
 

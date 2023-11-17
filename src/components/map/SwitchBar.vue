@@ -12,13 +12,13 @@ watch([() => props.mapmode], ([newMode]) => {
 </script>
 <template >
     <div class="menu">
-        <div class="switch-box">
+        <div class="box">
             <div class="switch-menu">
                 <span>
-                    <span class="switch-span" :class="{ current: mapmode === '2d' }"
+                    <span class="span" :class="{ current: mapmode === '2d' }"
                         @click="mapmode = MAP_MODE['MAP_2D']">二维</span>
                     /
-                    <span class="switch-span" :class="{ current: mapmode === '3d' }"
+                    <span class="span" :class="{ current: mapmode === '3d' }"
                         @click="mapmode = MAP_MODE['MAP_3D']">三维</span>
                 </span>
             </div>
@@ -41,7 +41,7 @@ watch([() => props.mapmode], ([newMode]) => {
     padding: 0 10px;
 }
 
-.switch-box {
+.box {
     width: 10rem;
     height: 3rem;
     display: flex;
@@ -63,7 +63,7 @@ watch([() => props.mapmode], ([newMode]) => {
     color: rgba(255, 255, 255, 1);
 }
 
-.switch-span {
+.span {
     cursor: pointer;
 }
 
