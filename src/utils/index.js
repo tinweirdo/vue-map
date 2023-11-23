@@ -1,10 +1,11 @@
+import { Viewer } from 'cesium';
 import { inject, provide } from "vue"
 
 // 二维地图相关配置
-const mapKEY = Symbol();
-export const provideMap = map => provide(mapKEY, map)
+const MAP_KEY = Symbol();
+export const provideMap = map => provide(MAP_KEY, map)
 export const useMap = () => {
-    const map = inject(mapKEY)
+    const map = inject(MAP_KEY)
     if (!map.value) {
         throw new Error("No map provided!!!")
     }
@@ -12,10 +13,14 @@ export const useMap = () => {
 };
 
 // 三维地图相关配置
-const viewerKEY = Symbol();
-export const provideViewer = viewer => provide(viewerKEY, viewer)
+const VIEWER_KEY = Symbol();
+export const provideViewer = viewer => provide(VIEWER_KEY, viewer)
+/**
+ * 
+ * @returns {Viewer}
+ */
 export const useViewer = () => {
-    const viewer = inject(viewerKEY)
+    const viewer = inject(VIEWER_KEY)
     if (!viewer.value) {
         throw new Error("No map provided!!!")
     }

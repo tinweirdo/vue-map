@@ -19,8 +19,10 @@ const addPolylineCollection = () => {
     const polylines = props.features.lineFeatures;
     for (const feature of polylines) {
         if (feature.geometry.paths) {
+            // if(viewer.entities)
             attributes.value = feature.attributes;
             const { globalId, map_num_s, map_num_e } = feature.attributes;
+            if (viewer.entities.getById(globalId)) continue
             const polylineEntity = {
                 id: globalId,
                 name: map_num_s + " - " + map_num_e,
@@ -41,6 +43,7 @@ const addPolylineCollection = () => {
         if (feature.geometry.x && feature.geometry.y) {
             attributes.value = feature.attributes;
             const { globalId, map_num } = feature.attributes;
+            if (viewer.entities.getById(globalId)) continue
             const pointEntity = {
                 id: globalId,
                 name: map_num,
