@@ -4,7 +4,6 @@
 <script setup>
 import { onMounted, computed, ref } from 'vue';
 import { fields } from '@/assets/projs/popup_gx.json';
-// const props = defineProps(['attributes', 'geometry', 'entity']);
 const props = defineProps({ attributes: Object, geometry: Array });
 const newFields = computed(() => {
     const arr = [];
@@ -65,7 +64,7 @@ const flow = computed(() => {
 const el = ref();
 
 onMounted(() => {
-    el.value.remove()
+    // el.value.remove()
 })
 
 </script>

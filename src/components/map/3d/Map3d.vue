@@ -17,6 +17,7 @@ onMounted(() => {
         animation: false,//动画
         baseLayerPicker: false,//底图
         fullscreenButton: false,//全屏
+        infoBox: false,
         vrButton: false,//VR
         geocoder: false,//搜索
         homeButton: false,
@@ -34,23 +35,8 @@ onMounted(() => {
             pitch: Cesium.Math.toRadians(-90.0),
             roll: 0.0,
         },
-        duration: 0
+        duration: 0.3
     });
-
-
-    console.log('widget :>> ', viewer);
-    // var handler = new Cesium.ScreenSpaceEventHandler(widget.scene.canvas);
-    // handler.setInputAction(function (movement) {
-    //     var pick = widget.scene.pick(movement.position);
-    //     if (Cesium.defined(pick) && (pick.id.match(/label_([0-9]+)/))) {
-    //         var id = parseInt(RegExp.$1);
-    //         var point = constant.points[id];
-    //         widget.infoBox.viewModel.titleText = point.label;
-    //         widget.infoBox.viewModel.descriptionRawHtml = point.description;
-    //         widget.infoBox.viewModel.showInfo = true;
-    //         widget.infoBox.viewModel.closeClicked.addEventListener(function () { widget.infoBox.viewModel.showInfo = false; });
-    //     }
-    // }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
 });
 </script>
 
@@ -71,4 +57,5 @@ onMounted(() => {
 .cesium-viewer>.cesium-viewer-bottom>.cesium-widget-credits {
     display: none;
 }
+
 </style>

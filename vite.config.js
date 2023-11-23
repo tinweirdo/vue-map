@@ -26,7 +26,9 @@ export default defineConfig({
   resolve: {
     alias: [//配置别名
       { find: '@', replacement: resolve(__dirname, 'src') },
-      { find: '@mapVues', replacement: resolve(__dirname, 'src/components/map') },
+      { find: '@map', replacement: resolve(__dirname, 'src/components/map') },
+      { find: '@map2d', replacement: resolve(__dirname, 'src/components/map/2d') },
+      { find: '@map3d', replacement: resolve(__dirname, 'src/components/map/3d') },
       { find: '@widgets', replacement: resolve(__dirname, 'src/components/widgets') },
       { find: '@views', replacement: resolve(__dirname, 'src/views') },
     ]

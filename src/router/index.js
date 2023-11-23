@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 
-import Map from '@mapVues/Map.vue';
+import Map from '@map/Map.vue';
 import Login from '@views/Login/Login.vue';
 // set Login.vue as the default page
 const routes = [

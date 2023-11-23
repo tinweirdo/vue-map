@@ -2,11 +2,9 @@
 import { createApp } from 'vue';
 import App from '@/App.vue';
 import router from "@/router";
-import proj4leaflet from 'proj4leaflet'
-
-
 import Layui from '@layui/layui-vue';
 
+import './style.css';
 import '@layui/layui-vue/lib/index.css';
 import '@/assets/leaflet.css';
 import '@/assets/common/fonts/font.css';//引入特殊字体
