@@ -1,8 +1,13 @@
 <script setup>
-import { onMounted, computed, ref } from 'vue';
+import { onMounted, computed, ref, inject, watch } from 'vue';
 import { fields } from '@/assets/projs/popup_gd.json';
-// const props = defineProps(['attributes', 'geometry', 'entity']);
-const props = defineProps({ attributes: Object, geometry: Array });
+const props = defineProps({ attributes: Object });
+const mapmode = inject("mapmode");
+
+watch(() => [props.attributes], ([attr]) => {
+    if (mapmode.value === "2d") return;
+    console.log("props.attributes22", props.attributes);
+})
 
 const title = computed(() => {
     if (!props.attributes) return ''
@@ -96,7 +101,7 @@ onMounted(() => {
                     <div class="left-caliber">管径</div>
                     <div class="left-m">
                         <p>{{ title }}</p>
-                        <p>{{props.attributes['material']}}</p>
+                        <p>{{ props.attributes['material'] }}</p>
                     </div>
                 </div>
                 <div class="mid-cir">

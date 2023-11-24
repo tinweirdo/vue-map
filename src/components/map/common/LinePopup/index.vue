@@ -2,9 +2,16 @@
 
 
 <script setup>
-import { onMounted, computed, ref } from 'vue';
+import { onMounted, computed, ref, watch, inject } from 'vue';
 import { fields } from '@/assets/projs/popup_gx.json';
-const props = defineProps({ attributes: Object, geometry: Array });
+const props = defineProps({ attributes: Object });
+const mapmode = inject("mapmode");
+
+watch(() => [props.attributes], ([attr]) => {
+    if (mapmode.value === "2d") return;
+    console.log("props.attributes11", props.attributes);
+}, { immediate: true })
+
 const newFields = computed(() => {
     const arr = [];
     for (const item of fields) {
@@ -60,11 +67,10 @@ const flow = computed(() => {
     return text;
 })
 
-
 const el = ref();
 
 onMounted(() => {
-    // el.value.remove()
+    el.value.remove()
 })
 
 </script>
@@ -141,8 +147,6 @@ onMounted(() => {
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 </template>

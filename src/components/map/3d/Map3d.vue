@@ -4,12 +4,77 @@ window.CESIUM_BASE_URL = '/static/Cesium/';
 import * as Cesium from 'cesium';
 import "cesium/Build/Cesium/Widgets/widgets.css";
 import { CESIUM_KEY } from '@/env.js';
-import { shallowRef, onMounted } from 'vue';
+import { shallowRef, ref, onMounted, provide } from 'vue';
 import { provideViewer } from '@/utils';
 const viewer = shallowRef();
 provideViewer(viewer);
 
 onMounted(() => {
+    // 初始化地球
+    initViewer();
+});
+
+const pickedLine = shallowRef({});
+const pickedPoint = shallowRef({});
+provide("pickedLine", pickedLine)
+provide("pickedPoint", pickedPoint)
+// 为 entity 添加弹窗
+const bindClick = () => {
+    let coords = [];
+    const handler = new Cesium.ScreenSpaceEventHandler(viewer.value.scene.canvas);
+    handler.setInputAction(function (movement) {
+        const picked = viewer.value.scene.pick(movement.position);
+
+        pickedLine.value = {};
+        pickedPoint.value = {};
+
+        if (!(Cesium.defined(picked) && picked.id.id)) return;
+        const { attributes, type, geometry } = picked.id.feature;
+        if (type === "line") {
+            pickedLine.value = picked.id.feature;
+            pickedPoint.value = {};
+        }
+        else if (type === "point") {
+            pickedLine.value = {};
+            pickedPoint.value = picked.id.feature;
+        }
+        else {
+            pickedLine.value = {};
+            pickedPoint.value = {};
+        }
+        coords = geometry.paths?.[0][0] || [geometry.x, geometry.y];
+        //弹窗位置控制
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK)
+
+    // //经纬度转为世界坐标
+    // let gisPosition = Cesium.Cartesian3.fromDegrees(
+    //     coords[0],
+    //     coords[1],
+    //     0,
+    // );
+    // // document.getElementById('stateShow').style.display = 'block' //弹出信息框
+    // //实时更新位置
+    // viewer.value.scene.postRender.addEventListener(() => {
+    //     //转化为屏幕坐标
+    //     var windowPosition = Cesium.SceneTransforms.wgs84ToWindowCoordinates(viewer.scene, gisPosition);
+    //     // document.getElementById('stateShow').style.left = (windowPosition.x - 150) + 'px'
+    //     // document.getElementById('stateShow').style.top = (windowPosition.y - 220) + 'px'
+
+    //     //解决滚动不隐藏问题
+    //     const camerPosition = viewer.camera.position;
+    //     let height = viewer.scene.globe.ellipsoid.cartesianToCartographic(camerPosition).height;
+    //     height += viewer.scene.globe.ellipsoid.maximumRadius;
+    //     if ((!(Cesium.Cartesian3.distance(camerPosition, gisPosition) > height)) && viewer.camera.positionCartographic.height < 50000000) {
+    //         // document.getElementById('stateShow').style.display = "block"
+    //     }
+    //     else {
+    //         // document.getElementById('stateShow').style.display = "none"
+    //     }
+    // })
+}
+
+// 初始化地球
+const initViewer = () => {
     // Your access token can be found at: https://ion.cesium.com/tokens.
     Cesium.Ion.defaultAccessToken = CESIUM_KEY;
     // Initialize the Cesium Cesium.Viewer in the HTML element with the `cesiumContainer` ID.
@@ -37,12 +102,16 @@ onMounted(() => {
         },
         duration: 0.3
     });
-});
+    // 为 entity 添加弹窗
+    bindClick();
+}
 </script>
 
 <template>
     <div id="cesiumContainer">
-        <slot v-if="viewer" />
+        <div id="cesiumContainer-kcgis3d-pupup-all">
+            <slot v-if="viewer" />
+        </div>
     </div>
 </template>
 
@@ -57,5 +126,4 @@ onMounted(() => {
 .cesium-viewer>.cesium-viewer-bottom>.cesium-widget-credits {
     display: none;
 }
-
 </style>
