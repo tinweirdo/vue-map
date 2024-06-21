@@ -1,20 +1,7 @@
 import axios from 'axios';
 import { shallowRef } from "vue";
 
-export function useFeatures(url, where) {
-    if (!where) where = '1=1';
-    const data = shallowRef([])
-    axios.get(`${url}/query`, {
-        params: { where }
-    })
-        .then(res => {
-            data.value = res.data.features
-        });
-
-    return data;
-}
-
-export function usetestJson(type) {
+export function useFeatures(type) {
     const data = shallowRef([]);
     let url = "../../public/projdata"
     if (type === "line") {
@@ -29,3 +16,4 @@ export function usetestJson(type) {
 
     return data;
 }
+

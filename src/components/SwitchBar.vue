@@ -1,12 +1,11 @@
 
 <script setup>
 import { watch } from 'vue';
-import { MAP_MODE } from '@/constant';
 const props = defineProps({ mapmode: String })
-const emit = defineEmits(['mapmodeUpdated'])
+const emit = defineEmits(['change-map-mode'])
 
 watch([() => props.mapmode], ([newMode]) => {
-    emit('mapmodeUpdated', newMode)
+    emit('change-map-mode', newMode)
 }, { immediate: true })
 
 </script>
@@ -16,10 +15,10 @@ watch([() => props.mapmode], ([newMode]) => {
             <div class="switch-menu">
                 <span>
                     <span class="span" :class="{ current: mapmode === '2d' }"
-                        @click="mapmode = MAP_MODE['MAP_2D']">二维</span>
+                        @click="mapmode = '2d'">二维</span>
                     /
                     <span class="span" :class="{ current: mapmode === '3d' }"
-                        @click="mapmode = MAP_MODE['MAP_3D']">三维</span>
+                        @click="mapmode = '3d'">三维</span>
                 </span>
             </div>
         </div>

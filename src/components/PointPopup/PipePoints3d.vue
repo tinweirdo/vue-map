@@ -1,13 +1,14 @@
 <script setup>
 import * as Cesium from 'cesium';
 import { ref, onMounted, onUnmounted, watch, inject } from 'vue'
-import PointPopup from '@map/common/PointPopup/index.vue'
+import PointPopup from './index.vue'
 import { useViewer } from '@/utils'
 const props = defineProps({ features: Array })
 const pickedPoint = inject("pickedPoint")
 
 const viewer = useViewer()
 
+const popupRef = ref(null)
 const mounted = ref(false)
 const pipeCollection = new Cesium.EntityCollection();
 
@@ -36,9 +37,12 @@ const addPointCollection = () => {
                     color: Cesium.Color.fromCssColorString("#ff0000"),
                     outlineColor: Cesium.Color.fromCssColorString("#000"),
                     outlineWidth: 1,
-                    clampToGround: true,
+                    heightReference: Cesium.HeightReference.CLAMP_TO_GROUND
                 },
             }
+            pointEntity.popup = {
+                html: popupRef.value.$el, //可以是任意html
+            };
             viewer.entities.add(pointEntity)
             pipeCollection.add(pointEntity)
         }
@@ -53,7 +57,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <PointPopup class="popup3d" :attributes="attributes" />
+    <PointPopup ref="popupRef" class="popup3d" :attributes="attributes" />
 </template>
 
 <style scoped>
@@ -69,4 +73,3 @@ onUnmounted(() => {
     background-color: rgba(0, 0, 0, 0.7);
 }
 </style>
-

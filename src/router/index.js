@@ -1,19 +1,12 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 
-import Map from '@map/Map.vue';
-import Login from '@views/Login/Login.vue';
+import Map from '@views/Map/Map.vue';
 // set Login.vue as the default page
 const routes = [
   {
     path: '/',
     redirect: '/map'
   },
-  {
-    path: '/login',
-    name: 'login',
-    component: Login
-  },
-
   {
     path: '/map',
     name: 'map',
@@ -24,6 +17,10 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+
 })
 
 export default router

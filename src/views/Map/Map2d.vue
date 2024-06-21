@@ -11,8 +11,9 @@ onMounted(() => {
         minZoom: 3,
         maxZoom: 18,
         attributionControl: false,
-        center: [31.862834, 117.154221],
-        zoom: 16
+        center: [25.743467, 112.741528],
+        zoom: 13,
+        zoomControl: false
     }
     map.value = L.map('leafletContainer', mapOpt);
     const baseLayers = {
@@ -26,11 +27,6 @@ onMounted(() => {
             L.layerGroup([
                 L.tileLayer('http://t{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}&tk=6da78be63e66c6ac6a6f4164e85cbeab', { subdomains: ['0', '1', '2', '3', '4', '5', '6', '7'] }),
                 L.tileLayer('http://t{s}.tianditu.gov.cn/cia_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=cia&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}&tk=6da78be63e66c6ac6a6f4164e85cbeab', { subdomains: ['0', '1', '2', '3', '4', '5', '6', '7'] })
-            ]),
-        "天地图地形":
-            L.layerGroup([
-                L.tileLayer('http://t{s}.tianditu.gov.cn/ter_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ter&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}&tk=6da78be63e66c6ac6a6f4164e85cbeab', { subdomains: ['0', '1', '2', '3', '4', '5', '6', '7'] }),
-                L.tileLayer('http://t{s}.tianditu.gov.cn/cta_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=cta&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}&tk=6da78be63e66c6ac6a6f4164e85cbeab', { subdomains: ['0', '1', '2', '3', '4', '5', '6', '7'] })
             ])
     };
     L.control.layers(baseLayers, {}, {
@@ -38,8 +34,6 @@ onMounted(() => {
         collapsed: false,//如果为 "true"，控件将折叠成一个图标，并在鼠标悬停、触摸或键盘激活时展开。
     }).addTo(map.value);
 });
-
-
 </script>
 
 <template>

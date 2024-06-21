@@ -2,19 +2,21 @@
 import { createApp } from 'vue';
 import App from '@/App.vue';
 import router from "@/router";
-import Layui from '@layui/layui-vue';
+
+// 引入 element 样式
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 
 import './style.css';
-import '@layui/layui-vue/lib/index.css';
 import '@/assets/leaflet.css';
 import '@/assets/common/fonts/font.css';//引入特殊字体
-import 'view-ui-plus/dist/styles/viewuiplus.css';
 
 const app = createApp(App);
 
-app.provide('app', app)
-
-app.use(Layui);
 app.use(router); // 引用路由实例
+app.use(ElementPlus)
 
 app.mount('#app');
+
+app.provide('app', app)
+

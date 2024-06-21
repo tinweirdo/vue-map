@@ -1,7 +1,7 @@
 <script setup>
 import * as Cesium from 'cesium';
 import { ref, onMounted, onUnmounted, watch, inject } from 'vue'
-import LinePopup from '@map/common/LinePopup/index.vue'
+import LinePopup from './index.vue'
 import { useViewer } from '@/utils'
 const props = defineProps({ features: Array })
 const viewer = useViewer()
