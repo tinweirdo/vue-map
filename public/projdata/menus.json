@@ -1,0 +1,980 @@
+[
+    {
+        "id": "MapAdmin",
+        "name": "地图管理",
+        "type": "group",
+        "icon": "iconjsy_menu",
+        "display": true,
+        "children": [
+            {
+                "id": "MapAdmin-LayerControl",
+                "name": "图层管理",
+                "uri": "widgets_pipe/2d_manageLayersVector/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/2d_manageLayersVector.json",
+                "autoDisable": false,
+                "disableOhter": false,
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "noTitle": false,
+                    "width": 300,
+                    "position": {
+                        "top": 200,
+                        "bottom": 20,
+                        "left": 15
+                    },
+                    "maxMin": false,
+                    "closeBtn": true,
+                    "resize": true
+                },
+                "openAtStart": true
+            },
+            {
+                "id": "MapAdmin-Located",
+                "name": "坐标定位",
+                "uri": "cdkc_pipe_widgets/pipe_multi_locate/widget.js",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "height": 300,
+                    "position": {
+                        "bottom": 20,
+                        "left": 360
+                    },
+                    "maxMin": false,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "MapAdmin-Measure",
+                "name": "测量",
+                "uri": "cdkc_pipe_widgets/pipe_2d_measure/widget.js",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 405,
+                    "height": 95,
+                    "autoDisable": false,
+                    "disableOhter": false,
+                    "position": {
+                        "bottom": 20,
+                        "left": 360
+                    },
+                    "maxMin": false,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "disableOhter": false
+            }
+        ]
+    },
+    {
+        "id": "PipeQuery",
+        "name": "管网查询",
+        "type": "group",
+        "icon": "cdkc_xunjian",
+        "display": true,
+        "children": [
+            {
+                "id": "PipeQuery-Quick",
+                "name": "快速查询",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_quicksearch/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_2d3d_quicksearch.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 650,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": false,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "PipeQuery-Spatial",
+                "name": "空间查询",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_kjcx/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_2d3d_kjcx.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": false,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "PipeQuery-Around",
+                "name": "周边查询",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_zbcx/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_2d3d_zbcx.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": false,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "PipeQuery-Professional",
+                "name": "高级查询",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_gjcx/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_2d3d_gjcx.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 650,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": false,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            }
+        ]
+    },
+    {
+        "id": "PipeAnalysis",
+        "name": "管网分析",
+        "type": "group",
+        "icon": "cdkc_tongji",
+        "display": true,
+        "children": [
+            {
+                "id": "PipeAnalysis-Flow",
+                "name": "流向分析",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_lxfx/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_lxfx.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "height": 300,
+                    "position": {
+                        "right": 15,
+                        "top": 70
+                    },
+                    "maxMin": false,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "PipeAnalysis-Confluence",
+                "name": "汇流分析",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_hlfx/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_lxfx.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "height": 300,
+                    "position": {
+                        "left": 10,
+                        "top": 70
+                    },
+                    "maxMin": false,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "PipeAnalysis-Level",
+                "name": "水平净距分析",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_spjjfx/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_spjjfx.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "PipeAnalysis-Vertical",
+                "name": "垂直净距分析",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_czjjfx/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_czjjfx.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "PipeAnalysis-Cross",
+                "name": "横剖面分析",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_hpmfx_hstx_konva/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_hpmfx.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 840,
+                    "position": {
+                        "top": 70,
+                        "right": 15,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "PipeAnalysis-Portrait",
+                "name": "纵剖面分析",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_zpmfx_hstx_konva/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_zpmfx.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 840,
+                    "position": {
+                        "top": 70,
+                        "right": 15,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "PipeAnalysis-Connected",
+                "name": "连通性分析",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_ltxfx/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_ltxfx.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 740,
+                    "height": 635,
+                    "position": {
+                        "top": 70,
+                        "right": 0
+                    },
+                    "maxMin": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            }
+        ]
+    },
+    {
+        "id": "PipeEdit",
+        "name": "管网编辑",
+        "type": "group",
+        "display": false,
+        "icon": "cdkc_bianji",
+        "children": [
+            {
+                "id": "property_inputandout",
+                "name": "属性更新",
+                "uri": "cdkc_pipe_widgets/property_inputandout/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/property_inputandout.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "pipe_2d3d_sxbj_gd",
+                "name": "管点属性编辑",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_sxbj_gd/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_sxbj_gd.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 450,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "pipe_2d3d_sxbj_gx",
+                "name": "管线属性编辑",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_sxbj_gx/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_sxbj_gx.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 450,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "pipe_2d3d_sxbj_gxlj",
+                "name": "管线连接编辑",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_sxbj_gxlj/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_sxbj_gxlj.json",
+                "display": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 360,
+                    "height": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "pipe_2d3d_editFeature",
+                "name": "管网编辑",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_editFeature/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/edit_network.json",
+                "display": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "collection_gwbj",
+                "name": "管网编辑",
+                "uri": "cdkc_pipe_widgets/collection_gwbj/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/collection_gwbj.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "height": 350,
+                    "position": {
+                        "left": 15,
+                        "top": 70
+                    },
+                    "disableOhter": true,
+                    "maxMin": true,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "autoDisable": false,
+                "openAtStart": false
+            },
+            {
+                "id": "col-pipe-pointAdd",
+                "name": "新增管点",
+                "uri": "cdkc_pipe_widgets/collection_add_gd/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/collection_sxbj_gd.json",
+                "display": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "col-pipe-lineAdd",
+                "name": "新增管线",
+                "uri": "cdkc_pipe_widgets/collection_add_gx/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/collection_sxbj_gx.json",
+                "display": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "col-pipe-propertyEdit",
+                "name": "管点属性编辑",
+                "uri": "cdkc_pipe_widgets/collection_sxbj_gd/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/collection_sxbj_gd.json",
+                "display": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "col-pipeProperty-LineEdit",
+                "name": "管线属性编辑",
+                "uri": "cdkc_pipe_widgets/collection_sxbj_gx/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/collection_sxbj_gx.json",
+                "display": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "gatherPoints",
+                "name": "开始收点",
+                "uri": "cdkc_pipe_widgets/collection_add_sur_num/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/collection_startMeasure_many.json",
+                "display": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "PointsNotMeasure",
+                "name": "未测量点",
+                "uri": "cdkc_pipe_widgets/collection_unmeasured/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/collection_startMeasure_many.json",
+                "display": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "col-importData",
+                "name": "导入数据",
+                "uri": "cdkc_pipe_widgets/collection_importCsv/widget.js",
+                "display": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "gatherPointsinOrder",
+                "name": "逐条收点",
+                "uri": "cdkc_pipe_widgets/collection_startMeasure_one/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/collection_startMeasure_many.json",
+                "display": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "gatherPointsAlot",
+                "name": "批量收点",
+                "uri": "cdkc_pipe_widgets/collection_startMeasure_many/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/collection_startMeasure_many.json",
+                "display": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "col-pipe_check",
+                "name": "管网检查",
+                "uri": "cdkc_pipe_widgets/collection_pipe_check/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/collection_startMeasure_many.json",
+                "display": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "pipe_2d3d_inputnetwork2",
+                "name": "数据导入",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_inputnetwork/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_2d3d_inputnetwork.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 780,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "maxMin": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "pipe_2d_editLine",
+                "name": "线数据编辑",
+                "uri": "cdkc_pipe_widgets/pipe_2d_editLine/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/edit_line.json",
+                "display": true,
+                "autoDisable": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 450,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 30
+                    },
+                    "maxMin": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "pipe_2d_editArea",
+                "name": "面数据编辑",
+                "uri": "cdkc_pipe_widgets/pipe_2d_editArea/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/edit_area.json",
+                "display": true,
+                "autoDisable": false,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 450,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 30
+                    },
+                    "maxMin": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            }
+        ]
+    },
+    {
+        "id": "PipeStatistics",
+        "name": "管网统计",
+        "type": "group",
+        "display": true,
+        "icon": "cdkc_tongji1",
+        "children": [
+            {
+                "id": "PipeStatistics-Base",
+                "name": "管网统计",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_gwtj/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_2d3d_gwtj.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 600,
+                    "position": {
+                        "right": 15,
+                        "top": 70,
+                        "bottom": 20
+                    },
+                    "disableOhter": true,
+                    "maxMin": true,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "PipeStatistics-Comprehensive",
+                "name": "综合统计",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_statistics/widget.js",
+                "configFile": "cdkc_pipe/2d/zh_hsstxq/configs/pipe_gwtj.json",
+                "lineLayerUrl": "hstxVectorMap/FeatureServer/hstxLineLayer",
+                "pointLayerUrl": "hstxVectorMap/FeatureServer/hstxPointLayer",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "css": {
+                    "width": 320,
+                    "right": 15,
+                    "top": 70,
+                    "bottom": 30
+                },
+                "openAtStart": false
+            }
+        ]
+    },
+    {
+        "id": "OutputPrint",
+        "name": "输出打印",
+        "type": "group",
+        "display": true,
+        "icon": "cdkc_dayin",
+        "children": [
+            {
+                "id": "OutputPrint-Print",
+                "name": "打印",
+                "uri": "cdkc_pipe_widgets/2d_print_new/widget.js",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "autoDisable": false,
+                "disableOhter": false,
+                "windowOptions": {
+                    "width": 574,
+                    "height": 192,
+                    "position": {
+                        "top": 300,
+                        "right": 500
+                    },
+                    "maxMin": false,
+                    "resize": true,
+                    "closeBtn": true
+                }
+            },
+            {
+                "id": "OutputPrint-Excel",
+                "name": "导出EXCEL",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_export_excel/widget.js",
+                "configFile": "cdkc_pipe/2d/mszhgw2.0/configs/pipe_2d3d_export_excel.json",
+                "classification": true,
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 490,
+                    "height": 700,
+                    "position": {
+                        "right": 15,
+                        "top": 53,
+                        "bottom": 30
+                    },
+                    "maxMin": false,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "OutputPrint-CAD",
+                "name": "导出CAD",
+                "uri": "cdkc_pipe_widgets/pipe_2d3d_export_cad/widget.js",
+                "configFile": "cdkc_pipe/2d/lzpipe2.0/configs/pipe_2d3d_export_cad.json",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "width": 480,
+                    "position": {
+                        "right": 15,
+                        "top": 53,
+                        "bottom": 20
+                    },
+                    "maxMin": false,
+                    "resize": true,
+                    "closeBtn": true
+                },
+                "openAtStart": false
+            }
+        ]
+    },
+    {
+        "id": "SysManage",
+        "name": "系统管理",
+        "type": "group",
+        "display": false,
+        "icon": "iconjsy_menu",
+        "children": [
+            {
+                "id": "col-base_deploy",
+                "name": "基础配置",
+                "uri": "cdkc_pipe_widgets/cdkc_base_config/widget.js",
+                "resources": "xj_jczygl",
+                "display": true,
+                "origin": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "position": {
+                        "top": 53,
+                        "left": 15,
+                        "right": 15,
+                        "bottom": 20
+                    },
+                    "maxMin": false,
+                    "closeBtn": true,
+                    "resize": true
+                },
+                "openAtStart": false
+            },
+            {
+                "id": "company_manage",
+                "name": "公司管理",
+                "uri": "widgets_sys/dwzz_company/widget.js",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "position": {
+                        "top": 53,
+                        "left": 15,
+                        "right": 15,
+                        "bottom": 20
+                    },
+                    "closeBtn": true,
+                    "maxMin": false,
+                    "resize": true
+                },
+                "autoDisable": false,
+                "disableOhter": false
+            },
+            {
+                "id": "dwzz_department",
+                "name": "部门管理",
+                "uri": "widgets_sys/dwzz_department/widget.js",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "position": {
+                        "top": 53,
+                        "left": 15,
+                        "right": 15,
+                        "bottom": 20
+                    },
+                    "closeBtn": true,
+                    "maxMin": false,
+                    "resize": true
+                },
+                "autoDisable": false,
+                "disableOhter": false
+            },
+            {
+                "id": "role_manage",
+                "name": "角色管理",
+                "uri": "widgets_sys/dwzz_role/widget.js",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "position": {
+                        "top": 53,
+                        "left": 15,
+                        "right": 15,
+                        "bottom": 20
+                    },
+                    "closeBtn": true,
+                    "maxMin": false,
+                    "resize": true
+                },
+                "autoDisable": false,
+                "disableOhter": false
+            },
+            {
+                "id": "UserManage",
+                "name": "用户管理",
+                "uri": "widgets_sys/dwzz_user/widget.js",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "position": {
+                        "top": 53,
+                        "left": 15,
+                        "right": 15,
+                        "bottom": 20
+                    },
+                    "closeBtn": true,
+                    "maxMin": false,
+                    "resize": true
+                },
+                "autoDisable": false,
+                "disableOhter": false
+            },
+            {
+                "id": "DataItemManageJSy",
+                "name": "字典配置",
+                "uri": "widgets_sys/system_dataItem/widget.js",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "position": {
+                        "top": 53,
+                        "left": 15,
+                        "right": 15,
+                        "bottom": 20
+                    },
+                    "closeBtn": true,
+                    "maxMin": false,
+                    "resize": true
+                },
+                "autoDisable": false,
+                "disableOhter": false
+            },
+            {
+                "id": "system_docItem",
+                "name": "文档管理",
+                "uri": "widgets_sys/system_docItem/widget.js",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "position": {
+                        "top": 53,
+                        "left": 15,
+                        "right": 15,
+                        "bottom": 20
+                    },
+                    "closeBtn": true,
+                    "maxMin": false,
+                    "resize": true
+                },
+                "autoDisable": false,
+                "disableOhter": false
+            },
+            {
+                "id": "SystemLogJsy",
+                "name": "系统日志",
+                "uri": "widgets_sys/system_log/widget.js",
+                "display": true,
+                "icon": "cdkc_caidan",
+                "windowOptions": {
+                    "position": {
+                        "top": 53,
+                        "left": 15,
+                        "right": 15,
+                        "bottom": 20
+                    },
+                    "closeBtn": true,
+                    "maxMin": false,
+                    "resize": true
+                },
+                "autoDisable": false,
+                "disableOhter": false
+            }
+        ]
+    }
+]

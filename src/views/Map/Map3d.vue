@@ -94,7 +94,7 @@ const initViewer = () => {
     });
     // Fly the camera to San Francisco at the given longitude, latitude, and height.
     viewer.value.camera.flyTo({
-        destination: Cesium.Cartesian3.fromDegrees(112.741528, 25.743467, 2000),
+        destination: Cesium.Cartesian3.fromDegrees(115.844784, 29.724061, 2000),
         orientation: {
             heading: Cesium.Math.toRadians(0.0),
             pitch: Cesium.Math.toRadians(-90.0),

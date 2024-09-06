@@ -4,7 +4,7 @@ import { ref, onMounted, onUnmounted, watch } from 'vue'
 import PointPopup from './index.vue'
 import { useMap } from '@/utils'
 
-const props = defineProps({ features: Array })
+const props = defineProps({ data: Object })
 
 const popupRef = ref(null);
 const mounted = ref(false);
@@ -23,9 +23,9 @@ const attributes = ref({})
 
 const layer = L.layerGroup().addTo(map)
 
-watch([() => props.features, mounted], ([features, mounted]) => {
+watch([() => props.data.features, mounted], ([features, mounted]) => {
     layer.clearLayers()
-    if (!mounted) return;
+    if (!mounted || !features) return;
     for (const feature of features) {
         if (feature.geometry.y && feature.geometry.x) {
             const coordinates = L.latLng(feature.geometry.y, feature.geometry.x);

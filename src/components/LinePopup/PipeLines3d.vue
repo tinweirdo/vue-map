@@ -3,7 +3,7 @@ import * as Cesium from 'cesium';
 import { ref, onMounted, onUnmounted, watch, inject } from 'vue'
 import LinePopup from './index.vue'
 import { useViewer } from '@/utils'
-const props = defineProps({ features: Array })
+const props = defineProps({ data: Object })
 const viewer = useViewer()
 
 const pickedLine = inject("pickedLine")
@@ -11,17 +11,17 @@ const pickedLine = inject("pickedLine")
 const mounted = ref(false);
 const attributes = ref({});
 
-watch([() => props.features, mounted, pickedLine], ([features, mounted, newFeature]) => {
+watch([() => props.data.features, mounted, pickedLine], ([features, mounted, newFeature]) => {
     // 更新点击的 entity 属性
     if (newFeature?.attributes) attributes.value = newFeature?.attributes;
     // 已经完成了初次加载
-    if (!(mounted && features.length)) return;
+    if (!(mounted && features?.length)) return;
     addPolylineCollection();
 }, { immediate: true });
 
 const pipeCollection = new Cesium.EntityCollection();
 const addPolylineCollection = () => {
-    for (const feature of props.features) {
+    for (const feature of props.data.features) {
         if (feature.geometry.paths) {
             feature.type = "line";
             const { globalId, map_num_s, map_num_e } = feature.attributes;

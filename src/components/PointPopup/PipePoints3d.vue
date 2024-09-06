@@ -3,7 +3,7 @@ import * as Cesium from 'cesium';
 import { ref, onMounted, onUnmounted, watch, inject } from 'vue'
 import PointPopup from './index.vue'
 import { useViewer } from '@/utils'
-const props = defineProps({ features: Array })
+const props = defineProps({ data: Object })
 const pickedPoint = inject("pickedPoint")
 
 const viewer = useViewer()
@@ -13,16 +13,16 @@ const mounted = ref(false)
 const pipeCollection = new Cesium.EntityCollection();
 
 const attributes = ref({})
-watch([() => props.features, mounted, pickedPoint], ([features, mounted, newFeature]) => {
+watch([() => props.data.features, mounted, pickedPoint], ([features, mounted, newFeature]) => {
     // 更新点击的 entity 属性
     if (newFeature?.attributes) attributes.value = newFeature?.attributes;
     // 已经完成了初次加载
-    if (!(mounted && features.length)) return;
+    if (!(mounted && features?.length)) return;
     addPointCollection();
 }, { immediate: true });
 
 const addPointCollection = () => {
-    for (const feature of props.features) {
+    for (const feature of props.data.features) {
         if (feature.geometry.x && feature.geometry.y) {
             feature.type = "point";
             const { globalId, map_num } = feature.attributes;

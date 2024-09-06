@@ -4,7 +4,7 @@ import { ref, onMounted, onUnmounted, watch } from 'vue'
 import LinePopup from './index.vue'
 import { useMap } from '@/utils'
 
-const props = defineProps({ features: Array })
+const props = defineProps({ data: Object })
 
 const popupRef = ref(null)
 const mounted = ref(false)
@@ -24,15 +24,15 @@ const attributes = ref({})
 
 const layer = L.layerGroup().addTo(map)
 
-watch([() => props.features, mounted], ([features, mounted]) => {
-    layer.clearLayers()
-    if (!mounted) return
+watch([() => props.data.features, mounted], ([features, mounted]) => {
+    layer.clearLayers();
+    if (!mounted || !features) return;
     for (const feature of features) {
         if (feature.geometry.paths) {
             const coord1 = [feature.geometry.paths[0][0][1], feature.geometry.paths[0][0][0]];
             const coord2 = [feature.geometry.paths[0][1][1], feature.geometry.paths[0][1][0]];
             const line = L.polyline([coord1, coord2], style).addTo(layer)
-            line.bindPopup(null, { minWidth: 700, minHeight: 360 })
+            line.bindPopup(null, { minWidth: 600, minHeight: 360 })
             line.on('popupopen', () => {
                 line.setPopupContent(popupRef.value.$el)
                 attributes.value = feature.attributes

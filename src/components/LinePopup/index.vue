@@ -1,6 +1,3 @@
-
-
-
 <script setup>
 import { onMounted, computed, ref, watch, inject } from 'vue';
 import { fields } from '@/assets/projs/popup_gx.json';
@@ -9,7 +6,6 @@ const mapmode = inject("mapmode");
 
 watch(() => [props.attributes], ([attr]) => {
     if (mapmode.value === "2d") return;
-    console.log("props.attributes11", props.attributes);
 }, { immediate: true })
 
 const newFields = computed(() => {
@@ -83,7 +79,7 @@ onMounted(() => {
         <div class='context'>
             <div class="context_line">
                 <table>
-                    <tr v-for="(item) in newFields">
+                    <tr v-for="(item) in newFields" :key="item.name">
                         <td width='90px'>{{ item.alias }}</td>
                         <td>{{ item.value }}</td>
                     </tr>
@@ -153,5 +149,3 @@ onMounted(() => {
 <style>
 @import './index.css';
 </style>
-
-

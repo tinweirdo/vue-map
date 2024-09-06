@@ -72,7 +72,7 @@ onMounted(() => {
         <div class='context' style="display: flex;justify-content: space-between;">
             <div class="context_line">
                 <table>
-                    <tr v-for="(item) in newFields">
+                    <tr v-for="(item) in newFields" :key="item.name">
                         <td width='70px'>{{ item.alias }}</td>
                         <td>{{ item.value }}</td>
                     </tr>

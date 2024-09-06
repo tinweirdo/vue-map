@@ -3,12 +3,12 @@ import { shallowRef } from "vue";
 
 export function useFeatures(type) {
     const data = shallowRef([]);
-    let url = "../../public/projdata"
+    let url = ""
     if (type === "line") {
-        url += "/lines.json"
+        url = "projdata/lines.json"
     }
     else if (type === "point") {
-        url += "/points.json"
+        url = "projdata/points.json"
     }
     axios.get(url).then(res => {
         data.value = res.data
